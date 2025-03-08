@@ -1,0 +1,622 @@
+{
+  "phrases": [
+    {
+      "id": 1,
+      "lt": "Labas",
+      "en": "Hello",
+      "category": "greetings"
+    },
+    {
+      "id": 2,
+      "lt": "Ačiū",
+      "en": "Thank you",
+      "category": "common"
+    },
+    {
+      "id": 3,
+      "lt": "Prašau",
+      "en": "Please/You're welcome",
+      "category": "common"
+    },
+    {
+      "id": 4,
+      "lt": "Kaip sekasi?",
+      "en": "How are you?",
+      "category": "greetings"
+    },
+    {
+      "id": 5,
+      "lt": "Viso gero",
+      "en": "Goodbye",
+      "category": "greetings"
+    },
+    
+    {
+      "id": 6,
+      "lt": "žmogus",
+      "en": "person",
+      "category": "nouns_people"
+    },
+    {
+      "id": 7,
+      "lt": "vyras",
+      "en": "man",
+      "category": "nouns_people"
+    },
+    {
+      "id": 8,
+      "lt": "moteris",
+      "en": "woman",
+      "category": "nouns_people"
+    },
+    {
+      "id": 9,
+      "lt": "vaikas",
+      "en": "child",
+      "category": "nouns_people"
+    },
+    {
+      "id": 10,
+      "lt": "šeima",
+      "en": "family",
+      "category": "nouns_people"
+    },
+    {
+      "id": 11,
+      "lt": "tėvas",
+      "en": "father",
+      "category": "nouns_people"
+    },
+    {
+      "id": 12,
+      "lt": "motina",
+      "en": "mother",
+      "category": "nouns_people"
+    },
+    {
+      "id": 13,
+      "lt": "brolis",
+      "en": "brother",
+      "category": "nouns_people"
+    },
+    {
+      "id": 14,
+      "lt": "sesuo",
+      "en": "sister",
+      "category": "nouns_people"
+    },
+    {
+      "id": 15,
+      "lt": "draugas",
+      "en": "friend",
+      "category": "nouns_people"
+    },
+    
+    {
+      "id": 16,
+      "lt": "namas",
+      "en": "house",
+      "category": "nouns_places"
+    },
+    {
+      "id": 17,
+      "lt": "miestas",
+      "en": "city",
+      "category": "nouns_places"
+    },
+    {
+      "id": 18,
+      "lt": "mokykla",
+      "en": "school",
+      "category": "nouns_places"
+    },
+    {
+      "id": 19,
+      "lt": "parduotuvė",
+      "en": "shop",
+      "category": "nouns_places"
+    },
+    {
+      "id": 20,
+      "lt": "restoranas",
+      "en": "restaurant",
+      "category": "nouns_places"
+    },
+    
+    {
+      "id": 21,
+      "lt": "stalas",
+      "en": "table",
+      "category": "nouns_objects"
+    },
+    {
+      "id": 22,
+      "lt": "kėdė",
+      "en": "chair",
+      "category": "nouns_objects"
+    },
+    {
+      "id": 23,
+      "lt": "knyga",
+      "en": "book",
+      "category": "nouns_objects"
+    },
+    {
+      "id": 24,
+      "lt": "telefonas",
+      "en": "phone",
+      "category": "nouns_objects"
+    },
+    {
+      "id": 25,
+      "lt": "automobilis",
+      "en": "car",
+      "category": "nouns_objects"
+    },
+    
+    {
+      "id": 26,
+      "lt": "laikas",
+      "en": "time",
+      "category": "nouns_time"
+    },
+    {
+      "id": 27,
+      "lt": "diena",
+      "en": "day",
+      "category": "nouns_time"
+    },
+    {
+      "id": 28,
+      "lt": "savaitė",
+      "en": "week",
+      "category": "nouns_time"
+    },
+    {
+      "id": 29,
+      "lt": "mėnuo",
+      "en": "month",
+      "category": "nouns_time"
+    },
+    {
+      "id": 30,
+      "lt": "metai",
+      "en": "year",
+      "category": "nouns_time"
+    },
+    
+    {
+      "id": 31,
+      "lt": "medis",
+      "en": "tree",
+      "category": "nouns_nature"
+    },
+    {
+      "id": 32,
+      "lt": "gėlė",
+      "en": "flower",
+      "category": "nouns_nature"
+    },
+    {
+      "id": 33,
+      "lt": "saulė",
+      "en": "sun",
+      "category": "nouns_nature"
+    },
+    {
+      "id": 34,
+      "lt": "mėnulis",
+      "en": "moon",
+      "category": "nouns_nature"
+    },
+    {
+      "id": 35,
+      "lt": "vanduo",
+      "en": "water",
+      "category": "nouns_nature"
+    },
+    
+    {
+      "id": 36,
+      "lt": "būti",
+      "en": "to be",
+      "category": "verbs_basic"
+    },
+    {
+      "id": 37,
+      "lt": "turėti",
+      "en": "to have",
+      "category": "verbs_basic"
+    },
+    {
+      "id": 38,
+      "lt": "daryti",
+      "en": "to do",
+      "category": "verbs_basic"
+    },
+    {
+      "id": 39,
+      "lt": "eiti",
+      "en": "to go",
+      "category": "verbs_basic"
+    },
+    {
+      "id": 40,
+      "lt": "ateiti",
+      "en": "to come",
+      "category": "verbs_basic"
+    },
+    
+    {
+      "id": 41,
+      "lt": "valgyti",
+      "en": "to eat",
+      "category": "verbs_daily"
+    },
+    {
+      "id": 42,
+      "lt": "gerti",
+      "en": "to drink",
+      "category": "verbs_daily"
+    },
+    {
+      "id": 43,
+      "lt": "miegoti",
+      "en": "to sleep",
+      "category": "verbs_daily"
+    },
+    {
+      "id": 44,
+      "lt": "kalbėti",
+      "en": "to speak",
+      "category": "verbs_daily"
+    },
+    {
+      "id": 45,
+      "lt": "dirbti",
+      "en": "to work",
+      "category": "verbs_daily"
+    },
+    
+    {
+      "id": 46,
+      "lt": "mąstyti",
+      "en": "to think",
+      "category": "verbs_mental"
+    },
+    {
+      "id": 47,
+      "lt": "žinoti",
+      "en": "to know",
+      "category": "verbs_mental"
+    },
+    {
+      "id": 48,
+      "lt": "suprasti",
+      "en": "to understand",
+      "category": "verbs_mental"
+    },
+    {
+      "id": 49,
+      "lt": "mokytis",
+      "en": "to learn",
+      "category": "verbs_mental"
+    },
+    {
+      "id": 50,
+      "lt": "norėti",
+      "en": "to want",
+      "category": "verbs_mental"
+    },
+    
+    {
+      "id": 51,
+      "lt": "maistas",
+      "en": "food",
+      "category": "nouns_food"
+    },
+    {
+      "id": 52,
+      "lt": "duona",
+      "en": "bread",
+      "category": "nouns_food"
+    },
+    {
+      "id": 53,
+      "lt": "pienas",
+      "en": "milk",
+      "category": "nouns_food"
+    },
+    {
+      "id": 54,
+      "lt": "kava",
+      "en": "coffee",
+      "category": "nouns_food"
+    },
+    {
+      "id": 55,
+      "lt": "arbata",
+      "en": "tea",
+      "category": "nouns_food"
+    },
+    
+    {
+      "id": 56,
+      "lt": "galva",
+      "en": "head",
+      "category": "nouns_body"
+    },
+    {
+      "id": 57,
+      "lt": "ranka",
+      "en": "hand",
+      "category": "nouns_body"
+    },
+    {
+      "id": 58,
+      "lt": "koja",
+      "en": "leg",
+      "category": "nouns_body"
+    },
+    {
+      "id": 59,
+      "lt": "akis",
+      "en": "eye",
+      "category": "nouns_body"
+    },
+    {
+      "id": 60,
+      "lt": "burna",
+      "en": "mouth",
+      "category": "nouns_body"
+    },
+    
+    {
+      "id": 61,
+      "lt": "bėgti",
+      "en": "to run",
+      "category": "verbs_motion"
+    },
+    {
+      "id": 62,
+      "lt": "šokti",
+      "en": "to jump/dance",
+      "category": "verbs_motion"
+    },
+    {
+      "id": 63,
+      "lt": "sėdėti",
+      "en": "to sit",
+      "category": "verbs_motion"
+    },
+    {
+      "id": 64,
+      "lt": "stovėti",
+      "en": "to stand",
+      "category": "verbs_motion"
+    },
+    {
+      "id": 65,
+      "lt": "vaikščioti",
+      "en": "to walk",
+      "category": "verbs_motion"
+    },
+    
+    {
+      "id": 66,
+      "lt": "sakyti",
+      "en": "to say",
+      "category": "verbs_communication"
+    },
+    {
+      "id": 67,
+      "lt": "klausti",
+      "en": "to ask",
+      "category": "verbs_communication"
+    },
+    {
+      "id": 68,
+      "lt": "atsakyti",
+      "en": "to answer",
+      "category": "verbs_communication"
+    },
+    {
+      "id": 69,
+      "lt": "rašyti",
+      "en": "to write",
+      "category": "verbs_communication"
+    },
+    {
+      "id": 70,
+      "lt": "skaityti",
+      "en": "to read",
+      "category": "verbs_communication"
+    },
+    
+    {
+      "id": 71,
+      "lt": "oras",
+      "en": "weather",
+      "category": "nouns_weather"
+    },
+    {
+      "id": 72,
+      "lt": "lietus",
+      "en": "rain",
+      "category": "nouns_weather"
+    },
+    {
+      "id": 73,
+      "lt": "sniegas",
+      "en": "snow",
+      "category": "nouns_weather"
+    },
+    {
+      "id": 74,
+      "lt": "vėjas",
+      "en": "wind",
+      "category": "nouns_weather"
+    },
+    {
+      "id": 75,
+      "lt": "debesys",
+      "en": "cloud",
+      "category": "nouns_weather"
+    },
+    
+    {
+      "id": 76,
+      "lt": "mylėti",
+      "en": "to love",
+      "category": "verbs_emotions"
+    },
+    {
+      "id": 77,
+      "lt": "jausti",
+      "en": "to feel",
+      "category": "verbs_emotions"
+    },
+    {
+      "id": 78,
+      "lt": "verkti",
+      "en": "to cry",
+      "category": "verbs_emotions"
+    },
+    {
+      "id": 79,
+      "lt": "juoktis",
+      "en": "to laugh",
+      "category": "verbs_emotions"
+    },
+    {
+      "id": 80,
+      "lt": "šypsotis",
+      "en": "to smile",
+      "category": "verbs_emotions"
+    },
+    
+    {
+      "id": 81,
+      "lt": "drabužiai",
+      "en": "clothes",
+      "category": "nouns_clothing"
+    },
+    {
+      "id": 82,
+      "lt": "batai",
+      "en": "shoes",
+      "category": "nouns_clothing"
+    },
+    {
+      "id": 83,
+      "lt": "kepurė",
+      "en": "hat",
+      "category": "nouns_clothing"
+    },
+    {
+      "id": 84,
+      "lt": "šalikas",
+      "en": "scarf",
+      "category": "nouns_clothing"
+    },
+    {
+      "id": 85,
+      "lt": "pirštinės",
+      "en": "gloves",
+      "category": "nouns_clothing"
+    },
+    
+    {
+      "id": 86,
+      "lt": "praustis",
+      "en": "to wash oneself",
+      "category": "verbs_daily"
+    },
+    {
+      "id": 87,
+      "lt": "rengtis",
+      "en": "to get dressed",
+      "category": "verbs_daily"
+    },
+    {
+      "id": 88,
+      "lt": "žiūrėti",
+      "en": "to watch/look",
+      "category": "verbs_daily"
+    },
+    {
+      "id": 89,
+      "lt": "klausyti",
+      "en": "to listen",
+      "category": "verbs_daily"
+    },
+    {
+      "id": 90,
+      "lt": "gaminti",
+      "en": "to cook",
+      "category": "verbs_daily"
+    },
+    
+    {
+      "id": 91,
+      "lt": "kompiuteris",
+      "en": "computer",
+      "category": "nouns_technology"
+    },
+    {
+      "id": 92,
+      "lt": "internetas",
+      "en": "internet",
+      "category": "nouns_technology"
+    },
+    {
+      "id": 93,
+      "lt": "televizorius",
+      "en": "television",
+      "category": "nouns_technology"
+    },
+    {
+      "id": 94,
+      "lt": "radijas",
+      "en": "radio",
+      "category": "nouns_technology"
+    },
+    {
+      "id": 95,
+      "lt": "planšetė",
+      "en": "tablet",
+      "category": "nouns_technology"
+    },
+    
+    {
+      "id": 96,
+      "lt": "skambinti",
+      "en": "to call",
+      "category": "verbs_technology"
+    },
+    {
+      "id": 97,
+      "lt": "siųsti",
+      "en": "to send",
+      "category": "verbs_technology"
+    },
+    {
+      "id": 98,
+      "lt": "ieškoti",
+      "en": "to search",
+      "category": "verbs_technology"
+    },
+    {
+      "id": 99,
+      "lt": "spausdinti",
+      "en": "to print",
+      "category": "verbs_technology"
+    },
+    {
+      "id": 100,
+      "lt": "fotografuoti",
+      "en": "to photograph",
+      "category": "verbs_technology"
+    }
+  ]
+} 
