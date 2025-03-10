@@ -76,7 +76,10 @@ export default function FlipCard({ frontText, backText, onFlip, selectedLanguage
         }`}
       >
         {/* Front - Lithuanian */}
-        <div className="absolute w-full h-full bg-white rounded-lg shadow-lg backface-hidden flex flex-col items-center justify-center p-4">
+        <div 
+          className="absolute w-full h-full bg-white rounded-lg shadow-lg backface-hidden flex flex-col items-center justify-center p-4 cursor-pointer"
+          onClick={handleFlip}
+        >
           <div className="flex items-center gap-2">
             <p className="text-2xl font-semibold text-center">{frontText}</p>
             <button

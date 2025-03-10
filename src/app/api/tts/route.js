@@ -1,12 +1,15 @@
 "use server";
 import { NextResponse } from "next/server";
+import { put, list } from "@vercel/blob";
 import fs from 'fs';
 import path from 'path';
 import phrases from '@/data/phrases.json';
 
-// Create cache directory if it doesn't exist
+const isDevelopment = process.env.NODE_ENV === 'development';
 const CACHE_DIR = path.join(process.cwd(), 'public', 'audio-cache');
-if (!fs.existsSync(CACHE_DIR)) {
+
+// Create cache directory if it doesn't exist (for development)
+if (isDevelopment && !fs.existsSync(CACHE_DIR)) {
   fs.mkdirSync(CACHE_DIR, { recursive: true });
 }
 
@@ -17,20 +20,52 @@ function getTextById(id) {
 }
 
 // Helper function to check if file exists in cache
-function getCachedAudio(id) {
-  const filepath = path.join(CACHE_DIR, `${id}.mp3`);
-  
-  if (fs.existsSync(filepath)) {
-    const audioContent = fs.readFileSync(filepath);
-    return audioContent.toString('base64');
+async function getCachedAudio(id) {
+  if (isDevelopment) {
+    // Local storage in development
+    const filepath = path.join(CACHE_DIR, `${id}.mp3`);
+    if (fs.existsSync(filepath)) {
+      const audioContent = fs.readFileSync(filepath);
+      return audioContent.toString('base64');
+    }
+    return null;
+  } else {
+    // Vercel Blob in production
+    try {
+      const { blobs } = await list({ prefix: `audio/${id}` });
+      if (blobs.length > 0) {
+        const response = await fetch(blobs[0].url);
+        const arrayBuffer = await response.arrayBuffer();
+        return Buffer.from(arrayBuffer).toString('base64');
+      }
+      return null;
+    } catch (error) {
+      console.error('Error checking blob cache:', error);
+      return null;
+    }
   }
-  return null;
 }
 
 // Helper function to save audio to cache
-function saveToCache(id, audioContent) {
-  const filepath = path.join(CACHE_DIR, `${id}.mp3`);
-  fs.writeFileSync(filepath, Buffer.from(audioContent, 'base64'));
+async function saveToCache(id, audioContent) {
+  if (isDevelopment) {
+    // Local storage in development
+    const filepath = path.join(CACHE_DIR, `${id}.mp3`);
+    fs.writeFileSync(filepath, Buffer.from(audioContent, 'base64'));
+    return filepath;
+  } else {
+    // Vercel Blob in production
+    try {
+      const { url } = await put(`audio/${id}.mp3`, Buffer.from(audioContent, 'base64'), {
+        access: 'public',
+        contentType: 'audio/mp3'
+      });
+      return url;
+    } catch (error) {
+      console.error('Error saving to blob storage:', error);
+      throw error;
+    }
+  }
 }
 
 export async function POST(request) {
@@ -44,9 +79,9 @@ export async function POST(request) {
     }
 
     // Check cache first
-    const cachedAudio = getCachedAudio(id);
+    const cachedAudio = await getCachedAudio(id);
     if (cachedAudio) {
-      console.log("Using cached audio for ID:", id);
+      console.log(`Using cached audio for ID: ${id} (${isDevelopment ? 'local' : 'blob'} storage)`);
       return NextResponse.json({ audio: cachedAudio });
     }
 
@@ -82,8 +117,8 @@ export async function POST(request) {
     const data = await response.json();
     
     // Save to cache
-    saveToCache(id, data.audioContent);
-    console.log("Saved audio to cache for ID:", id);
+    const cachePath = await saveToCache(id, data.audioContent);
+    console.log(`Saved audio to cache for ID: ${id} (${isDevelopment ? 'local' : 'blob'} storage) at ${cachePath}`);
 
     return NextResponse.json({ audio: data.audioContent });
   } catch (error) {
