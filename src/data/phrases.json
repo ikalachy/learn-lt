@@ -4,30 +4,40 @@
       "id": 1,
       "lt": "Labas",
       "en": "Hello",
+      "ru": "Привет",
+      "by": "Прывітанне",
       "category": "greetings"
     },
     {
       "id": 2,
       "lt": "Ačiū",
       "en": "Thank you",
+      "ru": "Спасибо",
+      "by": "Дзякуй",
       "category": "common"
     },
     {
       "id": 3,
       "lt": "Prašau",
       "en": "Please/You're welcome",
+      "ru": "Пожалуйста",
+      "by": "Калі ласка",
       "category": "common"
     },
     {
       "id": 4,
       "lt": "Kaip sekasi?",
       "en": "How are you?",
+      "ru": "Как дела?",
+      "by": "Як справы?",
       "category": "greetings"
     },
     {
       "id": 5,
       "lt": "Viso gero",
       "en": "Goodbye",
+      "ru": "До свидания",
+      "by": "Да пабачэння",
       "category": "greetings"
     },
     
@@ -35,60 +45,80 @@
       "id": 6,
       "lt": "žmogus",
       "en": "person",
+      "ru": "человек",
+      "by": "чалавек",
       "category": "nouns_people"
     },
     {
       "id": 7,
       "lt": "vyras",
       "en": "man",
+      "ru": "мужчина",
+      "by": "мужчына",
       "category": "nouns_people"
     },
     {
       "id": 8,
       "lt": "moteris",
       "en": "woman",
+      "ru": "женщина",
+      "by": "жанчына",
       "category": "nouns_people"
     },
     {
       "id": 9,
       "lt": "vaikas",
       "en": "child",
+      "ru": "ребёнок",
+      "by": "дзіця",
       "category": "nouns_people"
     },
     {
       "id": 10,
       "lt": "šeima",
       "en": "family",
+      "ru": "семья",
+      "by": "сям'я",
       "category": "nouns_people"
     },
     {
       "id": 11,
       "lt": "tėvas",
       "en": "father",
+      "ru": "отец",
+      "by": "бацька",
       "category": "nouns_people"
     },
     {
       "id": 12,
       "lt": "motina",
       "en": "mother",
+      "ru": "мать",
+      "by": "маці",
       "category": "nouns_people"
     },
     {
       "id": 13,
       "lt": "brolis",
       "en": "brother",
+      "ru": "брат",
+      "by": "брат",
       "category": "nouns_people"
     },
     {
       "id": 14,
       "lt": "sesuo",
       "en": "sister",
+      "ru": "сестра",
+      "by": "сястра",
       "category": "nouns_people"
     },
     {
       "id": 15,
       "lt": "draugas",
       "en": "friend",
+      "ru": "друг",
+      "by": "сябар",
       "category": "nouns_people"
     },
     
@@ -96,30 +126,40 @@
       "id": 16,
       "lt": "namas",
       "en": "house",
+      "ru": "дом",
+      "by": "дом",
       "category": "nouns_places"
     },
     {
       "id": 17,
       "lt": "miestas",
       "en": "city",
+      "ru": "город",
+      "by": "горад",
       "category": "nouns_places"
     },
     {
       "id": 18,
       "lt": "mokykla",
       "en": "school",
+      "ru": "школа",
+      "by": "школа",
       "category": "nouns_places"
     },
     {
       "id": 19,
       "lt": "parduotuvė",
       "en": "shop",
+      "ru": "магазин",
+      "by": "крама",
       "category": "nouns_places"
     },
     {
       "id": 20,
       "lt": "restoranas",
       "en": "restaurant",
+      "ru": "ресторан",
+      "by": "рэстаран",
       "category": "nouns_places"
     },
     
@@ -127,30 +167,40 @@
       "id": 21,
       "lt": "stalas",
       "en": "table",
+      "ru": "стол",
+      "by": "стол",
       "category": "nouns_objects"
     },
     {
       "id": 22,
       "lt": "kėdė",
       "en": "chair",
+      "ru": "стул",
+      "by": "крэсла",
       "category": "nouns_objects"
     },
     {
       "id": 23,
       "lt": "knyga",
       "en": "book",
+      "ru": "книга",
+      "by": "кніга",
       "category": "nouns_objects"
     },
     {
       "id": 24,
       "lt": "telefonas",
       "en": "phone",
+      "ru": "телефон",
+      "by": "тэлефон",
       "category": "nouns_objects"
     },
     {
       "id": 25,
       "lt": "automobilis",
       "en": "car",
+      "ru": "автомобиль",
+      "by": "аўтамабіль",
       "category": "nouns_objects"
     },
     
@@ -158,30 +208,40 @@
       "id": 26,
       "lt": "laikas",
       "en": "time",
+      "ru": "время",
+      "by": "час",
       "category": "nouns_time"
     },
     {
       "id": 27,
       "lt": "diena",
       "en": "day",
+      "ru": "день",
+      "by": "дзень",
       "category": "nouns_time"
     },
     {
       "id": 28,
       "lt": "savaitė",
       "en": "week",
+      "ru": "неделя",
+      "by": "тыдзень",
       "category": "nouns_time"
     },
     {
       "id": 29,
       "lt": "mėnuo",
       "en": "month",
+      "ru": "месяц",
+      "by": "месяц",
       "category": "nouns_time"
     },
     {
       "id": 30,
       "lt": "metai",
       "en": "year",
+      "ru": "год",
+      "by": "год",
       "category": "nouns_time"
     },
     
@@ -189,30 +249,40 @@
       "id": 31,
       "lt": "medis",
       "en": "tree",
+      "ru": "дерево",
+      "by": "дрэва",
       "category": "nouns_nature"
     },
     {
       "id": 32,
       "lt": "gėlė",
       "en": "flower",
+      "ru": "цветок",
+      "by": "кветка",
       "category": "nouns_nature"
     },
     {
       "id": 33,
       "lt": "saulė",
       "en": "sun",
+      "ru": "солнце",
+      "by": "сонца",
       "category": "nouns_nature"
     },
     {
       "id": 34,
       "lt": "mėnulis",
       "en": "moon",
+      "ru": "луна",
+      "by": "месяц",
       "category": "nouns_nature"
     },
     {
       "id": 35,
       "lt": "vanduo",
       "en": "water",
+      "ru": "вода",
+      "by": "вада",
       "category": "nouns_nature"
     },
     
@@ -220,30 +290,40 @@
       "id": 36,
       "lt": "būti",
       "en": "to be",
+      "ru": "быть",
+      "by": "быць",
       "category": "verbs_basic"
     },
     {
       "id": 37,
       "lt": "turėti",
       "en": "to have",
+      "ru": "иметь",
+      "by": "мець",
       "category": "verbs_basic"
     },
     {
       "id": 38,
       "lt": "daryti",
       "en": "to do",
+      "ru": "делать",
+      "by": "рабіць",
       "category": "verbs_basic"
     },
     {
       "id": 39,
       "lt": "eiti",
       "en": "to go",
+      "ru": "идти",
+      "by": "ісці",
       "category": "verbs_basic"
     },
     {
       "id": 40,
       "lt": "ateiti",
       "en": "to come",
+      "ru": "приходить",
+      "by": "прыходзіць",
       "category": "verbs_basic"
     },
     
@@ -251,30 +331,40 @@
       "id": 41,
       "lt": "valgyti",
       "en": "to eat",
+      "ru": "есть",
+      "by": "есці",
       "category": "verbs_daily"
     },
     {
       "id": 42,
       "lt": "gerti",
       "en": "to drink",
+      "ru": "пить",
+      "by": "піць",
       "category": "verbs_daily"
     },
     {
       "id": 43,
       "lt": "miegoti",
       "en": "to sleep",
+      "ru": "спать",
+      "by": "спаць",
       "category": "verbs_daily"
     },
     {
       "id": 44,
       "lt": "kalbėti",
       "en": "to speak",
+      "ru": "говорить",
+      "by": "гаварыць",
       "category": "verbs_daily"
     },
     {
       "id": 45,
       "lt": "dirbti",
       "en": "to work",
+      "ru": "работать",
+      "by": "працаваць",
       "category": "verbs_daily"
     },
     
@@ -282,30 +372,40 @@
       "id": 46,
       "lt": "mąstyti",
       "en": "to think",
+      "ru": "думать",
+      "by": "думаць",
       "category": "verbs_mental"
     },
     {
       "id": 47,
       "lt": "žinoti",
       "en": "to know",
+      "ru": "знать",
+      "by": "ведаць",
       "category": "verbs_mental"
     },
     {
       "id": 48,
       "lt": "suprasti",
       "en": "to understand",
+      "ru": "понимать",
+      "by": "разумець",
       "category": "verbs_mental"
     },
     {
       "id": 49,
       "lt": "mokytis",
       "en": "to learn",
+      "ru": "учиться",
+      "by": "вучыцца",
       "category": "verbs_mental"
     },
     {
       "id": 50,
       "lt": "norėti",
       "en": "to want",
+      "ru": "хотеть",
+      "by": "хацець",
       "category": "verbs_mental"
     },
     
@@ -313,30 +413,40 @@
       "id": 51,
       "lt": "maistas",
       "en": "food",
+      "ru": "еда",
+      "by": "ежа",
       "category": "nouns_food"
     },
     {
       "id": 52,
       "lt": "duona",
       "en": "bread",
+      "ru": "хлеб",
+      "by": "хлеб",
       "category": "nouns_food"
     },
     {
       "id": 53,
       "lt": "pienas",
       "en": "milk",
+      "ru": "молоко",
+      "by": "малако",
       "category": "nouns_food"
     },
     {
       "id": 54,
       "lt": "kava",
       "en": "coffee",
+      "ru": "кофе",
+      "by": "кава",
       "category": "nouns_food"
     },
     {
       "id": 55,
       "lt": "arbata",
       "en": "tea",
+      "ru": "чай",
+      "by": "гарбата",
       "category": "nouns_food"
     },
     
@@ -344,30 +454,40 @@
       "id": 56,
       "lt": "galva",
       "en": "head",
+      "ru": "голова",
+      "by": "галава",
       "category": "nouns_body"
     },
     {
       "id": 57,
       "lt": "ranka",
       "en": "hand",
+      "ru": "рука",
+      "by": "рука",
       "category": "nouns_body"
     },
     {
       "id": 58,
       "lt": "koja",
       "en": "leg",
+      "ru": "нога",
+      "by": "нага",
       "category": "nouns_body"
     },
     {
       "id": 59,
       "lt": "akis",
       "en": "eye",
+      "ru": "глаз",
+      "by": "вока",
       "category": "nouns_body"
     },
     {
       "id": 60,
       "lt": "burna",
       "en": "mouth",
+      "ru": "рот",
+      "by": "рот",
       "category": "nouns_body"
     },
     
@@ -375,30 +495,40 @@
       "id": 61,
       "lt": "bėgti",
       "en": "to run",
+      "ru": "бежать",
+      "by": "бегчы",
       "category": "verbs_motion"
     },
     {
       "id": 62,
       "lt": "šokti",
       "en": "to jump/dance",
+      "ru": "прыгать/танцевать",
+      "by": "скакаць/танцаваць",
       "category": "verbs_motion"
     },
     {
       "id": 63,
       "lt": "sėdėti",
       "en": "to sit",
+      "ru": "сидеть",
+      "by": "сядзець",
       "category": "verbs_motion"
     },
     {
       "id": 64,
       "lt": "stovėti",
       "en": "to stand",
+      "ru": "стоять",
+      "by": "стаяць",
       "category": "verbs_motion"
     },
     {
       "id": 65,
       "lt": "vaikščioti",
       "en": "to walk",
+      "ru": "ходить",
+      "by": "хадзіць",
       "category": "verbs_motion"
     },
     
@@ -406,30 +536,40 @@
       "id": 66,
       "lt": "sakyti",
       "en": "to say",
+      "ru": "говорить",
+      "by": "казаць",
       "category": "verbs_communication"
     },
     {
       "id": 67,
       "lt": "klausti",
       "en": "to ask",
+      "ru": "спрашивать",
+      "by": "пытацца",
       "category": "verbs_communication"
     },
     {
       "id": 68,
       "lt": "atsakyti",
       "en": "to answer",
+      "ru": "отвечать",
+      "by": "адказваць",
       "category": "verbs_communication"
     },
     {
       "id": 69,
       "lt": "rašyti",
       "en": "to write",
+      "ru": "писать",
+      "by": "пісаць",
       "category": "verbs_communication"
     },
     {
       "id": 70,
       "lt": "skaityti",
       "en": "to read",
+      "ru": "читать",
+      "by": "чытаць",
       "category": "verbs_communication"
     },
     
@@ -437,30 +577,40 @@
       "id": 71,
       "lt": "oras",
       "en": "weather",
+      "ru": "погода",
+      "by": "надвор'е",
       "category": "nouns_weather"
     },
     {
       "id": 72,
       "lt": "lietus",
       "en": "rain",
+      "ru": "дождь",
+      "by": "дождж",
       "category": "nouns_weather"
     },
     {
       "id": 73,
       "lt": "sniegas",
       "en": "snow",
+      "ru": "снег",
+      "by": "снег",
       "category": "nouns_weather"
     },
     {
       "id": 74,
       "lt": "vėjas",
       "en": "wind",
+      "ru": "ветер",
+      "by": "вецер",
       "category": "nouns_weather"
     },
     {
       "id": 75,
       "lt": "debesys",
       "en": "cloud",
+      "ru": "облако",
+      "by": "воблака",
       "category": "nouns_weather"
     },
     
@@ -468,30 +618,40 @@
       "id": 76,
       "lt": "mylėti",
       "en": "to love",
+      "ru": "любить",
+      "by": "кахаць",
       "category": "verbs_emotions"
     },
     {
       "id": 77,
       "lt": "jausti",
       "en": "to feel",
+      "ru": "чувствовать",
+      "by": "адчуваць",
       "category": "verbs_emotions"
     },
     {
       "id": 78,
       "lt": "verkti",
       "en": "to cry",
+      "ru": "плакать",
+      "by": "плакаць",
       "category": "verbs_emotions"
     },
     {
       "id": 79,
       "lt": "juoktis",
       "en": "to laugh",
+      "ru": "смеяться",
+      "by": "смяяцца",
       "category": "verbs_emotions"
     },
     {
       "id": 80,
       "lt": "šypsotis",
       "en": "to smile",
+      "ru": "улыбаться",
+      "by": "усміхацца",
       "category": "verbs_emotions"
     },
     
@@ -499,30 +659,40 @@
       "id": 81,
       "lt": "drabužiai",
       "en": "clothes",
+      "ru": "одежда",
+      "by": "адзенне",
       "category": "nouns_clothing"
     },
     {
       "id": 82,
       "lt": "batai",
       "en": "shoes",
+      "ru": "обувь",
+      "by": "абутак",
       "category": "nouns_clothing"
     },
     {
       "id": 83,
       "lt": "kepurė",
       "en": "hat",
+      "ru": "шапка",
+      "by": "шапка",
       "category": "nouns_clothing"
     },
     {
       "id": 84,
       "lt": "šalikas",
       "en": "scarf",
+      "ru": "шарф",
+      "by": "шалік",
       "category": "nouns_clothing"
     },
     {
       "id": 85,
       "lt": "pirštinės",
       "en": "gloves",
+      "ru": "перчатки",
+      "by": "пальчаткі",
       "category": "nouns_clothing"
     },
     
@@ -530,30 +700,40 @@
       "id": 86,
       "lt": "praustis",
       "en": "to wash oneself",
+      "ru": "умываться",
+      "by": "мыцца",
       "category": "verbs_daily"
     },
     {
       "id": 87,
       "lt": "rengtis",
       "en": "to get dressed",
+      "ru": "одеваться",
+      "by": "апранацца",
       "category": "verbs_daily"
     },
     {
       "id": 88,
       "lt": "žiūrėti",
       "en": "to watch/look",
+      "ru": "смотреть",
+      "by": "глядзець",
       "category": "verbs_daily"
     },
     {
       "id": 89,
       "lt": "klausyti",
       "en": "to listen",
+      "ru": "слушать",
+      "by": "слухаць",
       "category": "verbs_daily"
     },
     {
       "id": 90,
       "lt": "gaminti",
       "en": "to cook",
+      "ru": "готовить",
+      "by": "гатаваць",
       "category": "verbs_daily"
     },
     
@@ -561,30 +741,40 @@
       "id": 91,
       "lt": "kompiuteris",
       "en": "computer",
+      "ru": "компьютер",
+      "by": "камп'ютар",
       "category": "nouns_technology"
     },
     {
       "id": 92,
       "lt": "internetas",
       "en": "internet",
+      "ru": "интернет",
+      "by": "інтэрнэт",
       "category": "nouns_technology"
     },
     {
       "id": 93,
       "lt": "televizorius",
       "en": "television",
+      "ru": "телевизор",
+      "by": "тэлевізар",
       "category": "nouns_technology"
     },
     {
       "id": 94,
       "lt": "radijas",
       "en": "radio",
+      "ru": "радио",
+      "by": "радыё",
       "category": "nouns_technology"
     },
     {
       "id": 95,
       "lt": "planšetė",
       "en": "tablet",
+      "ru": "планшет",
+      "by": "планшэт",
       "category": "nouns_technology"
     },
     
@@ -592,30 +782,440 @@
       "id": 96,
       "lt": "skambinti",
       "en": "to call",
+      "ru": "звонить",
+      "by": "тэлефанаваць",
       "category": "verbs_technology"
     },
     {
       "id": 97,
       "lt": "siųsti",
       "en": "to send",
+      "ru": "отправлять",
+      "by": "адпраўляць",
       "category": "verbs_technology"
     },
     {
       "id": 98,
       "lt": "ieškoti",
       "en": "to search",
+      "ru": "искать",
+      "by": "шукаць",
       "category": "verbs_technology"
     },
     {
       "id": 99,
       "lt": "spausdinti",
       "en": "to print",
+      "ru": "печатать",
+      "by": "друкаваць",
       "category": "verbs_technology"
     },
     {
       "id": 100,
       "lt": "fotografuoti",
       "en": "to photograph",
+      "ru": "фотографировать",
+      "by": "фатаграфаваць",
+      "category": "verbs_technology"
+    },
+    {
+      "id": 101,
+      "lt": "pirkti",
+      "en": "to buy",
+      "ru": "покупать",
+      "by": "купляць",
+      "category": "verbs_commerce"
+    },
+    {
+      "id": 102,
+      "lt": "parduoti",
+      "en": "to sell",
+      "ru": "продавать",
+      "by": "прадаваць",
+      "category": "verbs_commerce"
+    },
+    {
+      "id": 103,
+      "lt": "mokėti",
+      "en": "to pay",
+      "ru": "платить",
+      "by": "плаціць",
+      "category": "verbs_commerce"
+    },
+    {
+      "id": 104,
+      "lt": "taupyti",
+      "en": "to save",
+      "ru": "экономить",
+      "by": "эканоміць",
+      "category": "verbs_commerce"
+    },
+    {
+      "id": 105,
+      "lt": "skolinti",
+      "en": "to lend",
+      "ru": "одалживать",
+      "by": "пазычаць",
+      "category": "verbs_commerce"
+    },
+    {
+      "id": 106,
+      "lt": "keliauti",
+      "en": "to travel",
+      "ru": "путешествовать",
+      "by": "падарожнічаць",
+      "category": "verbs_motion"
+    },
+    {
+      "id": 107,
+      "lt": "skristi",
+      "en": "to fly",
+      "ru": "летать",
+      "by": "лятаць",
+      "category": "verbs_motion"
+    },
+    {
+      "id": 108,
+      "lt": "plaukti",
+      "en": "to swim",
+      "ru": "плавать",
+      "by": "плаваць",
+      "category": "verbs_motion"
+    },
+    {
+      "id": 109,
+      "lt": "šokti",
+      "en": "to dance",
+      "ru": "танцевать",
+      "by": "танцаваць",
+      "category": "verbs_motion"
+    },
+    {
+      "id": 110,
+      "lt": "lipti",
+      "en": "to climb",
+      "ru": "взбираться",
+      "by": "узбірацца",
+      "category": "verbs_motion"
+    },
+    {
+      "id": 111,
+      "lt": "kurti",
+      "en": "to create",
+      "ru": "создавать",
+      "by": "ствараць",
+      "category": "verbs_creative"
+    },
+    {
+      "id": 112,
+      "lt": "piešti",
+      "en": "to draw",
+      "ru": "рисовать",
+      "by": "маляваць",
+      "category": "verbs_creative"
+    },
+    {
+      "id": 113,
+      "lt": "dainuoti",
+      "en": "to sing",
+      "ru": "петь",
+      "by": "спяваць",
+      "category": "verbs_creative"
+    },
+    {
+      "id": 114,
+      "lt": "groti",
+      "en": "to play (music)",
+      "ru": "играть (музыку)",
+      "by": "іграць (музыку)",
+      "category": "verbs_creative"
+    },
+    {
+      "id": 115,
+      "lt": "komponuoti",
+      "en": "to compose",
+      "ru": "сочинять",
+      "by": "складаць",
+      "category": "verbs_creative"
+    },
+    {
+      "id": 116,
+      "lt": "pradėti",
+      "en": "to begin",
+      "ru": "начинать",
+      "by": "пачынаць",
+      "category": "verbs_basic"
+    },
+    {
+      "id": 117,
+      "lt": "baigti",
+      "en": "to finish",
+      "ru": "заканчивать",
+      "by": "заканчваць",
+      "category": "verbs_basic"
+    },
+    {
+      "id": 118,
+      "lt": "laukti",
+      "en": "to wait",
+      "ru": "ждать",
+      "by": "чакаць",
+      "category": "verbs_basic"
+    },
+    {
+      "id": 119,
+      "lt": "gauti",
+      "en": "to receive",
+      "ru": "получать",
+      "by": "атрымліваць",
+      "category": "verbs_basic"
+    },
+    {
+      "id": 120,
+      "lt": "duoti",
+      "en": "to give",
+      "ru": "давать",
+      "by": "даваць",
+      "category": "verbs_basic"
+    },
+    {
+      "id": 121,
+      "lt": "augti",
+      "en": "to grow",
+      "ru": "расти",
+      "by": "расці",
+      "category": "verbs_nature"
+    },
+    {
+      "id": 122,
+      "lt": "žydėti",
+      "en": "to bloom",
+      "ru": "цвести",
+      "by": "квітнець",
+      "category": "verbs_nature"
+    },
+    {
+      "id": 123,
+      "lt": "nokti",
+      "en": "to ripen",
+      "ru": "созревать",
+      "by": "спець",
+      "category": "verbs_nature"
+    },
+    {
+      "id": 124,
+      "lt": "vysti",
+      "en": "to wither",
+      "ru": "вянуть",
+      "by": "вянуць",
+      "category": "verbs_nature"
+    },
+    {
+      "id": 125,
+      "lt": "džiūti",
+      "en": "to dry",
+      "ru": "сохнуть",
+      "by": "сохнуць",
+      "category": "verbs_nature"
+    },
+    {
+      "id": 126,
+      "lt": "mokyti",
+      "en": "to teach",
+      "ru": "учить",
+      "by": "вучыць",
+      "category": "verbs_education"
+    },
+    {
+      "id": 127,
+      "lt": "studijuoti",
+      "en": "to study",
+      "ru": "изучать",
+      "by": "вывучаць",
+      "category": "verbs_education"
+    },
+    {
+      "id": 128,
+      "lt": "skaičiuoti",
+      "en": "to count",
+      "ru": "считать",
+      "by": "лічыць",
+      "category": "verbs_education"
+    },
+    {
+      "id": 129,
+      "lt": "tyrinėti",
+      "en": "to research",
+      "ru": "исследовать",
+      "by": "даследаваць",
+      "category": "verbs_education"
+    },
+    {
+      "id": 130,
+      "lt": "analizuoti",
+      "en": "to analyze",
+      "ru": "анализировать",
+      "by": "аналізаваць",
+      "category": "verbs_education"
+    },
+    {
+      "id": 131,
+      "lt": "gydyti",
+      "en": "to heal",
+      "ru": "лечить",
+      "by": "лячыць",
+      "category": "verbs_health"
+    },
+    {
+      "id": 132,
+      "lt": "sirgti",
+      "en": "to be sick",
+      "ru": "болеть",
+      "by": "хварэць",
+      "category": "verbs_health"
+    },
+    {
+      "id": 133,
+      "lt": "sveikti",
+      "en": "to recover",
+      "ru": "выздоравливать",
+      "by": "выздараўліваць",
+      "category": "verbs_health"
+    },
+    {
+      "id": 134,
+      "lt": "mankštintis",
+      "en": "to exercise",
+      "ru": "упражняться",
+      "by": "практыкавацца",
+      "category": "verbs_health"
+    },
+    {
+      "id": 135,
+      "lt": "ilsėtis",
+      "en": "to rest",
+      "ru": "отдыхать",
+      "by": "адпачываць",
+      "category": "verbs_health"
+    },
+    {
+      "id": 136,
+      "lt": "planuoti",
+      "en": "to plan",
+      "ru": "планировать",
+      "by": "планаваць",
+      "category": "verbs_mental"
+    },
+    {
+      "id": 137,
+      "lt": "svajoti",
+      "en": "to dream",
+      "ru": "мечтать",
+      "by": "марыць",
+      "category": "verbs_mental"
+    },
+    {
+      "id": 138,
+      "lt": "tikėti",
+      "en": "to believe",
+      "ru": "верить",
+      "by": "верыць",
+      "category": "verbs_mental"
+    },
+    {
+      "id": 139,
+      "lt": "abejoti",
+      "en": "to doubt",
+      "ru": "сомневаться",
+      "by": "сумнявацца",
+      "category": "verbs_mental"
+    },
+    {
+      "id": 140,
+      "lt": "prisiminti",
+      "en": "to remember",
+      "ru": "помнить",
+      "by": "памятаць",
+      "category": "verbs_mental"
+    },
+    {
+      "id": 141,
+      "lt": "valyti",
+      "en": "to clean",
+      "ru": "чистить",
+      "by": "чысціць",
+      "category": "verbs_household"
+    },
+    {
+      "id": 142,
+      "lt": "skalbti",
+      "en": "to wash (clothes)",
+      "ru": "стирать",
+      "by": "мыць",
+      "category": "verbs_household"
+    },
+    {
+      "id": 143,
+      "lt": "lyginti",
+      "en": "to iron",
+      "ru": "гладить",
+      "by": "прасаваць",
+      "category": "verbs_household"
+    },
+    {
+      "id": 144,
+      "lt": "tvarkyti",
+      "en": "to organize",
+      "ru": "убирать",
+      "by": "прыбіраць",
+      "category": "verbs_household"
+    },
+    {
+      "id": 145,
+      "lt": "remontuoti",
+      "en": "to repair",
+      "ru": "ремонтировать",
+      "by": "рамантаваць",
+      "category": "verbs_household"
+    },
+    {
+      "id": 146,
+      "lt": "programuoti",
+      "en": "to program",
+      "ru": "программировать",
+      "by": "праграмаваць",
+      "category": "verbs_technology"
+    },
+    {
+      "id": 147,
+      "lt": "naršyti",
+      "en": "to browse",
+      "ru": "просматривать",
+      "by": "праглядаць",
+      "category": "verbs_technology"
+    },
+    {
+      "id": 148,
+      "lt": "parsisiųsti",
+      "en": "to download",
+      "ru": "скачивать",
+      "by": "спампоўваць",
+      "category": "verbs_technology"
+    },
+    {
+      "id": 149,
+      "lt": "įkelti",
+      "en": "to upload",
+      "ru": "загружать",
+      "by": "загружаць",
+      "category": "verbs_technology"
+    },
+    {
+      "id": 150,
+      "lt": "atnaujinti",
+      "en": "to update",
+      "ru": "обновлять",
+      "by": "абнаўляць",
       "category": "verbs_technology"
     }
   ]

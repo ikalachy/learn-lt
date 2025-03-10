@@ -4,10 +4,12 @@ import { useState, useEffect } from 'react';
 import FlipCard from '@/components/FlipCard';
 import phrases from '@/data/phrases.json';
 import { updateProgress } from '@/utils/progressManager';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function FlashcardsPage() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showControls, setShowControls] = useState(false);
+  const { selectedLanguage } = useLanguage();
 
   const currentPhrase = phrases.phrases[currentIndex];
 
@@ -40,8 +42,9 @@ export default function FlashcardsPage() {
         <div className="flex flex-col items-center gap-8">
           <FlipCard 
             frontText={currentPhrase.lt}
-            backText={currentPhrase.en}
+            backText={currentPhrase[selectedLanguage]}
             onFlip={handleFlip}
+            selectedLanguage={selectedLanguage}
           />
 
           <div className="flex gap-4">

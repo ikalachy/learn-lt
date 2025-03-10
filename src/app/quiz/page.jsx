@@ -3,12 +3,14 @@
 import { useState, useEffect } from 'react';
 import phrases from '@/data/phrases.json';
 import { updateProgress } from '@/utils/progressManager';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function QuizPage() {
   const [currentPhrase, setCurrentPhrase] = useState(null);
   const [options, setOptions] = useState([]);
   const [userAnswer, setUserAnswer] = useState(null);
   const [isCorrect, setIsCorrect] = useState(null);
+  const { selectedLanguage } = useLanguage();
 
   const getRandomPhrases = (count, excludeId) => {
     return phrases.phrases
@@ -19,8 +21,8 @@ export default function QuizPage() {
 
   const setupNewQuestion = () => {
     const phrase = phrases.phrases[Math.floor(Math.random() * phrases.phrases.length)];
-    const wrongOptions = getRandomPhrases(3, phrase.id).map(p => p.en);
-    const allOptions = [...wrongOptions, phrase.en].sort(() => 0.5 - Math.random());
+    const wrongOptions = getRandomPhrases(3, phrase.id).map(p => p[selectedLanguage]);
+    const allOptions = [...wrongOptions, phrase[selectedLanguage]].sort(() => 0.5 - Math.random());
     
     setCurrentPhrase(phrase);
     setOptions(allOptions);
@@ -30,11 +32,11 @@ export default function QuizPage() {
 
   useEffect(() => {
     setupNewQuestion();
-  }, []);
+  }, [selectedLanguage]);
 
   const handleAnswer = (answer) => {
     setUserAnswer(answer);
-    const correct = answer === currentPhrase.en;
+    const correct = answer === currentPhrase[selectedLanguage];
     setIsCorrect(correct);
     updateProgress(currentPhrase.id, correct);
   };
@@ -45,7 +47,7 @@ export default function QuizPage() {
     <div className="min-h-screen bg-gray-100 py-12 px-4">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-3xl font-bold text-center mb-8">Lithuanian Quiz</h1>
-        
+
         <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
           <p className="text-2xl font-semibold text-center mb-8">{currentPhrase.lt}</p>
           
@@ -62,7 +64,7 @@ export default function QuizPage() {
                     ? isCorrect
                       ? 'bg-green-500 text-white'
                       : 'bg-red-500 text-white'
-                    : option === currentPhrase.en && userAnswer !== null
+                    : option === currentPhrase[selectedLanguage] && userAnswer !== null
                     ? 'bg-green-500 text-white'
                     : 'bg-gray-200'
                 }`}
