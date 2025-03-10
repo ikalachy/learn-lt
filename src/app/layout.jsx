@@ -26,37 +26,37 @@ export default function RootLayout({ children }) {
                 <span className="sm:hidden">LLT</span>
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-200 transition-all group-hover:w-full"></span>
               </Link>
-              <div className="flex items-center space-x-4 sm:space-x-6">
-                <div className="space-x-2 sm:space-x-4 flex items-center">
+              <div className="flex items-center space-x-2 sm:space-x-6">
+                <div className="space-x-1 sm:space-x-4 flex items-center">
                   <Link 
                     href="/flashcards" 
-                    className={`relative px-3 py-1 rounded-md transition-all hover:bg-white/10 ${
+                    className={`relative px-2 sm:px-3 py-1 rounded-md transition-all hover:bg-white/10 ${
                       pathname === '/flashcards' ? 'text-blue-200 font-medium' : ''
                     }`}
                   >
-                    <span>Flashcards</span>
+                    <span className="text-sm sm:text-base">Cards</span>
                     {pathname === '/flashcards' && (
                       <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-200"></span>
                     )}
                   </Link>
                   <Link 
                     href="/quiz" 
-                    className={`relative px-3 py-1 rounded-md transition-all hover:bg-white/10 ${
+                    className={`relative px-2 sm:px-3 py-1 rounded-md transition-all hover:bg-white/10 ${
                       pathname === '/quiz' ? 'text-blue-200 font-medium' : ''
                     }`}
                   >
-                    <span>Quiz</span>
+                    <span className="text-sm sm:text-base">Quiz</span>
                     {pathname === '/quiz' && (
                       <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-200"></span>
                     )}
                   </Link>
                   <Link 
                     href="/typing" 
-                    className={`relative px-3 py-1 rounded-md transition-all hover:bg-white/10 ${
+                    className={`relative px-2 sm:px-3 py-1 rounded-md transition-all hover:bg-white/10 ${
                       pathname === '/typing' ? 'text-blue-200 font-medium' : ''
                     }`}
                   >
-                    <span>Spell It!</span>
+                    <span className="text-sm sm:text-base whitespace-nowrap">Spell It!</span>
                     {pathname === '/typing' && (
                       <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-200"></span>
                     )}
