@@ -162,19 +162,19 @@ export default function TypingPage() {
           </div>
 
           {/* Selected letters */}
-          <div className="flex flex-wrap justify-center gap-1.5 mb-3 min-h-[44px] p-1.5 border-2 border-dashed border-gray-300 rounded-lg bg-gray-50">
+          <div className="flex flex-wrap justify-center gap-1.5 mb-3 min-h-[52px] p-1.5 border-2 border-dashed border-gray-300 rounded-lg bg-gray-50">
             {currentPhrase.lt.split('').map((_, index) => (
               <div
                 key={`box-${index}`}
                 onClick={() => selectedLetters[index] && handleLetterClick(selectedLetters[index], index, false)}
-                className={`w-8 h-8 border-2 ${
+                className={`w-10 h-10 border-2 ${
                   selectedLetters[index] 
                     ? 'border-blue-500 bg-blue-500 shadow-sm cursor-pointer hover:bg-blue-600 active:scale-95' 
                     : 'border-gray-200'
                 } rounded-md flex items-center justify-center transition-all duration-200`}
               >
                 {selectedLetters[index] && (
-                  <span className="text-base font-semibold text-white animate-pop-in select-none">
+                  <span className="text-lg font-semibold text-white animate-pop-in select-none">
                     {selectedLetters[index]}
                   </span>
                 )}
@@ -188,7 +188,7 @@ export default function TypingPage() {
               <button
                 key={`available-${index}`}
                 onClick={() => handleLetterClick(letter, index)}
-                className="w-8 h-8 flex items-center justify-center text-base font-semibold bg-white text-gray-700 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 hover:scale-110 active:scale-95 shadow-sm hover:shadow-md animate-fade-in"
+                className="w-10 h-10 flex items-center justify-center text-lg font-semibold bg-white text-gray-700 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 hover:scale-110 active:scale-95 shadow-sm hover:shadow-md animate-fade-in"
               >
                 {letter}
               </button>
