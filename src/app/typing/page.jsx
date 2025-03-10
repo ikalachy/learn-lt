@@ -104,16 +104,16 @@ export default function TypingPage() {
   if (!currentPhrase) return <div>Loading...</div>;
 
   return (
-    <div className="min-h-screen bg-gray-100 py-8 px-4">
-      <div className="max-w-4xl mx-auto">
-        <div className="mb-4">
+    <div className="min-h-screen bg-gray-100 py-6 px-2">
+      <div className="max-w-2xl mx-auto">
+        <div className="mb-1">
           <div className="flex justify-center gap-2">
-            <div className="flex items-center gap-1 px-2 py-1 bg-red-50 rounded-lg min-w-[80px] justify-center">
-              <span className="text-xs sm:text-sm text-gray-600 mr-1">Try</span>
+            <div className="flex items-center gap-1 px-2 py-1 bg-red-50 rounded-md min-w-[70px] justify-center">
+              <span className="text-xs text-gray-600">Try</span>
               {[...Array(MAX_ATTEMPTS)].map((_, i) => (
                 <div
                   key={i}
-                  className={`w-2 h-2 rounded-full transition-all ${
+                  className={`w-1.5 h-1.5 rounded-full transition-all ${
                     i < attempts 
                       ? 'bg-red-500 scale-110' 
                       : 'bg-red-200'
@@ -121,23 +121,23 @@ export default function TypingPage() {
                 />
               ))}
             </div>
-            <div className="flex items-center gap-1 px-2 py-1 bg-blue-50 rounded-lg min-w-[80px] justify-center">
-              <span className="text-xs sm:text-sm text-gray-600">Score</span>
-              <span className="text-base sm:text-lg font-bold text-blue-600">{score}</span>
+            <div className="flex items-center gap-1 px-2 py-0.5 bg-blue-50 rounded-md min-w-[70px] justify-center">
+              <span className="text-xs text-gray-600">Score</span>
+              <span className="text-sm font-bold text-blue-600">{score}</span>
             </div>
-            <div className="flex items-center gap-1 px-2 py-1 bg-green-50 rounded-lg min-w-[80px] justify-center">
-              <span className="text-xs sm:text-sm text-gray-600">Streak</span>
-              <span className={`text-base sm:text-lg font-bold ${streak > 0 ? 'text-green-600' : 'text-gray-400'}`}>
+            <div className="flex items-center gap-1 px-2 py-0.5 bg-green-50 rounded-md min-w-[70px] justify-center">
+              <span className="text-xs text-gray-600">Streak</span>
+              <span className={`text-sm font-bold ${streak > 0 ? 'text-green-600' : 'text-gray-400'}`}>
                 {streak}{streak > 0 && '🔥'}
               </span>
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow-lg p-4 mb-4">
-          <div className="text-center mb-6">
-            <div className="flex items-center justify-center gap-2 mb-2">
-              <p className="text-2xl sm:text-3xl font-bold text-gray-800">{currentPhrase[selectedLanguage]}</p>
+        <div className="bg-white rounded-lg shadow p-3">
+          <div className="text-center mb-3">
+            <div className="flex items-center justify-center gap-2 mb-1">
+              <p className="text-xl font-bold text-gray-800">{currentPhrase[selectedLanguage]}</p>
               <button
                 onClick={showTemporaryHint}
                 disabled={hintCount === 0 || isCorrect || showAnswer}
@@ -148,33 +148,33 @@ export default function TypingPage() {
                 }`}
                 title={hintCount === 0 ? 'No hints left' : `${hintCount} hints left`}
               >
-                <span className="text-lg">💡</span>
-                <span className="absolute -top-1 -right-1 flex items-center justify-center w-4 h-4 text-[10px] font-bold bg-yellow-500 text-white rounded-full">
+                <span className="text-base">💡</span>
+                <span className="absolute -top-1 -right-1 flex items-center justify-center w-3.5 h-3.5 text-[8px] font-bold bg-yellow-500 text-white rounded-full">
                   {hintCount}
                 </span>
               </button>
             </div>
             {(showAnswer || showHint) && (
-              <p className={`text-lg ${showHint ? 'text-gray-600 animate-fade-in' : 'text-blue-600'}`}>
+              <p className={`text-base ${showHint ? 'text-gray-600 animate-fade-in' : 'text-blue-600'}`}>
                 <span className="font-semibold">{currentPhrase.lt}</span>
               </p>
             )}
           </div>
 
           {/* Selected letters */}
-          <div className="flex flex-wrap justify-center gap-2 mb-4 min-h-[52px] p-2 border-2 border-dashed border-gray-300 rounded-lg bg-gray-50">
+          <div className="flex flex-wrap justify-center gap-1.5 mb-3 min-h-[44px] p-1.5 border-2 border-dashed border-gray-300 rounded-lg bg-gray-50">
             {currentPhrase.lt.split('').map((_, index) => (
               <div
                 key={`box-${index}`}
                 onClick={() => selectedLetters[index] && handleLetterClick(selectedLetters[index], index, false)}
-                className={`w-10 h-10 border-2 ${
+                className={`w-8 h-8 border-2 ${
                   selectedLetters[index] 
-                    ? 'border-blue-500 bg-blue-500 shadow-md cursor-pointer hover:bg-blue-600 active:scale-95' 
+                    ? 'border-blue-500 bg-blue-500 shadow-sm cursor-pointer hover:bg-blue-600 active:scale-95' 
                     : 'border-gray-200'
-                } rounded-lg flex items-center justify-center transition-all duration-200`}
+                } rounded-md flex items-center justify-center transition-all duration-200`}
               >
                 {selectedLetters[index] && (
-                  <span className="text-lg font-semibold text-white animate-pop-in select-none">
+                  <span className="text-base font-semibold text-white animate-pop-in select-none">
                     {selectedLetters[index]}
                   </span>
                 )}
@@ -183,12 +183,12 @@ export default function TypingPage() {
           </div>
 
           {/* Available letters */}
-          <div className="flex flex-wrap justify-center gap-2 p-2 bg-gray-50 rounded-lg">
+          <div className="flex flex-wrap justify-center gap-1.5 p-1.5 bg-gray-50 rounded-lg">
             {availableLetters.map((letter, index) => (
               <button
                 key={`available-${index}`}
                 onClick={() => handleLetterClick(letter, index)}
-                className="w-10 h-10 flex items-center justify-center text-lg font-semibold bg-white text-gray-700 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 hover:scale-110 active:scale-95 shadow-sm hover:shadow-md animate-fade-in"
+                className="w-8 h-8 flex items-center justify-center text-base font-semibold bg-white text-gray-700 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 hover:scale-110 active:scale-95 shadow-sm hover:shadow-md animate-fade-in"
               >
                 {letter}
               </button>
@@ -196,17 +196,17 @@ export default function TypingPage() {
           </div>
 
           {(isCorrect || showAnswer) && (
-            <div className="mt-4 text-center">
-              <p className={`text-lg font-bold mb-2 ${
+            <div className="mt-3 text-center">
+              <p className={`text-base font-bold mb-2 ${
                 isCorrect 
                   ? 'text-green-600 animate-bounce' 
                   : 'text-blue-600'
               }`}>
-                {isCorrect ? '🎉 Correct! Well done!' : 'Keep practicing!'}
+                {isCorrect ? '🎉 Correct!' : 'Keep practicing!'}
               </p>
               <button
                 onClick={setupNewWord}
-                className="px-6 py-2 bg-blue-600 text-white text-base font-semibold rounded-lg hover:bg-blue-700 transition-all duration-200 hover:scale-105 active:scale-95 shadow-md hover:shadow-lg"
+                className="px-4 py-1.5 bg-blue-600 text-white text-sm font-semibold rounded-md hover:bg-blue-700 transition-all duration-200 hover:scale-105 active:scale-95 shadow hover:shadow-md"
               >
                 Next Word →
               </button>
