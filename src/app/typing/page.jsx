@@ -162,19 +162,19 @@ export default function TypingPage() {
           </div>
 
           {/* Selected letters */}
-          <div className="flex flex-wrap justify-center gap-1.5 mb-3 min-h-[52px] p-1.5 border-2 border-dashed border-gray-300 rounded-lg bg-gray-50">
+          <div className="flex flex-wrap justify-center gap-2.5 mb-4 min-h-[72px] p-3 border-2 border-dashed border-gray-300 rounded-lg bg-gray-50">
             {currentPhrase.lt.split('').map((_, index) => (
               <div
                 key={`box-${index}`}
                 onClick={() => selectedLetters[index] && handleLetterClick(selectedLetters[index], index, false)}
-                className={`w-10 h-10 border-2 ${
+                className={`w-14 h-14 border-2 ${
                   selectedLetters[index] 
-                    ? 'border-blue-500 bg-blue-500 shadow-sm cursor-pointer hover:bg-blue-600 active:scale-95' 
+                    ? 'border-blue-500 bg-blue-500 shadow cursor-pointer hover:bg-blue-600 active:scale-95' 
                     : 'border-gray-200'
-                } rounded-md flex items-center justify-center transition-all duration-200`}
+                } rounded-lg flex items-center justify-center transition-all duration-200`}
               >
                 {selectedLetters[index] && (
-                  <span className="text-lg font-semibold text-white animate-pop-in select-none">
+                  <span className="text-2xl font-semibold text-white animate-pop-in select-none">
                     {selectedLetters[index]}
                   </span>
                 )}
@@ -183,12 +183,12 @@ export default function TypingPage() {
           </div>
 
           {/* Available letters */}
-          <div className="flex flex-wrap justify-center gap-1.5 p-1.5 bg-gray-50 rounded-lg">
+          <div className="flex flex-wrap justify-center gap-2.5 p-3 bg-gray-50 rounded-lg">
             {availableLetters.map((letter, index) => (
               <button
                 key={`available-${index}`}
                 onClick={() => handleLetterClick(letter, index)}
-                className="w-10 h-10 flex items-center justify-center text-lg font-semibold bg-white text-gray-700 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 hover:scale-110 active:scale-95 shadow-sm hover:shadow-md animate-fade-in"
+                className="w-14 h-14 flex items-center justify-center text-2xl font-semibold bg-white text-gray-700 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 hover:scale-110 active:scale-95 shadow hover:shadow-md animate-fade-in"
               >
                 {letter}
               </button>
