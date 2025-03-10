@@ -142,7 +142,7 @@ export default function TypingPage() {
               <button
                 onClick={showTemporaryHint}
                 disabled={hintCount === 0 || isCorrect || showAnswer}
-                className={`group relative flex items-center justify-center w-8 sm:w-10 h-8 sm:h-10 rounded-full transition-all ${
+                className={`relative flex items-center justify-center w-8 sm:w-10 h-8 sm:h-10 rounded-full transition-all ${
                   hintCount > 0 && !isCorrect && !showAnswer
                     ? 'bg-yellow-100 hover:bg-yellow-200 text-yellow-600 hover:scale-110'
                     : 'bg-gray-100 text-gray-400 cursor-not-allowed'
@@ -152,9 +152,6 @@ export default function TypingPage() {
                 <span className="text-lg sm:text-xl">💡</span>
                 <span className="absolute -top-1 -right-1 flex items-center justify-center w-4 sm:w-5 h-4 sm:h-5 text-[10px] sm:text-xs font-bold bg-yellow-500 text-white rounded-full">
                   {hintCount}
-                </span>
-                <span className="absolute left-1/2 -translate-x-1/2 -bottom-8 px-2 py-1 bg-gray-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                  {hintCount === 0 ? 'No hints left' : `${hintCount} hints left`}
                 </span>
               </button>
             </div>
