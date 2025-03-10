@@ -106,9 +106,9 @@ export default function TypingPage() {
   return (
     <div className="min-h-screen bg-gray-100 py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <div className="flex justify-between items-center mb-8">
-          <h1 className="text-2xl sm:text-3xl font-bold">Spell It!</h1>
-          <div className="flex items-center gap-2 sm:gap-3">
+        <div className="mb-8">
+          <h1 className="text-3xl sm:text-4xl font-bold text-center mb-6">Spell It!</h1>
+          <div className="flex justify-center gap-2 sm:gap-3">
             <div className="flex items-center gap-1 px-3 py-1.5 bg-red-50 rounded-lg min-w-[80px] justify-center">
               <span className="text-xs sm:text-sm text-gray-600 mr-1">Try</span>
               {[...Array(MAX_ATTEMPTS)].map((_, i) => (
