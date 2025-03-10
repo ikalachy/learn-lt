@@ -104,16 +104,16 @@ export default function TypingPage() {
   if (!currentPhrase) return <div>Loading...</div>;
 
   return (
-    <div className="min-h-screen bg-gray-100 py-12 px-4">
+    <div className="min-h-screen bg-gray-100 py-8 px-4">
       <div className="max-w-4xl mx-auto">
-        <div className="mb-8">
-          <div className="flex justify-center gap-2 sm:gap-3">
-            <div className="flex items-center gap-1 px-3 py-1.5 bg-red-50 rounded-lg min-w-[80px] justify-center">
+        <div className="mb-4">
+          <div className="flex justify-center gap-2">
+            <div className="flex items-center gap-1 px-2 py-1 bg-red-50 rounded-lg min-w-[80px] justify-center">
               <span className="text-xs sm:text-sm text-gray-600 mr-1">Try</span>
               {[...Array(MAX_ATTEMPTS)].map((_, i) => (
                 <div
                   key={i}
-                  className={`w-2.5 h-2.5 rounded-full transition-all ${
+                  className={`w-2 h-2 rounded-full transition-all ${
                     i < attempts 
                       ? 'bg-red-500 scale-110' 
                       : 'bg-red-200'
@@ -121,11 +121,11 @@ export default function TypingPage() {
                 />
               ))}
             </div>
-            <div className="flex items-center gap-1 px-3 py-1.5 bg-blue-50 rounded-lg min-w-[80px] justify-center">
+            <div className="flex items-center gap-1 px-2 py-1 bg-blue-50 rounded-lg min-w-[80px] justify-center">
               <span className="text-xs sm:text-sm text-gray-600">Score</span>
               <span className="text-base sm:text-lg font-bold text-blue-600">{score}</span>
             </div>
-            <div className="flex items-center gap-1 px-3 py-1.5 bg-green-50 rounded-lg min-w-[80px] justify-center">
+            <div className="flex items-center gap-1 px-2 py-1 bg-green-50 rounded-lg min-w-[80px] justify-center">
               <span className="text-xs sm:text-sm text-gray-600">Streak</span>
               <span className={`text-base sm:text-lg font-bold ${streak > 0 ? 'text-green-600' : 'text-gray-400'}`}>
                 {streak}{streak > 0 && '🔥'}
@@ -134,22 +134,22 @@ export default function TypingPage() {
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
-          <div className="text-center mb-8">
-            <div className="flex items-center justify-center gap-3 mb-4">
+        <div className="bg-white rounded-lg shadow-lg p-4 mb-4">
+          <div className="text-center mb-6">
+            <div className="flex items-center justify-center gap-2 mb-2">
               <p className="text-2xl sm:text-3xl font-bold text-gray-800">{currentPhrase[selectedLanguage]}</p>
               <button
                 onClick={showTemporaryHint}
                 disabled={hintCount === 0 || isCorrect || showAnswer}
-                className={`relative flex items-center justify-center w-8 sm:w-10 h-8 sm:h-10 rounded-full transition-all ${
+                className={`relative flex items-center justify-center w-8 h-8 rounded-full transition-all ${
                   hintCount > 0 && !isCorrect && !showAnswer
                     ? 'bg-yellow-100 hover:bg-yellow-200 text-yellow-600 hover:scale-110'
                     : 'bg-gray-100 text-gray-400 cursor-not-allowed'
                 }`}
                 title={hintCount === 0 ? 'No hints left' : `${hintCount} hints left`}
               >
-                <span className="text-lg sm:text-xl">💡</span>
-                <span className="absolute -top-1 -right-1 flex items-center justify-center w-4 sm:w-5 h-4 sm:h-5 text-[10px] sm:text-xs font-bold bg-yellow-500 text-white rounded-full">
+                <span className="text-lg">💡</span>
+                <span className="absolute -top-1 -right-1 flex items-center justify-center w-4 h-4 text-[10px] font-bold bg-yellow-500 text-white rounded-full">
                   {hintCount}
                 </span>
               </button>
@@ -162,19 +162,19 @@ export default function TypingPage() {
           </div>
 
           {/* Selected letters */}
-          <div className="flex flex-wrap justify-center gap-2 mb-8 min-h-[60px] p-4 border-2 border-dashed border-gray-300 rounded-lg bg-gray-50">
+          <div className="flex flex-wrap justify-center gap-2 mb-4 min-h-[52px] p-2 border-2 border-dashed border-gray-300 rounded-lg bg-gray-50">
             {currentPhrase.lt.split('').map((_, index) => (
               <div
                 key={`box-${index}`}
                 onClick={() => selectedLetters[index] && handleLetterClick(selectedLetters[index], index, false)}
-                className={`w-12 h-12 border-2 ${
+                className={`w-10 h-10 border-2 ${
                   selectedLetters[index] 
                     ? 'border-blue-500 bg-blue-500 shadow-md cursor-pointer hover:bg-blue-600 active:scale-95' 
                     : 'border-gray-200'
                 } rounded-lg flex items-center justify-center transition-all duration-200`}
               >
                 {selectedLetters[index] && (
-                  <span className="text-xl font-semibold text-white animate-pop-in select-none">
+                  <span className="text-lg font-semibold text-white animate-pop-in select-none">
                     {selectedLetters[index]}
                   </span>
                 )}
@@ -183,12 +183,12 @@ export default function TypingPage() {
           </div>
 
           {/* Available letters */}
-          <div className="flex flex-wrap justify-center gap-2 p-4 bg-gray-50 rounded-lg">
+          <div className="flex flex-wrap justify-center gap-2 p-2 bg-gray-50 rounded-lg">
             {availableLetters.map((letter, index) => (
               <button
                 key={`available-${index}`}
                 onClick={() => handleLetterClick(letter, index)}
-                className="w-12 h-12 flex items-center justify-center text-xl font-semibold bg-white text-gray-700 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 hover:scale-110 active:scale-95 shadow-sm hover:shadow-md animate-fade-in"
+                className="w-10 h-10 flex items-center justify-center text-lg font-semibold bg-white text-gray-700 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 hover:scale-110 active:scale-95 shadow-sm hover:shadow-md animate-fade-in"
               >
                 {letter}
               </button>
@@ -196,8 +196,8 @@ export default function TypingPage() {
           </div>
 
           {(isCorrect || showAnswer) && (
-            <div className="mt-8 text-center">
-              <p className={`text-xl font-bold mb-4 ${
+            <div className="mt-4 text-center">
+              <p className={`text-lg font-bold mb-2 ${
                 isCorrect 
                   ? 'text-green-600 animate-bounce' 
                   : 'text-blue-600'
@@ -206,7 +206,7 @@ export default function TypingPage() {
               </p>
               <button
                 onClick={setupNewWord}
-                className="px-8 py-3 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-700 transition-all duration-200 hover:scale-105 active:scale-95 shadow-md hover:shadow-lg"
+                className="px-6 py-2 bg-blue-600 text-white text-base font-semibold rounded-lg hover:bg-blue-700 transition-all duration-200 hover:scale-105 active:scale-95 shadow-md hover:shadow-lg"
               >
                 Next Word →
               </button>
