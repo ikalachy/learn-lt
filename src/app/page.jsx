@@ -13,7 +13,7 @@ export default function HomePage() {
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-8">Learn Lithuanian</h1>
         
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           <Link href="/flashcards">
             <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
               <h2 className="text-2xl font-semibold mb-4">Flashcards</h2>
@@ -25,6 +25,13 @@ export default function HomePage() {
             <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
               <h2 className="text-2xl font-semibold mb-4">Quiz Mode</h2>
               <p className="text-gray-600">Test your knowledge by choosing the correct translation.</p>
+            </div>
+          </Link>
+
+          <Link href="/typing">
+            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+              <h2 className="text-2xl font-semibold mb-4">Spell It!</h2>
+              <p className="text-gray-600">Practice spelling Lithuanian words by selecting letters in the correct order.</p>
             </div>
           </Link>
         </div>

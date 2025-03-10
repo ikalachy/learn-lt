@@ -46,7 +46,7 @@ export default function TypingPage() {
     
     const letters = randomPhrase.lt.toLowerCase().split('');
     const extraLetters = 'aąbcčdeęėfghiįyjklmnoprsštuųūvzž'.split('');
-    const additionalLetters = shuffleArray(extraLetters).slice(0, 5);
+    const additionalLetters = shuffleArray(extraLetters).slice(0, 2);
     
     setAvailableLetters(shuffleArray([...letters, ...additionalLetters]));
     setSelectedLetters([]);
