@@ -45,6 +45,7 @@ export default function FlashcardsPage() {
             backText={currentPhrase[selectedLanguage]}
             onFlip={handleFlip}
             selectedLanguage={selectedLanguage}
+            id={currentPhrase.id}
           />
 
           <div className="flex gap-4">
