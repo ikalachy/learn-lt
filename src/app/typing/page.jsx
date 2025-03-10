@@ -107,7 +107,6 @@ export default function TypingPage() {
     <div className="min-h-screen bg-gray-100 py-12 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-3xl sm:text-4xl font-bold text-center mb-6">Spell It!</h1>
           <div className="flex justify-center gap-2 sm:gap-3">
             <div className="flex items-center gap-1 px-3 py-1.5 bg-red-50 rounded-lg min-w-[80px] justify-center">
               <span className="text-xs sm:text-sm text-gray-600 mr-1">Try</span>
@@ -167,14 +166,15 @@ export default function TypingPage() {
             {currentPhrase.lt.split('').map((_, index) => (
               <div
                 key={`box-${index}`}
+                onClick={() => selectedLetters[index] && handleLetterClick(selectedLetters[index], index, false)}
                 className={`w-12 h-12 border-2 ${
                   selectedLetters[index] 
-                    ? 'border-blue-500 bg-blue-500 shadow-md' 
-                    : 'border-gray-300 hover:border-gray-400'
+                    ? 'border-blue-500 bg-blue-500 shadow-md cursor-pointer hover:bg-blue-600 active:scale-95' 
+                    : 'border-gray-200'
                 } rounded-lg flex items-center justify-center transition-all duration-200`}
               >
                 {selectedLetters[index] && (
-                  <span className="text-xl font-semibold text-white animate-pop-in">
+                  <span className="text-xl font-semibold text-white animate-pop-in select-none">
                     {selectedLetters[index]}
                   </span>
                 )}
