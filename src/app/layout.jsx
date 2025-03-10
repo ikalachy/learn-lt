@@ -50,6 +50,17 @@ export default function RootLayout({ children }) {
                       <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-200"></span>
                     )}
                   </Link>
+                  <Link 
+                    href="/typing" 
+                    className={`relative px-3 py-1 rounded-md transition-all hover:bg-white/10 ${
+                      pathname === '/typing' ? 'text-blue-200 font-medium' : ''
+                    }`}
+                  >
+                    <span>Spell It!</span>
+                    {pathname === '/typing' && (
+                      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-200"></span>
+                    )}
+                  </Link>
                   <LanguageSelector />
                 </div>
                 <a
