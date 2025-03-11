@@ -5,9 +5,11 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 import LanguageSelector from '@/components/LanguageSelector';
+import { Analytics } from "@vercel/analytics/react"
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
+const isDevelopment = process.env.NODE_ENV === 'development';
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
@@ -80,6 +82,7 @@ export default function RootLayout({ children }) {
             </div>
           </nav>
           {children}
+         {!isDevelopment && <Analytics />}
         </LanguageProvider>
       </body>
     </html>
