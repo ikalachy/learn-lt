@@ -197,13 +197,12 @@ export default function QuizPage() {
               </div>
 
               {userAnswer && (
-                <div className="mt-6 text-center">
+                <div className="mt-1 text-center">
                   <p
                     className={`text-lg font-semibold ${
                       isCorrect ? "text-green-600" : "text-red-600"
                     }`}
                   >
-                    {isCorrect ? "Correct!" : "Incorrect. Try again!"}
                   </p>
                   {isLastWord && isCorrect ? (
                     <div className="mt-4">
