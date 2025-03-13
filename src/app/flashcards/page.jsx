@@ -17,6 +17,7 @@ export default function FlashcardsPage() {
   const [availablePhrases, setAvailablePhrases] = useState([]);
   const [isLastWord, setIsLastWord] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
+  const [showFullTopicSelector, setShowFullTopicSelector] = useState(false);
   const { selectedLanguage } = useLanguage();
   const { selectedTopic, selectTopic, loading } = useTopic();
 
@@ -107,7 +108,7 @@ export default function FlashcardsPage() {
   return (
     <div className="min-h-screen bg-gray-100 py-3 px-4">
       <div className="max-w-[480px] mx-auto">
-        <TopicSelector />
+        {!showFullTopicSelector && <TopicSelector />}
 
         {!selectedTopic ? (
           <div className="text-center text-gray-600">
@@ -118,7 +119,7 @@ export default function FlashcardsPage() {
         ) : availablePhrases.length === 0 ? (
           <div className="text-center text-gray-600">Loading phrases...</div>
         ) : (
-          <div className="space-y-3">
+          <div className="space-y-6">
             <div className="flex justify-between items-center">
               <p className="text-sm text-gray-500">
                 Card {currentIndex + 1} of {availablePhrases.length}
@@ -185,6 +186,7 @@ export default function FlashcardsPage() {
                       </button>
                       <button
                         onClick={() => {
+                          setShowFullTopicSelector(true);
                           selectTopic(null);
                           setIsCompleted(false);
                         }}
@@ -225,6 +227,26 @@ export default function FlashcardsPage() {
                   </div>
                 </>
               )}
+            </div>
+          </div>
+        )}
+
+        {showFullTopicSelector && (
+          <div className="fixed inset-0 bg-white z-50 overflow-y-auto">
+            <div className="max-w-[480px] mx-auto p-4">
+              <div className="flex justify-between items-center mb-6">
+                <h2 className="text-2xl font-bold">Choose a Topic</h2>
+                <button
+                  onClick={() => setShowFullTopicSelector(false)}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  <span className="text-2xl">×</span>
+                </button>
+              </div>
+              <TopicSelector 
+                isFullPage={true} 
+                onTopicSelect={() => setShowFullTopicSelector(false)}
+              />
             </div>
           </div>
         )}

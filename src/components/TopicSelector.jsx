@@ -75,14 +75,61 @@ const TOPIC_ICONS = {
     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
     </svg>
+  ),
+  time: (
+    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+  ),
+  travel: (
+    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+  ),
+  numbers: (
+    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" />
+    </svg>
+  ),
+  greetings: (
+    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+  ),
+  family: (
+    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+    </svg>
+  ),
+  clothes: (
+    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+    </svg>
+  ),
+  adverbs: (
+    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+    </svg>
+  ),
+  'action-verbs': (
+    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+    </svg>
   )
 };
 
-const TopicSelector = () => {
+const TopicSelector = ({ isFullPage = false, onTopicSelect }) => {
   const { language } = useLanguage();
   const { selectedTopic, selectTopic, topics, loading } = useTopic();
   const containerRef = useRef(null);
   const progressBarRef = useRef(null);
+
+  const handleTopicSelect = (topicId) => {
+    selectTopic(topicId);
+    if (onTopicSelect) {
+      onTopicSelect();
+    }
+  };
 
   useEffect(() => {
     if (selectedTopic && containerRef.current) {
@@ -94,8 +141,8 @@ const TopicSelector = () => {
           inline: 'center'
         });
 
-        // Update progress bar position
-        if (progressBarRef.current) {
+        // Update progress bar position only for horizontal layout
+        if (!isFullPage && progressBarRef.current) {
           const buttonRect = selectedButton.getBoundingClientRect();
           const containerRect = containerRef.current.getBoundingClientRect();
           const leftOffset = buttonRect.left - containerRect.left;
@@ -106,7 +153,7 @@ const TopicSelector = () => {
         }
       }
     }
-  }, [selectedTopic]);
+  }, [selectedTopic, isFullPage]);
 
   if (loading) {
     return (
@@ -117,34 +164,46 @@ const TopicSelector = () => {
   }
 
   return (
-    <div className="bg-white border-b border-gray-200">
-      <div className="px-2 py-2">
+    <div className={`bg-white ${!isFullPage ? 'border-b border-gray-200' : ''}`}>
+      <div className={isFullPage ? 'p-4' : 'px-2 py-2'}>
         <div className="relative">
-          <div ref={containerRef} className="flex items-center gap-2 overflow-x-auto pb-2">
+          <div 
+            ref={containerRef} 
+            className={`${
+              isFullPage 
+                ? 'flex flex-col gap-2' 
+                : 'flex items-center gap-2 overflow-x-auto pb-2'
+            }`}
+          >
             {topics.map((topic) => (
               <button
                 key={topic.id}
                 data-topic-id={topic.id}
-                onClick={() => selectTopic(topic.id)}
-                className={`flex items-center gap-2 px-2.5 py-1.5 rounded-md border transition-colors duration-200 whitespace-nowrap
-                  ${topic.id === selectedTopic 
+                onClick={() => handleTopicSelect(topic.id)}
+                className={`flex items-center gap-3 px-4 py-3 rounded-lg border transition-colors duration-200 ${
+                  isFullPage ? 'w-full' : 'whitespace-nowrap'
+                } ${
+                  topic.id === selectedTopic 
                     ? 'border-blue-500 bg-blue-50' 
-                    : 'border-gray-200 hover:border-blue-300 hover:bg-blue-50'}`}
+                    : 'border-gray-200 hover:border-blue-300 hover:bg-blue-50'
+                }`}
               >
-                <div className={topic.id === selectedTopic ? 'text-blue-500' : 'text-gray-500'}>
+                <div className={`${topic.id === selectedTopic ? 'text-blue-500' : 'text-gray-500'}`}>
                   {TOPIC_ICONS[topic.id]}
                 </div>
-                <span className={`text-xs font-medium ${topic.id === selectedTopic ? 'text-blue-600' : 'text-gray-700'}`}>
+                <span className={`font-medium ${topic.id === selectedTopic ? 'text-blue-600' : 'text-gray-700'}`}>
                   {topic.name[language || 'en']}
                 </span>
               </button>
             ))}
           </div>
-          <div 
-            ref={progressBarRef}
-            className="absolute bottom-0 h-0.5 bg-blue-500 transition-all duration-300 ease-in-out"
-            style={{ left: 0, width: 0 }}
-          />
+          {!isFullPage && (
+            <div 
+              ref={progressBarRef}
+              className="absolute bottom-0 h-0.5 bg-blue-500 transition-all duration-300 ease-in-out"
+              style={{ left: 0, width: 0 }}
+            />
+          )}
         </div>
       </div>
     </div>
