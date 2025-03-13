@@ -1,11 +1,15 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import FlipCard from '@/components/FlipCard';
-import { updateProgress, getLastWordId, saveLastWordId } from '@/utils/progressManager';
-import { useLanguage } from '@/contexts/LanguageContext';
-import { useTopic } from '@/contexts/TopicContext';
-import TopicSelector from '@/components/TopicSelector';
+import { useState, useEffect } from "react";
+import FlipCard from "@/components/FlipCard";
+import {
+  updateProgress,
+  getLastWordId,
+  saveLastWordId,
+} from "@/utils/progressManager";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { useTopic } from "@/contexts/TopicContext";
+import TopicSelector from "@/components/TopicSelector";
 
 export default function FlashcardsPage() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -27,19 +31,19 @@ export default function FlashcardsPage() {
         const response = await fetch(`/api/topics/${selectedTopic}`);
         const topicData = await response.json();
         setAvailablePhrases(topicData.phrases);
-        
+
         // Find index of last viewed word
-        const lastWordId = getLastWordId('flashcards', selectedTopic);
-        const lastIndex = lastWordId 
-          ? topicData.phrases.findIndex(p => p.id === lastWordId)
+        const lastWordId = getLastWordId("flashcards", selectedTopic);
+        const lastIndex = lastWordId
+          ? topicData.phrases.findIndex((p) => p.id === lastWordId)
           : 0;
         const newIndex = lastIndex >= 0 ? lastIndex : 0;
         setCurrentIndex(newIndex);
-        
+
         // Check if we're on the last word
         setIsLastWord(newIndex === topicData.phrases.length - 1);
       } catch (error) {
-        console.error('Error loading phrases:', error);
+        console.error("Error loading phrases:", error);
       }
     };
 
@@ -53,7 +57,13 @@ export default function FlashcardsPage() {
       setShowControls(false);
       setIsLastWord(newIndex === availablePhrases.length - 1);
       // Save progress with total words count and current index
-      saveLastWordId('flashcards', selectedTopic, availablePhrases[newIndex].id, availablePhrases.length, newIndex);
+      saveLastWordId(
+        "flashcards",
+        selectedTopic,
+        availablePhrases[newIndex].id,
+        availablePhrases.length,
+        newIndex
+      );
     }
   };
 
@@ -64,7 +74,13 @@ export default function FlashcardsPage() {
       setShowControls(false);
       setIsLastWord(newIndex === availablePhrases.length - 1);
       // Save progress with total words count and current index
-      saveLastWordId('flashcards', selectedTopic, availablePhrases[newIndex].id, availablePhrases.length, newIndex);
+      saveLastWordId(
+        "flashcards",
+        selectedTopic,
+        availablePhrases[newIndex].id,
+        availablePhrases.length,
+        newIndex
+      );
     }
   };
 
@@ -73,8 +89,14 @@ export default function FlashcardsPage() {
     if (isFlipped && availablePhrases[currentIndex]) {
       updateProgress(availablePhrases[currentIndex].id, true);
       // Save progress with total words count and current index
-      saveLastWordId('flashcards', selectedTopic, availablePhrases[currentIndex].id, availablePhrases.length, currentIndex);
-      
+      saveLastWordId(
+        "flashcards",
+        selectedTopic,
+        availablePhrases[currentIndex].id,
+        availablePhrases.length,
+        currentIndex
+      );
+
       // If this is the last word and it's flipped, mark as completed
       if (isLastWord) {
         setIsCompleted(true);
@@ -83,11 +105,9 @@ export default function FlashcardsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 py-12 px-4">
+    <div className="min-h-screen bg-gray-100 py-5 px-4">
       <div className="max-w-[480px] mx-auto">
-        <h1 className="text-3xl font-bold text-center mb-8">Lithuanian Flashcards</h1>
-        
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
+        <div className="bg-white rounded-lg shadow-lg p-5 mb-5">
           <TopicSelector />
         </div>
 
@@ -96,13 +116,9 @@ export default function FlashcardsPage() {
             Please select a topic to start learning
           </div>
         ) : loading ? (
-          <div className="text-center text-gray-600">
-            Loading topics...
-          </div>
+          <div className="text-center text-gray-600">Loading topics...</div>
         ) : availablePhrases.length === 0 ? (
-          <div className="text-center text-gray-600">
-            Loading phrases...
-          </div>
+          <div className="text-center text-gray-600">Loading phrases...</div>
         ) : (
           <div className="space-y-6">
             <div className="flex justify-between items-center">
@@ -110,9 +126,13 @@ export default function FlashcardsPage() {
                 Card {currentIndex + 1} of {availablePhrases.length}
               </p>
               <div className="h-3 flex-grow mx-4 bg-gray-200 rounded-full overflow-hidden shadow-inner">
-                <div 
+                <div
                   className="h-full bg-blue-500 transition-all duration-300 shadow-sm"
-                  style={{ width: `${((currentIndex + 1) / availablePhrases.length) * 100}%` }}
+                  style={{
+                    width: `${
+                      ((currentIndex + 1) / availablePhrases.length) * 100
+                    }%`,
+                  }}
                 />
               </div>
             </div>
@@ -140,7 +160,7 @@ export default function FlashcardsPage() {
                       <span className="text-4xl">⭐</span>
                     </div>
                   </div>
-                  
+
                   <div className="space-y-2">
                     <h3 className="text-2xl font-bold text-green-600">
                       Congratulations!
@@ -151,9 +171,9 @@ export default function FlashcardsPage() {
                   </div>
 
                   <div className="w-full max-w-[300px] mx-auto bg-gray-100 rounded-full h-2 overflow-hidden">
-                    <div 
+                    <div
                       className="h-full bg-green-500 transition-all duration-1000"
-                      style={{ width: '100%' }}
+                      style={{ width: "100%" }}
                     />
                   </div>
 
@@ -168,7 +188,7 @@ export default function FlashcardsPage() {
                       Review Topic Again
                     </button>
                     <button
-                      onClick={() => window.location.href = '/quiz'}
+                      onClick={() => (window.location.href = "/quiz")}
                       className="px-6 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors"
                     >
                       Take a Quiz
@@ -208,4 +228,4 @@ export default function FlashcardsPage() {
       </div>
     </div>
   );
-} 
+}

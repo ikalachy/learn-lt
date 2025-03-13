@@ -81,7 +81,7 @@ const TOPIC_ICONS = {
 const TopicSelector = () => {
   const { language } = useLanguage();
   const { selectedTopic, selectTopic, topics, loading } = useTopic();
-  const [isExpanded, setIsExpanded] = useState(!selectedTopic);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
     if (selectedTopic) {
@@ -94,14 +94,10 @@ const TopicSelector = () => {
     setIsExpanded(false);
   };
 
-  const handleExpandClick = () => {
-    setIsExpanded(true);
-  };
-
   if (loading) {
     return (
-      <div className="flex justify-center items-center min-h-[200px]">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+      <div className="flex justify-center items-center min-h-[100px]">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
       </div>
     );
   }
@@ -112,18 +108,18 @@ const TopicSelector = () => {
 
     return (
       <div className="w-full">
-        <div className="flex justify-between items-center p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+        <div className="flex justify-between items-center p-3 bg-white rounded-lg shadow-sm border border-gray-200">
           <div className="flex items-center gap-3">
             <div className="text-blue-500">
               {TOPIC_ICONS[selectedTopic]}
             </div>
-            <h3 className="text-lg font-medium text-gray-800 truncate max-w-[200px]">
+            <h3 className="text-base font-medium text-gray-800 truncate max-w-[200px]">
               {selectedTopicData.name[language || 'en']}
             </h3>
           </div>
           <button
-            onClick={handleExpandClick}
-            className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-blue-600 hover:text-blue-700 hover:bg-blue-50 rounded-md transition-colors duration-200"
+            onClick={() => setIsExpanded(true)}
+            className="flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-blue-600 hover:text-blue-700 hover:bg-blue-50 rounded-md transition-colors duration-200"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
@@ -137,29 +133,39 @@ const TopicSelector = () => {
 
   return (
     <div className="w-full">
-      <div className="text-center mb-6">
-        <h2 className="text-2xl font-bold text-gray-800">Choose a Topic to Learn</h2>
+      <div className="flex justify-between items-center mb-4">
+        <h2 className="text-xl font-bold text-gray-800">Choose a Topic to Learn</h2>
+        {selectedTopic && (
+          <button
+            onClick={() => setIsExpanded(false)}
+            className="text-gray-500 hover:text-gray-700"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        )}
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4">
         {topics.map((topic) => (
           <button
             key={topic.id}
             onClick={() => handleTopicSelect(topic.id)}
-            className={`group relative p-6 rounded-xl border-2 transition-all duration-200 
-              hover:shadow-xl hover:-translate-y-1 hover:border-blue-300 hover:bg-blue-50
+            className={`group relative p-4 rounded-lg border-2 transition-all duration-200 
+              hover:shadow-lg hover:-translate-y-0.5 hover:border-blue-300 hover:bg-blue-50
               ${topic.id === selectedTopic ? 'border-blue-500 bg-blue-50' : 'border-gray-200'}
               bg-white shadow-sm w-full`}
           >
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4">
               <div className={`transition-colors flex-shrink-0 ${topic.id === selectedTopic ? 'text-blue-500' : 'text-gray-600 group-hover:text-blue-500'}`}>
                 {TOPIC_ICONS[topic.id] || (
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                   </svg>
                 )}
               </div>
-              <h3 className={`text-lg font-medium flex-grow ${topic.id === selectedTopic ? 'text-blue-600' : 'text-gray-800 group-hover:text-blue-600'}`}>
+              <h3 className={`text-base font-medium flex-grow ${topic.id === selectedTopic ? 'text-blue-600' : 'text-gray-800 group-hover:text-blue-600'}`}>
                 {topic.name[language || 'en']}
               </h3>
             </div>

@@ -110,11 +110,9 @@ export default function QuizPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 py-12 px-4">
+    <div className="min-h-screen bg-gray-100 py-5 px-4">
       <div className="max-w-[480px] mx-auto">
-        <h1 className="text-3xl font-bold text-center mb-8">Lithuanian Quiz</h1>
-
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
+        <div className="bg-white rounded-lg shadow-lg p-6 mb-5">
           <TopicSelector />
         </div>
 
