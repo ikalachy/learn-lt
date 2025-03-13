@@ -1,0 +1,261 @@
+{
+  "id": "weather",
+  "name": {
+    "en": "Weather",
+    "lt": "Orai"
+  },
+  "description": {
+    "en": "Common weather conditions, temperature, and weather-related phrases",
+    "lt": "Dažniausios oro sąlygos, temperatūra ir su oru susijusios frazės"
+  },
+  "phrases": [
+    {
+      "id": "sunny",
+      "lt": "Saulėta",
+      "en": "Sunny",
+      "ru": "Солнечно",
+      "by": "Сонечна",
+      "tags": ["weather", "condition"]
+    },
+    {
+      "id": "cloudy",
+      "lt": "Debesuota",
+      "en": "Cloudy",
+      "ru": "Пасмурно",
+      "by": "Воблачна",
+      "tags": ["weather", "condition"]
+    },
+    {
+      "id": "rainy",
+      "lt": "Lietinga",
+      "en": "Rainy",
+      "ru": "Дождливо",
+      "by": "Дажджліва",
+      "tags": ["weather", "condition"]
+    },
+    {
+      "id": "snowy",
+      "lt": "Snieguota",
+      "en": "Snowy",
+      "ru": "Снежно",
+      "by": "Снежна",
+      "tags": ["weather", "condition"]
+    },
+    {
+      "id": "windy",
+      "lt": "Vėjuota",
+      "en": "Windy",
+      "ru": "Ветрено",
+      "by": "Ветрана",
+      "tags": ["weather", "condition"]
+    },
+    {
+      "id": "foggy",
+      "lt": "Rūkuota",
+      "en": "Foggy",
+      "ru": "Туманно",
+      "by": "Туманна",
+      "tags": ["weather", "condition"]
+    },
+    {
+      "id": "stormy",
+      "lt": "Audringa",
+      "en": "Stormy",
+      "ru": "Грозово",
+      "by": "Навальнічна",
+      "tags": ["weather", "condition"]
+    },
+    {
+      "id": "hot",
+      "lt": "Karšta",
+      "en": "Hot",
+      "ru": "Жарко",
+      "by": "Горача",
+      "tags": ["weather", "temperature"]
+    },
+    {
+      "id": "cold",
+      "lt": "Šalta",
+      "en": "Cold",
+      "ru": "Холодно",
+      "by": "Холадна",
+      "tags": ["weather", "temperature"]
+    },
+    {
+      "id": "warm",
+      "lt": "Šilta",
+      "en": "Warm",
+      "ru": "Тепло",
+      "by": "Цёпла",
+      "tags": ["weather", "temperature"]
+    },
+    {
+      "id": "cool",
+      "lt": "Vėsu",
+      "en": "Cool",
+      "ru": "Прохладно",
+      "by": "Прахладна",
+      "tags": ["weather", "temperature"]
+    },
+    {
+      "id": "rain",
+      "lt": "Lietus",
+      "en": "Rain",
+      "ru": "Дождь",
+      "by": "Дождж",
+      "tags": ["weather", "precipitation"]
+    },
+    {
+      "id": "snow",
+      "lt": "Sniegas",
+      "en": "Snow",
+      "ru": "Снег",
+      "by": "Снег",
+      "tags": ["weather", "precipitation"]
+    },
+    {
+      "id": "thunder",
+      "lt": "Griaustinis",
+      "en": "Thunder",
+      "ru": "Гром",
+      "by": "Гром",
+      "tags": ["weather", "storm"]
+    },
+    {
+      "id": "lightning",
+      "lt": "Žaibas",
+      "en": "Lightning",
+      "ru": "Молния",
+      "by": "Маланка",
+      "tags": ["weather", "storm"]
+    },
+    {
+      "id": "cloud",
+      "lt": "Debesis",
+      "en": "Cloud",
+      "ru": "Облако",
+      "by": "Воблака",
+      "tags": ["weather", "sky"]
+    },
+    {
+      "id": "sun",
+      "lt": "Saulė",
+      "en": "Sun",
+      "ru": "Солнце",
+      "by": "Сонца",
+      "tags": ["weather", "sky"]
+    },
+    {
+      "id": "moon",
+      "lt": "Mėnulis",
+      "en": "Moon",
+      "ru": "Луна",
+      "by": "Месяц",
+      "tags": ["weather", "sky"]
+    },
+    {
+      "id": "star",
+      "lt": "Žvaigždė",
+      "en": "Star",
+      "ru": "Звезда",
+      "by": "Зорка",
+      "tags": ["weather", "sky"]
+    },
+    {
+      "id": "wind",
+      "lt": "Vėjas",
+      "en": "Wind",
+      "ru": "Ветер",
+      "by": "Вецер",
+      "tags": ["weather", "air"]
+    },
+    {
+      "id": "fog",
+      "lt": "Rūkas",
+      "en": "Fog",
+      "ru": "Туман",
+      "by": "Туман",
+      "tags": ["weather", "air"]
+    },
+    {
+      "id": "frost",
+      "lt": "Šerkšnas",
+      "en": "Frost",
+      "ru": "Иней",
+      "by": "Іней",
+      "tags": ["weather", "cold"]
+    },
+    {
+      "id": "ice",
+      "lt": "Ledas",
+      "en": "Ice",
+      "ru": "Лёд",
+      "by": "Лёд",
+      "tags": ["weather", "cold"]
+    },
+    {
+      "id": "umbrella",
+      "lt": "Skėtis",
+      "en": "Umbrella",
+      "ru": "Зонт",
+      "by": "Парасон",
+      "tags": ["weather", "accessory"]
+    },
+    {
+      "id": "raincoat",
+      "lt": "Lietpaltis",
+      "en": "Raincoat",
+      "ru": "Плащ",
+      "by": "Плашч",
+      "tags": ["weather", "accessory"]
+    },
+    {
+      "id": "forecast",
+      "lt": "Prognozė",
+      "en": "Forecast",
+      "ru": "Прогноз",
+      "by": "Прагноз",
+      "tags": ["weather", "prediction"]
+    },
+    {
+      "id": "temperature",
+      "lt": "Temperatūra",
+      "en": "Temperature",
+      "ru": "Температура",
+      "by": "Тэмпература",
+      "tags": ["weather", "measurement"]
+    },
+    {
+      "id": "degree",
+      "lt": "Laipsnis",
+      "en": "Degree",
+      "ru": "Градус",
+      "by": "Градус",
+      "tags": ["weather", "measurement"]
+    },
+    {
+      "id": "what-weather",
+      "lt": "Koks šiandien oras?",
+      "en": "What's the weather like today?",
+      "ru": "Какая сегодня погода?",
+      "by": "Якая сёння надвор'е?",
+      "tags": ["weather", "question"]
+    },
+    {
+      "id": "how-temperature",
+      "lt": "Kokia temperatūra?",
+      "en": "What's the temperature?",
+      "ru": "Какая температура?",
+      "by": "Якая тэмпература?",
+      "tags": ["weather", "question"]
+    },
+    {
+      "id": "will-rain",
+      "lt": "Ar lis?",
+      "en": "Will it rain?",
+      "ru": "Будет дождь?",
+      "by": "Будзе дождж?",
+      "tags": ["weather", "question"]
+    }
+  ]
+} 

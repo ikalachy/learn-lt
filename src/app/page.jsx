@@ -1,12 +1,19 @@
 'use client';
 
 import Link from 'next/link';
-import { getProgress } from '@/utils/progressManager';
+import { getProgress, getCompletedTopicsCount, getTotalCompletedTopics } from '@/utils/progressManager';
 
 export default function HomePage() {
   const progress = getProgress();
-  const totalWords = progress?.seenWords.length || 0;
-  const wordsToReview = progress?.incorrectWords.length || 0;
+  const lastViewedWords = progress?.lastViewedWords || {};
+  
+  // Calculate total topics started across all modes
+  const totalStarted = Object.values(lastViewedWords).reduce((total, modeProgress) => {
+    return total + Object.keys(modeProgress).length;
+  }, 0);
+
+  // Get total completed topics
+  const totalCompleted = getTotalCompletedTopics();
 
   return (
     <div className="min-h-screen bg-gray-100 py-12 px-4">
@@ -18,6 +25,14 @@ export default function HomePage() {
             <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
               <h2 className="text-2xl font-semibold mb-4">Flashcards</h2>
               <p className="text-gray-600">Practice Lithuanian words and phrases with interactive flashcards.</p>
+              <div className="mt-4 space-y-1">
+                <p className="text-sm text-gray-500">
+                  {Object.keys(lastViewedWords.flashcards || {}).length} topics started
+                </p>
+                <p className="text-sm text-green-600">
+                  {getCompletedTopicsCount('flashcards')} topics completed
+                </p>
+              </div>
             </div>
           </Link>
 
@@ -25,6 +40,14 @@ export default function HomePage() {
             <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
               <h2 className="text-2xl font-semibold mb-4">Quiz Mode</h2>
               <p className="text-gray-600">Test your knowledge by choosing the correct translation.</p>
+              <div className="mt-4 space-y-1">
+                <p className="text-sm text-gray-500">
+                  {Object.keys(lastViewedWords.quiz || {}).length} topics started
+                </p>
+                <p className="text-sm text-green-600">
+                  {getCompletedTopicsCount('quiz')} topics completed
+                </p>
+              </div>
             </div>
           </Link>
 
@@ -32,6 +55,14 @@ export default function HomePage() {
             <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
               <h2 className="text-2xl font-semibold mb-4">Spell It!</h2>
               <p className="text-gray-600">Practice spelling Lithuanian words by selecting letters in the correct order.</p>
+              <div className="mt-4 space-y-1">
+                <p className="text-sm text-gray-500">
+                  {Object.keys(lastViewedWords.typing || {}).length} topics started
+                </p>
+                <p className="text-sm text-green-600">
+                  {getCompletedTopicsCount('typing')} topics completed
+                </p>
+              </div>
             </div>
           </Link>
         </div>
@@ -40,12 +71,12 @@ export default function HomePage() {
           <h2 className="text-2xl font-semibold mb-4">Your Progress</h2>
           <div className="grid grid-cols-2 gap-4">
             <div className="text-center">
-              <p className="text-3xl font-bold text-blue-600">{totalWords}</p>
-              <p className="text-gray-600">Words Learned</p>
+              <p className="text-3xl font-bold text-blue-600">{totalStarted}</p>
+              <p className="text-gray-600">Topics Started</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl font-bold text-orange-600">{wordsToReview}</p>
-              <p className="text-gray-600">Words to Review</p>
+              <p className="text-3xl font-bold text-green-600">{totalCompleted}</p>
+              <p className="text-gray-600">Topics Completed</p>
             </div>
           </div>
         </div>

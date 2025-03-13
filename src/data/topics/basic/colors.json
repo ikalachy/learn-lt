@@ -1,0 +1,117 @@
+{
+  "id": "colors",
+  "name": {
+    "en": "Colors",
+    "lt": "Spalvos"
+  },
+  "description": {
+    "en": "Common colors and color-related phrases",
+    "lt": "Dažnai naudojamos spalvos ir su spalvomis susijusios frazės"
+  },
+  "phrases": [
+    {
+      "id": "red",
+      "lt": "Raudona",
+      "en": "Red",
+      "ru": "Красный",
+      "by": "Чырвоны",
+      "tags": ["color", "primary"]
+    },
+    {
+      "id": "blue",
+      "lt": "Mėlyna",
+      "en": "Blue",
+      "ru": "Синий",
+      "by": "Сіні",
+      "tags": ["color", "primary"]
+    },
+    {
+      "id": "green",
+      "lt": "Žalia",
+      "en": "Green",
+      "ru": "Зелёный",
+      "by": "Зялёны",
+      "tags": ["color", "primary"]
+    },
+    {
+      "id": "yellow",
+      "lt": "Geltona",
+      "en": "Yellow",
+      "ru": "Жёлтый",
+      "by": "Жоўты",
+      "tags": ["color", "primary"]
+    },
+    {
+      "id": "black",
+      "lt": "Juoda",
+      "en": "Black",
+      "ru": "Чёрный",
+      "by": "Чорны",
+      "tags": ["color", "neutral"]
+    },
+    {
+      "id": "white",
+      "lt": "Balta",
+      "en": "White",
+      "ru": "Белый",
+      "by": "Белы",
+      "tags": ["color", "neutral"]
+    },
+    {
+      "id": "gray",
+      "lt": "Pilka",
+      "en": "Gray",
+      "ru": "Серый",
+      "by": "Шэры",
+      "tags": ["color", "neutral"]
+    },
+    {
+      "id": "brown",
+      "lt": "Ruda",
+      "en": "Brown",
+      "ru": "Коричневый",
+      "by": "Карычневы",
+      "tags": ["color", "secondary"]
+    },
+    {
+      "id": "purple",
+      "lt": "Violetinė",
+      "en": "Purple",
+      "ru": "Фиолетовый",
+      "by": "Фіялетавы",
+      "tags": ["color", "secondary"]
+    },
+    {
+      "id": "orange",
+      "lt": "Oranžinė",
+      "en": "Orange",
+      "ru": "Оранжевый",
+      "by": "Аранжавы",
+      "tags": ["color", "secondary"]
+    },
+    {
+      "id": "pink",
+      "lt": "Rožinė",
+      "en": "Pink",
+      "ru": "Розовый",
+      "by": "Ружовы",
+      "tags": ["color", "secondary"]
+    },
+    {
+      "id": "light",
+      "lt": "Šviesi",
+      "en": "Light",
+      "ru": "Светлый",
+      "by": "Светлы",
+      "tags": ["color", "modifier"]
+    },
+    {
+      "id": "dark",
+      "lt": "Tamsi",
+      "en": "Dark",
+      "ru": "Тёмный",
+      "by": "Цёмны",
+      "tags": ["color", "modifier"]
+    }
+  ]
+} 

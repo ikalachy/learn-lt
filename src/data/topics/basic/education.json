@@ -1,0 +1,437 @@
+{
+  "id": "education",
+  "name": {
+    "en": "Education",
+    "lt": "Švietimas"
+  },
+  "description": {
+    "en": "Common education-related terms, school vocabulary, academic life, and learning phrases",
+    "lt": "Dažniausiai vartojami su švietimu susiję terminai, mokyklos žodynas, akademinio gyvenimo ir mokymosi frazės"
+  },
+  "phrases": [
+    {
+      "id": "school",
+      "lt": "Mokykla",
+      "en": "School",
+      "ru": "Школа",
+      "by": "Школа",
+      "tags": ["education", "place"]
+    },
+    {
+      "id": "university",
+      "lt": "Universitetas",
+      "en": "University",
+      "ru": "Университет",
+      "by": "Універсітэт",
+      "tags": ["education", "place"]
+    },
+    {
+      "id": "college",
+      "lt": "Kolegija",
+      "en": "College",
+      "ru": "Колледж",
+      "by": "Каледж",
+      "tags": ["education", "place"]
+    },
+    {
+      "id": "student",
+      "lt": "Studentas",
+      "en": "Student",
+      "ru": "Студент",
+      "by": "Студэнт",
+      "tags": ["education", "person"]
+    },
+    {
+      "id": "teacher",
+      "lt": "Mokytojas",
+      "en": "Teacher",
+      "ru": "Учитель",
+      "by": "Настаўнік",
+      "tags": ["education", "person"]
+    },
+    {
+      "id": "professor",
+      "lt": "Profesorius",
+      "en": "Professor",
+      "ru": "Профессор",
+      "by": "Прафесар",
+      "tags": ["education", "person"]
+    },
+    {
+      "id": "classroom",
+      "lt": "Klasė",
+      "en": "Classroom",
+      "ru": "Класс",
+      "by": "Клас",
+      "tags": ["education", "place"]
+    },
+    {
+      "id": "library",
+      "lt": "Biblioteka",
+      "en": "Library",
+      "ru": "Библиотека",
+      "by": "Бібліятэка",
+      "tags": ["education", "place"]
+    },
+    {
+      "id": "book",
+      "lt": "Knyga",
+      "en": "Book",
+      "ru": "Книга",
+      "by": "Кніга",
+      "tags": ["education", "item"]
+    },
+    {
+      "id": "notebook",
+      "lt": "Sąsiuvinis",
+      "en": "Notebook",
+      "ru": "Тетрадь",
+      "by": "Сшытак",
+      "tags": ["education", "item"]
+    },
+    {
+      "id": "pen",
+      "lt": "Rašiklis",
+      "en": "Pen",
+      "ru": "Ручка",
+      "by": "Ручка",
+      "tags": ["education", "item"]
+    },
+    {
+      "id": "pencil",
+      "lt": "Pieštukas",
+      "en": "Pencil",
+      "ru": "Карандаш",
+      "by": "Аловак",
+      "tags": ["education", "item"]
+    },
+    {
+      "id": "backpack",
+      "lt": "Kuprinė",
+      "en": "Backpack",
+      "ru": "Рюкзак",
+      "by": "Заплечнік",
+      "tags": ["education", "item"]
+    },
+    {
+      "id": "lesson",
+      "lt": "Pamoka",
+      "en": "Lesson",
+      "ru": "Урок",
+      "by": "Урок",
+      "tags": ["education", "event"]
+    },
+    {
+      "id": "lecture",
+      "lt": "Paskaita",
+      "en": "Lecture",
+      "ru": "Лекция",
+      "by": "Лекцыя",
+      "tags": ["education", "event"]
+    },
+    {
+      "id": "exam",
+      "lt": "Egzaminas",
+      "en": "Exam",
+      "ru": "Экзамен",
+      "by": "Экзамен",
+      "tags": ["education", "event"]
+    },
+    {
+      "id": "test",
+      "lt": "Testas",
+      "en": "Test",
+      "ru": "Тест",
+      "by": "Тэст",
+      "tags": ["education", "assessment"]
+    },
+    {
+      "id": "homework",
+      "lt": "Namų darbai",
+      "en": "Homework",
+      "ru": "Домашнее задание",
+      "by": "Дамашняе заданне",
+      "tags": ["education", "task"]
+    },
+    {
+      "id": "study",
+      "lt": "Mokytis",
+      "en": "Study",
+      "ru": "Учиться",
+      "by": "Вучыцца",
+      "tags": ["education", "action"]
+    },
+    {
+      "id": "learn",
+      "lt": "Išmokti",
+      "en": "Learn",
+      "ru": "Выучить",
+      "by": "Вывучыць",
+      "tags": ["education", "action"]
+    },
+    {
+      "id": "read",
+      "lt": "Skaityti",
+      "en": "Read",
+      "ru": "Читать",
+      "by": "Чытаць",
+      "tags": ["education", "action"]
+    },
+    {
+      "id": "write",
+      "lt": "Rašyti",
+      "en": "Write",
+      "ru": "Писать",
+      "by": "Пісаць",
+      "tags": ["education", "action"]
+    },
+    {
+      "id": "subject",
+      "lt": "Dalykas",
+      "en": "Subject",
+      "ru": "Предмет",
+      "by": "Прадмет",
+      "tags": ["education", "concept"]
+    },
+    {
+      "id": "mathematics",
+      "lt": "Matematika",
+      "en": "Mathematics",
+      "ru": "Математика",
+      "by": "Матэматыка",
+      "tags": ["education", "subject"]
+    },
+    {
+      "id": "science",
+      "lt": "Gamtos mokslai",
+      "en": "Science",
+      "ru": "Наука",
+      "by": "Навука",
+      "tags": ["education", "subject"]
+    },
+    {
+      "id": "history",
+      "lt": "Istorija",
+      "en": "History",
+      "ru": "История",
+      "by": "Гісторыя",
+      "tags": ["education", "subject"]
+    },
+    {
+      "id": "language",
+      "lt": "Kalba",
+      "en": "Language",
+      "ru": "Язык",
+      "by": "Мова",
+      "tags": ["education", "subject"]
+    },
+    {
+      "id": "grade",
+      "lt": "Pažymys",
+      "en": "Grade",
+      "ru": "Оценка",
+      "by": "Адзнака",
+      "tags": ["education", "assessment"]
+    },
+    {
+      "id": "pass",
+      "lt": "Išlaikyti",
+      "en": "Pass",
+      "ru": "Сдать",
+      "by": "Здаць",
+      "tags": ["education", "result"]
+    },
+    {
+      "id": "fail",
+      "lt": "Neišlaikyti",
+      "en": "Fail",
+      "ru": "Не сдать",
+      "by": "Не здаць",
+      "tags": ["education", "result"]
+    },
+    {
+      "id": "diploma",
+      "lt": "Diplomas",
+      "en": "Diploma",
+      "ru": "Диплом",
+      "by": "Дыплом",
+      "tags": ["education", "document"]
+    },
+    {
+      "id": "certificate",
+      "lt": "Pažymėjimas",
+      "en": "Certificate",
+      "ru": "Сертификат",
+      "by": "Сертыфікат",
+      "tags": ["education", "document"]
+    },
+    {
+      "id": "semester",
+      "lt": "Semestras",
+      "en": "Semester",
+      "ru": "Семестр",
+      "by": "Семестр",
+      "tags": ["education", "time"]
+    },
+    {
+      "id": "academic-year",
+      "lt": "Mokslo metai",
+      "en": "Academic year",
+      "ru": "Учебный год",
+      "by": "Навучальны год",
+      "tags": ["education", "time"]
+    },
+    {
+      "id": "break",
+      "lt": "Pertrauka",
+      "en": "Break",
+      "ru": "Перемена",
+      "by": "Перапынак",
+      "tags": ["education", "time"]
+    },
+    {
+      "id": "vacation",
+      "lt": "Atostogos",
+      "en": "Vacation",
+      "ru": "Каникулы",
+      "by": "Канікулы",
+      "tags": ["education", "time"]
+    },
+    {
+      "id": "schedule",
+      "lt": "Tvarkaraštis",
+      "en": "Schedule",
+      "ru": "Расписание",
+      "by": "Расклад",
+      "tags": ["education", "organization"]
+    },
+    {
+      "id": "assignment",
+      "lt": "Užduotis",
+      "en": "Assignment",
+      "ru": "Задание",
+      "by": "Заданне",
+      "tags": ["education", "task"]
+    },
+    {
+      "id": "project",
+      "lt": "Projektas",
+      "en": "Project",
+      "ru": "Проект",
+      "by": "Праект",
+      "tags": ["education", "task"]
+    },
+    {
+      "id": "presentation",
+      "lt": "Prezentacija",
+      "en": "Presentation",
+      "ru": "Презентация",
+      "by": "Прэзентацыя",
+      "tags": ["education", "task"]
+    },
+    {
+      "id": "research",
+      "lt": "Tyrimas",
+      "en": "Research",
+      "ru": "Исследование",
+      "by": "Даследаванне",
+      "tags": ["education", "activity"]
+    },
+    {
+      "id": "group-work",
+      "lt": "Grupinis darbas",
+      "en": "Group work",
+      "ru": "Групповая работа",
+      "by": "Групавая праца",
+      "tags": ["education", "activity"]
+    },
+    {
+      "id": "study-abroad",
+      "lt": "Studijos užsienyje",
+      "en": "Study abroad",
+      "ru": "Учёба за границей",
+      "by": "Вучоба за мяжой",
+      "tags": ["education", "program"]
+    },
+    {
+      "id": "scholarship",
+      "lt": "Stipendija",
+      "en": "Scholarship",
+      "ru": "Стипендия",
+      "by": "Стыпендыя",
+      "tags": ["education", "finance"]
+    },
+    {
+      "id": "tuition",
+      "lt": "Mokestis už mokslą",
+      "en": "Tuition",
+      "ru": "Плата за обучение",
+      "by": "Плата за навучанне",
+      "tags": ["education", "finance"]
+    },
+    {
+      "id": "degree",
+      "lt": "Laipsnis",
+      "en": "Degree",
+      "ru": "Степень",
+      "by": "Ступень",
+      "tags": ["education", "achievement"]
+    },
+    {
+      "id": "graduate",
+      "lt": "Baigti mokslus",
+      "en": "Graduate",
+      "ru": "Окончить учёбу",
+      "by": "Скончыць вучобу",
+      "tags": ["education", "achievement"]
+    },
+    {
+      "id": "good-luck",
+      "lt": "Sėkmės",
+      "en": "Good luck",
+      "ru": "Удачи",
+      "by": "Поспехаў",
+      "tags": ["education", "wish"]
+    },
+    {
+      "id": "congratulations",
+      "lt": "Sveikinimai",
+      "en": "Congratulations",
+      "ru": "Поздравляю",
+      "by": "Віншую",
+      "tags": ["education", "wish"]
+    },
+    {
+      "id": "study-hard",
+      "lt": "Mokykis stropiai",
+      "en": "Study hard",
+      "ru": "Учись усердно",
+      "by": "Вучыся старанна",
+      "tags": ["education", "encouragement"]
+    },
+    {
+      "id": "good-job",
+      "lt": "Šaunuolis",
+      "en": "Good job",
+      "ru": "Молодец",
+      "by": "Малайчына",
+      "tags": ["education", "praise"]
+    },
+    {
+      "id": "well-done",
+      "lt": "Puikiai atlikta",
+      "en": "Well done",
+      "ru": "Отлично сделано",
+      "by": "Выдатна зроблена",
+      "tags": ["education", "praise"]
+    },
+    {
+      "id": "keep-going",
+      "lt": "Tęsk toliau",
+      "en": "Keep going",
+      "ru": "Продолжай",
+      "by": "Працягвай",
+      "tags": ["education", "encouragement"]
+    }
+  ]
+} 

@@ -1,0 +1,253 @@
+{
+  "id": "prepositions",
+  "name": {
+    "en": "Prepositions",
+    "lt": "Prielinksniai"
+  },
+  "description": {
+    "en": "Common prepositions used to show relationships between words in a sentence",
+    "lt": "Dažniausiai vartojami prielinksniai, kurie parodo žodžių ryšius sakinyje"
+  },
+  "phrases": [
+    {
+      "id": "in",
+      "lt": "Į",
+      "en": "In",
+      "ru": "В",
+      "by": "У",
+      "tags": ["preposition", "location", "basic"]
+    },
+    {
+      "id": "on",
+      "lt": "Ant",
+      "en": "On",
+      "ru": "На",
+      "by": "На",
+      "tags": ["preposition", "location", "basic"]
+    },
+    {
+      "id": "at",
+      "lt": "Prie",
+      "en": "At",
+      "ru": "У",
+      "by": "Каля",
+      "tags": ["preposition", "location", "basic"]
+    },
+    {
+      "id": "to",
+      "lt": "Į",
+      "en": "To",
+      "ru": "К",
+      "by": "Да",
+      "tags": ["preposition", "direction", "basic"]
+    },
+    {
+      "id": "from",
+      "lt": "Iš",
+      "en": "From",
+      "ru": "Из",
+      "by": "З",
+      "tags": ["preposition", "direction", "basic"]
+    },
+    {
+      "id": "with",
+      "lt": "Su",
+      "en": "With",
+      "ru": "С",
+      "by": "З",
+      "tags": ["preposition", "accompaniment", "basic"]
+    },
+    {
+      "id": "without",
+      "lt": "Be",
+      "en": "Without",
+      "ru": "Без",
+      "by": "Без",
+      "tags": ["preposition", "accompaniment", "basic"]
+    },
+    {
+      "id": "for",
+      "lt": "Už",
+      "en": "For",
+      "ru": "Для",
+      "by": "Для",
+      "tags": ["preposition", "purpose", "basic"]
+    },
+    {
+      "id": "of",
+      "lt": "Iš",
+      "en": "Of",
+      "ru": "Из",
+      "by": "З",
+      "tags": ["preposition", "possession", "basic"]
+    },
+    {
+      "id": "by",
+      "lt": "Prie",
+      "en": "By",
+      "ru": "У",
+      "by": "Каля",
+      "tags": ["preposition", "location", "basic"]
+    },
+    {
+      "id": "near",
+      "lt": "Šalia",
+      "en": "Near",
+      "ru": "Возле",
+      "by": "Побач",
+      "tags": ["preposition", "location", "proximity"]
+    },
+    {
+      "id": "between",
+      "lt": "Tarp",
+      "en": "Between",
+      "ru": "Между",
+      "by": "Паміж",
+      "tags": ["preposition", "location", "position"]
+    },
+    {
+      "id": "among",
+      "lt": "Tarp",
+      "en": "Among",
+      "ru": "Среди",
+      "by": "Сярод",
+      "tags": ["preposition", "location", "position"]
+    },
+    {
+      "id": "through",
+      "lt": "Per",
+      "en": "Through",
+      "ru": "Через",
+      "by": "Праз",
+      "tags": ["preposition", "movement", "direction"]
+    },
+    {
+      "id": "across",
+      "lt": "Per",
+      "en": "Across",
+      "ru": "Через",
+      "by": "Праз",
+      "tags": ["preposition", "movement", "direction"]
+    },
+    {
+      "id": "over",
+      "lt": "Virš",
+      "en": "Over",
+      "ru": "Над",
+      "by": "Над",
+      "tags": ["preposition", "location", "position"]
+    },
+    {
+      "id": "under",
+      "lt": "Po",
+      "en": "Under",
+      "ru": "Под",
+      "by": "Пад",
+      "tags": ["preposition", "location", "position"]
+    },
+    {
+      "id": "behind",
+      "lt": "Už",
+      "en": "Behind",
+      "ru": "За",
+      "by": "За",
+      "tags": ["preposition", "location", "position"]
+    },
+    {
+      "id": "in_front_of",
+      "lt": "Prieš",
+      "en": "In front of",
+      "ru": "Перед",
+      "by": "Перад",
+      "tags": ["preposition", "location", "position"]
+    },
+    {
+      "id": "beside",
+      "lt": "Šalia",
+      "en": "Beside",
+      "ru": "Рядом с",
+      "by": "Побач з",
+      "tags": ["preposition", "location", "position"]
+    },
+    {
+      "id": "during",
+      "lt": "Per",
+      "en": "During",
+      "ru": "Во время",
+      "by": "Падчас",
+      "tags": ["preposition", "time", "duration"]
+    },
+    {
+      "id": "before",
+      "lt": "Prieš",
+      "en": "Before",
+      "ru": "До",
+      "by": "Да",
+      "tags": ["preposition", "time", "sequence"]
+    },
+    {
+      "id": "after",
+      "lt": "Po",
+      "en": "After",
+      "ru": "После",
+      "by": "Пасля",
+      "tags": ["preposition", "time", "sequence"]
+    },
+    {
+      "id": "about",
+      "lt": "Apie",
+      "en": "About",
+      "ru": "О",
+      "by": "Пра",
+      "tags": ["preposition", "topic", "subject"]
+    },
+    {
+      "id": "against",
+      "lt": "Prieš",
+      "en": "Against",
+      "ru": "Против",
+      "by": "Супраць",
+      "tags": ["preposition", "opposition", "direction"]
+    },
+    {
+      "id": "into",
+      "lt": "Į",
+      "en": "Into",
+      "ru": "В",
+      "by": "У",
+      "tags": ["preposition", "direction", "movement"]
+    },
+    {
+      "id": "onto",
+      "lt": "Ant",
+      "en": "Onto",
+      "ru": "На",
+      "by": "На",
+      "tags": ["preposition", "direction", "movement"]
+    },
+    {
+      "id": "inside",
+      "lt": "Viduje",
+      "en": "Inside",
+      "ru": "Внутри",
+      "by": "Унутры",
+      "tags": ["preposition", "location", "position"]
+    },
+    {
+      "id": "outside",
+      "lt": "Išorėje",
+      "en": "Outside",
+      "ru": "Снаружи",
+      "by": "Звонку",
+      "tags": ["preposition", "location", "position"]
+    },
+    {
+      "id": "around",
+      "lt": "Aplink",
+      "en": "Around",
+      "ru": "Вокруг",
+      "by": "Вакол",
+      "tags": ["preposition", "location", "movement"]
+    }
+  ]
+} 

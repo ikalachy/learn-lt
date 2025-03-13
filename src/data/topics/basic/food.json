@@ -1,0 +1,117 @@
+{
+  "id": "food",
+  "name": {
+    "en": "Food and Drinks",
+    "lt": "Maistas ir gėrimai"
+  },
+  "description": {
+    "en": "Common food items, drinks, and related phrases",
+    "lt": "Dažnai naudojami maisto produktai, gėrimai ir susijusios frazės"
+  },
+  "phrases": [
+    {
+      "id": "bread",
+      "lt": "Duona",
+      "en": "Bread",
+      "ru": "Хлеб",
+      "by": "Хлеб",
+      "tags": ["food", "bakery"]
+    },
+    {
+      "id": "milk",
+      "lt": "Pienas",
+      "en": "Milk",
+      "ru": "Молоко",
+      "by": "Малако",
+      "tags": ["drink", "dairy"]
+    },
+    {
+      "id": "water",
+      "lt": "Vanduo",
+      "en": "Water",
+      "ru": "Вода",
+      "by": "Вада",
+      "tags": ["drink"]
+    },
+    {
+      "id": "coffee",
+      "lt": "Kava",
+      "en": "Coffee",
+      "ru": "Кофе",
+      "by": "Кава",
+      "tags": ["drink", "hot"]
+    },
+    {
+      "id": "tea",
+      "lt": "Arbata",
+      "en": "Tea",
+      "ru": "Чай",
+      "by": "Гарбата",
+      "tags": ["drink", "hot"]
+    },
+    {
+      "id": "meat",
+      "lt": "Mėsa",
+      "en": "Meat",
+      "ru": "Мясо",
+      "by": "Мяса",
+      "tags": ["food", "protein"]
+    },
+    {
+      "id": "fish",
+      "lt": "Žuvis",
+      "en": "Fish",
+      "ru": "Рыба",
+      "by": "Рыба",
+      "tags": ["food", "protein"]
+    },
+    {
+      "id": "vegetable",
+      "lt": "Daržovė",
+      "en": "Vegetable",
+      "ru": "Овощ",
+      "by": "Гародніна",
+      "tags": ["food", "vegetable"]
+    },
+    {
+      "id": "fruit",
+      "lt": "Vaisius",
+      "en": "Fruit",
+      "ru": "Фрукт",
+      "by": "Садавіна",
+      "tags": ["food", "fruit"]
+    },
+    {
+      "id": "soup",
+      "lt": "Sriuba",
+      "en": "Soup",
+      "ru": "Суп",
+      "by": "Суп",
+      "tags": ["food", "dish"]
+    },
+    {
+      "id": "juice",
+      "lt": "Sultys",
+      "en": "Juice",
+      "ru": "Сок",
+      "by": "Сок",
+      "tags": ["drink"]
+    },
+    {
+      "id": "hungry",
+      "lt": "Alkanas",
+      "en": "Hungry",
+      "ru": "Голодный",
+      "by": "Галодны",
+      "tags": ["state", "feeling"]
+    },
+    {
+      "id": "thirsty",
+      "lt": "Ištroškęs",
+      "en": "Thirsty",
+      "ru": "Хочу пить",
+      "by": "Хачу піць",
+      "tags": ["state", "feeling"]
+    }
+  ]
+} 

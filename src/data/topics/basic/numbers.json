@@ -1,0 +1,133 @@
+{
+  "id": "numbers",
+  "name": {
+    "en": "Numbers",
+    "lt": "Skaičiai"
+  },
+  "description": {
+    "en": "Numbers, counting, and basic math terms",
+    "lt": "Skaičiai, skaičiavimas ir pagrindiniai matematikos terminai"
+  },
+  "phrases": [
+    {
+      "id": "zero",
+      "lt": "Nulis",
+      "en": "Zero",
+      "ru": "Ноль",
+      "by": "Нуль",
+      "tags": ["number", "basic"]
+    },
+    {
+      "id": "one",
+      "lt": "Vienas",
+      "en": "One",
+      "ru": "Один",
+      "by": "Адзін",
+      "tags": ["number", "basic"]
+    },
+    {
+      "id": "two",
+      "lt": "Du",
+      "en": "Two",
+      "ru": "Два",
+      "by": "Два",
+      "tags": ["number", "basic"]
+    },
+    {
+      "id": "three",
+      "lt": "Trys",
+      "en": "Three",
+      "ru": "Три",
+      "by": "Тры",
+      "tags": ["number", "basic"]
+    },
+    {
+      "id": "four",
+      "lt": "Keturi",
+      "en": "Four",
+      "ru": "Четыре",
+      "by": "Чатыры",
+      "tags": ["number", "basic"]
+    },
+    {
+      "id": "five",
+      "lt": "Penki",
+      "en": "Five",
+      "ru": "Пять",
+      "by": "Пяць",
+      "tags": ["number", "basic"]
+    },
+    {
+      "id": "ten",
+      "lt": "Dešimt",
+      "en": "Ten",
+      "ru": "Десять",
+      "by": "Дзесяць",
+      "tags": ["number", "basic"]
+    },
+    {
+      "id": "twenty",
+      "lt": "Dvidešimt",
+      "en": "Twenty",
+      "ru": "Двадцать",
+      "by": "Дваццаць",
+      "tags": ["number", "tens"]
+    },
+    {
+      "id": "hundred",
+      "lt": "Šimtas",
+      "en": "Hundred",
+      "ru": "Сто",
+      "by": "Сто",
+      "tags": ["number", "large"]
+    },
+    {
+      "id": "thousand",
+      "lt": "Tūkstantis",
+      "en": "Thousand",
+      "ru": "Тысяча",
+      "by": "Тысяча",
+      "tags": ["number", "large"]
+    },
+    {
+      "id": "first",
+      "lt": "Pirmas",
+      "en": "First",
+      "ru": "Первый",
+      "by": "Першы",
+      "tags": ["number", "ordinal"]
+    },
+    {
+      "id": "second",
+      "lt": "Antras",
+      "en": "Second",
+      "ru": "Второй",
+      "by": "Другі",
+      "tags": ["number", "ordinal"]
+    },
+    {
+      "id": "last",
+      "lt": "Paskutinis",
+      "en": "Last",
+      "ru": "Последний",
+      "by": "Апошні",
+      "tags": ["number", "ordinal"]
+    },
+    {
+      "id": "many",
+      "lt": "Daug",
+      "en": "Many",
+      "ru": "Много",
+      "by": "Шмат",
+      "tags": ["number", "quantity"]
+    },
+    {
+      "id": "few",
+      "lt": "Keletas",
+      "en": "Few",
+      "ru": "Несколько",
+      "by": "Некалькі",
+      "tags": ["number", "quantity"]
+    }
+  ]
+} 

@@ -1,0 +1,69 @@
+{
+  "id": "greetings",
+  "name": {
+    "en": "Greetings and Farewells",
+    "lt": "Pasisveikinimai ir atsisveikinimas"
+  },
+  "description": {
+    "en": "Common phrases for greeting people and saying goodbye",
+    "lt": "Dažnai naudojamos frazės pasisveikinimui ir atsisveikinimui"
+  },
+  "phrases": [
+    {
+      "id": "hello",
+      "lt": "Labas",
+      "en": "Hello",
+      "ru": "Привет",
+      "by": "Прывітанне",
+      "tags": ["greeting", "informal"]
+    },
+    {
+      "id": "good-morning",
+      "lt": "Labas rytas",
+      "en": "Good morning",
+      "ru": "Доброе утро",
+      "by": "Добрай раніцы",
+      "tags": ["greeting", "formal", "morning"]
+    },
+    {
+      "id": "good-evening",
+      "lt": "Labas vakaras",
+      "en": "Good evening",
+      "ru": "Добрый вечер",
+      "by": "Добры вечар",
+      "tags": ["greeting", "formal", "evening"]
+    },
+    {
+      "id": "goodbye",
+      "lt": "Viso gero",
+      "en": "Goodbye",
+      "ru": "До свидания",
+      "by": "Да пабачэння",
+      "tags": ["farewell", "formal"]
+    },
+    {
+      "id": "bye",
+      "lt": "Iki",
+      "en": "Bye",
+      "ru": "Пока",
+      "by": "Пака",
+      "tags": ["farewell", "informal"]
+    },
+    {
+      "id": "see-you-later",
+      "lt": "Iki pasimatymo",
+      "en": "See you later",
+      "ru": "До встречи",
+      "by": "Да сустрэчы",
+      "tags": ["farewell", "informal"]
+    },
+    {
+      "id": "how-are-you",
+      "lt": "Kaip sekasi?",
+      "en": "How are you?",
+      "ru": "Как дела?",
+      "by": "Як справы?",
+      "tags": ["greeting", "question"]
+    }
+  ]
+} 

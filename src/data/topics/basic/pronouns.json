@@ -1,0 +1,261 @@
+{
+  "id": "pronouns",
+  "name": {
+    "en": "Pronouns",
+    "lt": "Įvardžiai"
+  },
+  "description": {
+    "en": "Common pronouns used to replace nouns and refer to people, things, and places",
+    "lt": "Dažniausiai vartojami įvardžiai, kurie pakeičia daiktavardžius ir nurodo į žmones, daiktus ir vietas"
+  },
+  "phrases": [
+    {
+      "id": "i",
+      "lt": "Aš",
+      "en": "I",
+      "ru": "Я",
+      "by": "Я",
+      "tags": ["pronoun", "personal", "singular", "first-person"]
+    },
+    {
+      "id": "you",
+      "lt": "Tu",
+      "en": "You",
+      "ru": "Ты",
+      "by": "Ты",
+      "tags": ["pronoun", "personal", "singular", "second-person"]
+    },
+    {
+      "id": "he",
+      "lt": "Jis",
+      "en": "He",
+      "ru": "Он",
+      "by": "Ён",
+      "tags": ["pronoun", "personal", "singular", "third-person", "masculine"]
+    },
+    {
+      "id": "she",
+      "lt": "Ji",
+      "en": "She",
+      "ru": "Она",
+      "by": "Яна",
+      "tags": ["pronoun", "personal", "singular", "third-person", "feminine"]
+    },
+    {
+      "id": "it",
+      "lt": "Jis/Ji",
+      "en": "It",
+      "ru": "Оно",
+      "by": "Яно",
+      "tags": ["pronoun", "personal", "singular", "third-person", "neuter"]
+    },
+    {
+      "id": "we",
+      "lt": "Mes",
+      "en": "We",
+      "ru": "Мы",
+      "by": "Мы",
+      "tags": ["pronoun", "personal", "plural", "first-person"]
+    },
+    {
+      "id": "you_plural",
+      "lt": "Jūs",
+      "en": "You",
+      "ru": "Вы",
+      "by": "Вы",
+      "tags": ["pronoun", "personal", "plural", "second-person"]
+    },
+    {
+      "id": "they",
+      "lt": "Jie/Jos",
+      "en": "They",
+      "ru": "Они",
+      "by": "Яны",
+      "tags": ["pronoun", "personal", "plural", "third-person"]
+    },
+    {
+      "id": "myself",
+      "lt": "Pats/Pati",
+      "en": "Myself",
+      "ru": "Сам/Сама",
+      "by": "Сам/Сама",
+      "tags": ["pronoun", "reflexive", "singular", "first-person"]
+    },
+    {
+      "id": "yourself",
+      "lt": "Pats/Pati",
+      "en": "Yourself",
+      "ru": "Сам/Сама",
+      "by": "Сам/Сама",
+      "tags": ["pronoun", "reflexive", "singular", "second-person"]
+    },
+    {
+      "id": "himself",
+      "lt": "Pats",
+      "en": "Himself",
+      "ru": "Сам",
+      "by": "Сам",
+      "tags": ["pronoun", "reflexive", "singular", "third-person", "masculine"]
+    },
+    {
+      "id": "herself",
+      "lt": "Pati",
+      "en": "Herself",
+      "ru": "Сама",
+      "by": "Сама",
+      "tags": ["pronoun", "reflexive", "singular", "third-person", "feminine"]
+    },
+    {
+      "id": "itself",
+      "lt": "Pats/Pati",
+      "en": "Itself",
+      "ru": "Само",
+      "by": "Само",
+      "tags": ["pronoun", "reflexive", "singular", "third-person", "neuter"]
+    },
+    {
+      "id": "ourselves",
+      "lt": "Patys/Patys",
+      "en": "Ourselves",
+      "ru": "Сами",
+      "by": "Самі",
+      "tags": ["pronoun", "reflexive", "plural", "first-person"]
+    },
+    {
+      "id": "yourselves",
+      "lt": "Patys/Patys",
+      "en": "Yourselves",
+      "ru": "Сами",
+      "by": "Самі",
+      "tags": ["pronoun", "reflexive", "plural", "second-person"]
+    },
+    {
+      "id": "themselves",
+      "lt": "Patys/Patys",
+      "en": "Themselves",
+      "ru": "Сами",
+      "by": "Самі",
+      "tags": ["pronoun", "reflexive", "plural", "third-person"]
+    },
+    {
+      "id": "this",
+      "lt": "Šis/Ši",
+      "en": "This",
+      "ru": "Этот/Эта",
+      "by": "Гэты/Гэтая",
+      "tags": ["pronoun", "demonstrative", "singular", "near"]
+    },
+    {
+      "id": "that",
+      "lt": "Tas/Ta",
+      "en": "That",
+      "ru": "Тот/Та",
+      "by": "Той/Тая",
+      "tags": ["pronoun", "demonstrative", "singular", "far"]
+    },
+    {
+      "id": "these",
+      "lt": "Šie/Šios",
+      "en": "These",
+      "ru": "Эти",
+      "by": "Гэтыя",
+      "tags": ["pronoun", "demonstrative", "plural", "near"]
+    },
+    {
+      "id": "those",
+      "lt": "Tie/Tos",
+      "en": "Those",
+      "ru": "Те",
+      "by": "Тыя",
+      "tags": ["pronoun", "demonstrative", "plural", "far"]
+    },
+    {
+      "id": "who",
+      "lt": "Kas",
+      "en": "Who",
+      "ru": "Кто",
+      "by": "Хто",
+      "tags": ["pronoun", "interrogative", "person"]
+    },
+    {
+      "id": "what",
+      "lt": "Ką",
+      "en": "What",
+      "ru": "Что",
+      "by": "Што",
+      "tags": ["pronoun", "interrogative", "thing"]
+    },
+    {
+      "id": "which",
+      "lt": "Kuris/Kuri",
+      "en": "Which",
+      "ru": "Какой/Какая",
+      "by": "Які/Якая",
+      "tags": ["pronoun", "interrogative", "choice"]
+    },
+    {
+      "id": "whose",
+      "lt": "Kieno",
+      "en": "Whose",
+      "ru": "Чей/Чья",
+      "by": "Чый/Чыя",
+      "tags": ["pronoun", "interrogative", "possession"]
+    },
+    {
+      "id": "whom",
+      "lt": "Ką",
+      "en": "Whom",
+      "ru": "Кого",
+      "by": "Каго",
+      "tags": ["pronoun", "interrogative", "object"]
+    },
+    {
+      "id": "someone",
+      "lt": "Kažkas",
+      "en": "Someone",
+      "ru": "Кто-то",
+      "by": "Хтосьці",
+      "tags": ["pronoun", "indefinite", "person", "singular"]
+    },
+    {
+      "id": "something",
+      "lt": "Kažkas",
+      "en": "Something",
+      "ru": "Что-то",
+      "by": "Штосьці",
+      "tags": ["pronoun", "indefinite", "thing", "singular"]
+    },
+    {
+      "id": "anyone",
+      "lt": "Bet kas",
+      "en": "Anyone",
+      "ru": "Кто-нибудь",
+      "by": "Хто-небудзь",
+      "tags": ["pronoun", "indefinite", "person", "singular"]
+    },
+    {
+      "id": "anything",
+      "lt": "Bet kas",
+      "en": "Anything",
+      "ru": "Что-нибудь",
+      "by": "Што-небудзь",
+      "tags": ["pronoun", "indefinite", "thing", "singular"]
+    },
+    {
+      "id": "everyone",
+      "lt": "Visi",
+      "en": "Everyone",
+      "ru": "Все",
+      "by": "Усе",
+      "tags": ["pronoun", "indefinite", "person", "plural"]
+    },
+    {
+      "id": "everything",
+      "lt": "Viskas",
+      "en": "Everything",
+      "ru": "Всё",
+      "by": "Усё",
+      "tags": ["pronoun", "indefinite", "thing", "plural"]
+    }
+  ]
+} 

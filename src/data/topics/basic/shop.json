@@ -1,0 +1,533 @@
+{
+  "id": "shop",
+  "name": {
+    "en": "Shop",
+    "lt": "Parduotuvė"
+  },
+  "description": {
+    "en": "Common shopping-related terms, store vocabulary, products, and shopping phrases",
+    "lt": "Dažniausiai vartojami su apsipirkimu susiję terminai, parduotuvės žodynas, produktai ir apsipirkimo frazės"
+  },
+  "phrases": [
+    {
+      "id": "shop",
+      "lt": "Parduotuvė",
+      "en": "Shop",
+      "ru": "Магазин",
+      "by": "Крама",
+      "tags": ["shop", "place"]
+    },
+    {
+      "id": "store",
+      "lt": "Parduotuvė",
+      "en": "Store",
+      "ru": "Магазин",
+      "by": "Крама",
+      "tags": ["shop", "place"]
+    },
+    {
+      "id": "market",
+      "lt": "Turgus",
+      "en": "Market",
+      "ru": "Рынок",
+      "by": "Рынак",
+      "tags": ["shop", "place"]
+    },
+    {
+      "id": "mall",
+      "lt": "Prekybos centras",
+      "en": "Mall",
+      "ru": "Торговый центр",
+      "by": "Гандлёвы цэнтр",
+      "tags": ["shop", "place"]
+    },
+    {
+      "id": "supermarket",
+      "lt": "Supermarketas",
+      "en": "Supermarket",
+      "ru": "Супермаркет",
+      "by": "Супермаркет",
+      "tags": ["shop", "place"]
+    },
+    {
+      "id": "boutique",
+      "lt": "Butikas",
+      "en": "Boutique",
+      "ru": "Бутик",
+      "by": "Бутык",
+      "tags": ["shop", "place"]
+    },
+    {
+      "id": "cashier",
+      "lt": "Kasininkas",
+      "en": "Cashier",
+      "ru": "Кассир",
+      "by": "Касір",
+      "tags": ["shop", "person"]
+    },
+    {
+      "id": "seller",
+      "lt": "Pardavėjas",
+      "en": "Seller",
+      "ru": "Продавец",
+      "by": "Прадавец",
+      "tags": ["shop", "person"]
+    },
+    {
+      "id": "customer",
+      "lt": "Klientas",
+      "en": "Customer",
+      "ru": "Покупатель",
+      "by": "Кліент",
+      "tags": ["shop", "person"]
+    },
+    {
+      "id": "product",
+      "lt": "Produktas",
+      "en": "Product",
+      "ru": "Товар",
+      "by": "Тавар",
+      "tags": ["shop", "item"]
+    },
+    {
+      "id": "price",
+      "lt": "Kaina",
+      "en": "Price",
+      "ru": "Цена",
+      "by": "Цана",
+      "tags": ["shop", "money"]
+    },
+    {
+      "id": "cost",
+      "lt": "Kainuoja",
+      "en": "Cost",
+      "ru": "Стоит",
+      "by": "Каштуе",
+      "tags": ["shop", "money"]
+    },
+    {
+      "id": "expensive",
+      "lt": "Brangus",
+      "en": "Expensive",
+      "ru": "Дорогой",
+      "by": "Дарагі",
+      "tags": ["shop", "description"]
+    },
+    {
+      "id": "cheap",
+      "lt": "Pigus",
+      "en": "Cheap",
+      "ru": "Дешёвый",
+      "by": "Таны",
+      "tags": ["shop", "description"]
+    },
+    {
+      "id": "sale",
+      "lt": "Išpardavimas",
+      "en": "Sale",
+      "ru": "Распродажа",
+      "by": "Распродаж",
+      "tags": ["shop", "event"]
+    },
+    {
+      "id": "discount",
+      "lt": "Nuolaida",
+      "en": "Discount",
+      "ru": "Скидка",
+      "by": "Зніжка",
+      "tags": ["shop", "money"]
+    },
+    {
+      "id": "receipt",
+      "lt": "Čekis",
+      "en": "Receipt",
+      "ru": "Чек",
+      "by": "Чэк",
+      "tags": ["shop", "document"]
+    },
+    {
+      "id": "cash",
+      "lt": "Grynieji",
+      "en": "Cash",
+      "ru": "Наличные",
+      "by": "Наяўныя",
+      "tags": ["shop", "payment"]
+    },
+    {
+      "id": "card",
+      "lt": "Kortelė",
+      "en": "Card",
+      "ru": "Карта",
+      "by": "Картка",
+      "tags": ["shop", "payment"]
+    },
+    {
+      "id": "change",
+      "lt": "Grąža",
+      "en": "Change",
+      "ru": "Сдача",
+      "by": "Здача",
+      "tags": ["shop", "money"]
+    },
+    {
+      "id": "size",
+      "lt": "Dydis",
+      "en": "Size",
+      "ru": "Размер",
+      "by": "Памер",
+      "tags": ["shop", "measurement"]
+    },
+    {
+      "id": "color",
+      "lt": "Spalva",
+      "en": "Color",
+      "ru": "Цвет",
+      "by": "Колер",
+      "tags": ["shop", "description"]
+    },
+    {
+      "id": "brand",
+      "lt": "Prekės ženklas",
+      "en": "Brand",
+      "ru": "Бренд",
+      "by": "Брэнд",
+      "tags": ["shop", "description"]
+    },
+    {
+      "id": "quality",
+      "lt": "Kokybė",
+      "en": "Quality",
+      "ru": "Качество",
+      "by": "Якасць",
+      "tags": ["shop", "description"]
+    },
+    {
+      "id": "new",
+      "lt": "Naujas",
+      "en": "New",
+      "ru": "Новый",
+      "by": "Новы",
+      "tags": ["shop", "description"]
+    },
+    {
+      "id": "used",
+      "lt": "Naudotas",
+      "en": "Used",
+      "ru": "Б/у",
+      "by": "Б/у",
+      "tags": ["shop", "description"]
+    },
+    {
+      "id": "available",
+      "lt": "Yra",
+      "en": "Available",
+      "ru": "В наличии",
+      "by": "У наяўнасці",
+      "tags": ["shop", "status"]
+    },
+    {
+      "id": "out-of-stock",
+      "lt": "Išparduota",
+      "en": "Out of stock",
+      "ru": "Нет в наличии",
+      "by": "Няма ў наяўнасці",
+      "tags": ["shop", "status"]
+    },
+    {
+      "id": "try-on",
+      "lt": "Pamatuoti",
+      "en": "Try on",
+      "ru": "Примерить",
+      "by": "Прымераць",
+      "tags": ["shop", "action"]
+    },
+    {
+      "id": "fitting-room",
+      "lt": "Pamėrinė",
+      "en": "Fitting room",
+      "ru": "Примерочная",
+      "by": "Прымеркавая",
+      "tags": ["shop", "place"]
+    },
+    {
+      "id": "return",
+      "lt": "Grąžinti",
+      "en": "Return",
+      "ru": "Вернуть",
+      "by": "Вярнуць",
+      "tags": ["shop", "action"]
+    },
+    {
+      "id": "refund",
+      "lt": "Grąžinti pinigus",
+      "en": "Refund",
+      "ru": "Возврат денег",
+      "by": "Вяртанне грошай",
+      "tags": ["shop", "action"]
+    },
+    {
+      "id": "warranty",
+      "lt": "Garantija",
+      "en": "Warranty",
+      "ru": "Гарантия",
+      "by": "Гарантыя",
+      "tags": ["shop", "service"]
+    },
+    {
+      "id": "delivery",
+      "lt": "Pristatymas",
+      "en": "Delivery",
+      "ru": "Доставка",
+      "by": "Дастаўка",
+      "tags": ["shop", "service"]
+    },
+    {
+      "id": "shipping",
+      "lt": "Siuntimas",
+      "en": "Shipping",
+      "ru": "Отправка",
+      "by": "Адпраўка",
+      "tags": ["shop", "service"]
+    },
+    {
+      "id": "order",
+      "lt": "Užsakymas",
+      "en": "Order",
+      "ru": "Заказ",
+      "by": "Заказ",
+      "tags": ["shop", "action"]
+    },
+    {
+      "id": "basket",
+      "lt": "Krepšys",
+      "en": "Basket",
+      "ru": "Корзина",
+      "by": "Кошык",
+      "tags": ["shop", "item"]
+    },
+    {
+      "id": "cart",
+      "lt": "Krepšys",
+      "en": "Cart",
+      "ru": "Корзина",
+      "by": "Кошык",
+      "tags": ["shop", "item"]
+    },
+    {
+      "id": "checkout",
+      "lt": "Atsiskaitymas",
+      "en": "Checkout",
+      "ru": "Оплата",
+      "by": "Аплата",
+      "tags": ["shop", "action"]
+    },
+    {
+      "id": "queue",
+      "lt": "Eilė",
+      "en": "Queue",
+      "ru": "Очередь",
+      "by": "Чарга",
+      "tags": ["shop", "situation"]
+    },
+    {
+      "id": "wait",
+      "lt": "Laukti",
+      "en": "Wait",
+      "ru": "Ждать",
+      "by": "Чакаць",
+      "tags": ["shop", "action"]
+    },
+    {
+      "id": "open",
+      "lt": "Atidaryta",
+      "en": "Open",
+      "ru": "Открыто",
+      "by": "Адкрыта",
+      "tags": ["shop", "status"]
+    },
+    {
+      "id": "closed",
+      "lt": "Uždaryta",
+      "en": "Closed",
+      "ru": "Закрыто",
+      "by": "Закрыта",
+      "tags": ["shop", "status"]
+    },
+    {
+      "id": "hours",
+      "lt": "Darbo laikas",
+      "en": "Opening hours",
+      "ru": "Часы работы",
+      "by": "Гадзіны працы",
+      "tags": ["shop", "time"]
+    },
+    {
+      "id": "today",
+      "lt": "Šiandien",
+      "en": "Today",
+      "ru": "Сегодня",
+      "by": "Сёння",
+      "tags": ["shop", "time"]
+    },
+    {
+      "id": "tomorrow",
+      "lt": "Rytoj",
+      "en": "Tomorrow",
+      "ru": "Завтра",
+      "by": "Заўтра",
+      "tags": ["shop", "time"]
+    },
+    {
+      "id": "weekend",
+      "lt": "Savaitgalis",
+      "en": "Weekend",
+      "ru": "Выходные",
+      "by": "Выходныя",
+      "tags": ["shop", "time"]
+    },
+    {
+      "id": "holiday",
+      "lt": "Atostogos",
+      "en": "Holiday",
+      "ru": "Праздник",
+      "by": "Свята",
+      "tags": ["shop", "time"]
+    },
+    {
+      "id": "gift",
+      "lt": "Dovana",
+      "en": "Gift",
+      "ru": "Подарок",
+      "by": "Падарунак",
+      "tags": ["shop", "item"]
+    },
+    {
+      "id": "wrapping",
+      "lt": "Pakuotė",
+      "en": "Wrapping",
+      "ru": "Упаковка",
+      "by": "Пакаванне",
+      "tags": ["shop", "service"]
+    },
+    {
+      "id": "special-offer",
+      "lt": "Specialus pasiūlymas",
+      "en": "Special offer",
+      "ru": "Специальное предложение",
+      "by": "Спецыяльная прапанова",
+      "tags": ["shop", "promotion"]
+    },
+    {
+      "id": "clearance",
+      "lt": "Išvalymas",
+      "en": "Clearance",
+      "ru": "Распродажа",
+      "by": "Распродаж",
+      "tags": ["shop", "promotion"]
+    },
+    {
+      "id": "bargain",
+      "lt": "Išpirkimas",
+      "en": "Bargain",
+      "ru": "Выгодная покупка",
+      "by": "Выгадная пакупка",
+      "tags": ["shop", "promotion"]
+    },
+    {
+      "id": "recommend",
+      "lt": "Rekomenduoti",
+      "en": "Recommend",
+      "ru": "Рекомендовать",
+      "by": "Рэкамендаваць",
+      "tags": ["shop", "action"]
+    },
+    {
+      "id": "popular",
+      "lt": "Populiarus",
+      "en": "Popular",
+      "ru": "Популярный",
+      "by": "Папулярны",
+      "tags": ["shop", "description"]
+    },
+    {
+      "id": "latest",
+      "lt": "Naujausias",
+      "en": "Latest",
+      "ru": "Новейший",
+      "by": "Найноўшы",
+      "tags": ["shop", "description"]
+    },
+    {
+      "id": "best-seller",
+      "lt": "Bestselleris",
+      "en": "Best-seller",
+      "ru": "Бестселлер",
+      "by": "Бестсэлер",
+      "tags": ["shop", "description"]
+    },
+    {
+      "id": "limited-edition",
+      "lt": "Riboto leidimo",
+      "en": "Limited edition",
+      "ru": "Ограниченный выпуск",
+      "by": "Абмежаваны выпуск",
+      "tags": ["shop", "description"]
+    },
+    {
+      "id": "exclusive",
+      "lt": "Ekskluzyvus",
+      "en": "Exclusive",
+      "ru": "Эксклюзивный",
+      "by": "Эксклюзіўны",
+      "tags": ["shop", "description"]
+    },
+    {
+      "id": "premium",
+      "lt": "Premium",
+      "en": "Premium",
+      "ru": "Премиум",
+      "by": "Прэміум",
+      "tags": ["shop", "description"]
+    },
+    {
+      "id": "luxury",
+      "lt": "Prabanga",
+      "en": "Luxury",
+      "ru": "Люкс",
+      "by": "Люкс",
+      "tags": ["shop", "description"]
+    },
+    {
+      "id": "authentic",
+      "lt": "Autentiškas",
+      "en": "Authentic",
+      "ru": "Аутентичный",
+      "by": "Аўтэнтычны",
+      "tags": ["shop", "description"]
+    },
+    {
+      "id": "original",
+      "lt": "Originalus",
+      "en": "Original",
+      "ru": "Оригинальный",
+      "by": "Арыгінальны",
+      "tags": ["shop", "description"]
+    },
+    {
+      "id": "fake",
+      "lt": "Netikras",
+      "en": "Fake",
+      "ru": "Подделка",
+      "by": "Падробка",
+      "tags": ["shop", "description"]
+    },
+    {
+      "id": "counterfeit",
+      "lt": "Klastotė",
+      "en": "Counterfeit",
+      "ru": "Контрафакт",
+      "by": "Кантрафакт",
+      "tags": ["shop", "description"]
+    }
+  ]
+} 

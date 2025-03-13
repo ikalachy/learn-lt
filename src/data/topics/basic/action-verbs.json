@@ -1,0 +1,869 @@
+{
+  "id": "action-verbs",
+  "name": {
+    "en": "Action Verbs",
+    "lt": "Veiksmažodžiai"
+  },
+  "description": {
+    "en": "Common action verbs and their forms for everyday use",
+    "lt": "Dažniausiai vartojami veiksmažodžiai ir jų formos kasdieniam vartojimui"
+  },
+  "phrases": [
+    {
+      "id": "go",
+      "lt": "Eiti",
+      "en": "Go",
+      "ru": "Идти",
+      "by": "Ісці",
+      "tags": ["verb", "movement"]
+    },
+    {
+      "id": "come",
+      "lt": "Ateiti",
+      "en": "Come",
+      "ru": "Приходить",
+      "by": "Прыходзіць",
+      "tags": ["verb", "movement"]
+    },
+    {
+      "id": "run",
+      "lt": "Bėgti",
+      "en": "Run",
+      "ru": "Бежать",
+      "by": "Бегчы",
+      "tags": ["verb", "movement"]
+    },
+    {
+      "id": "walk",
+      "lt": "Vaikščioti",
+      "en": "Walk",
+      "ru": "Ходить",
+      "by": "Хадзіць",
+      "tags": ["verb", "movement"]
+    },
+    {
+      "id": "jump",
+      "lt": "Šokti",
+      "en": "Jump",
+      "ru": "Прыгать",
+      "by": "Скакаць",
+      "tags": ["verb", "movement"]
+    },
+    {
+      "id": "sit",
+      "lt": "Sėdėti",
+      "en": "Sit",
+      "ru": "Сидеть",
+      "by": "Сядзець",
+      "tags": ["verb", "position"]
+    },
+    {
+      "id": "stand",
+      "lt": "Stovėti",
+      "en": "Stand",
+      "ru": "Стоять",
+      "by": "Стаяць",
+      "tags": ["verb", "position"]
+    },
+    {
+      "id": "lie",
+      "lt": "Gulėti",
+      "en": "Lie",
+      "ru": "Лежать",
+      "by": "Ляжаць",
+      "tags": ["verb", "position"]
+    },
+    {
+      "id": "eat",
+      "lt": "Valgyti",
+      "en": "Eat",
+      "ru": "Есть",
+      "by": "Есці",
+      "tags": ["verb", "consumption"]
+    },
+    {
+      "id": "drink",
+      "lt": "Gerti",
+      "en": "Drink",
+      "ru": "Пить",
+      "by": "Піць",
+      "tags": ["verb", "consumption"]
+    },
+    {
+      "id": "sleep",
+      "lt": "Miegoti",
+      "en": "Sleep",
+      "ru": "Спать",
+      "by": "Спаць",
+      "tags": ["verb", "rest"]
+    },
+    {
+      "id": "wake",
+      "lt": "Pabusti",
+      "en": "Wake",
+      "ru": "Просыпаться",
+      "by": "Прачынацца",
+      "tags": ["verb", "rest"]
+    },
+    {
+      "id": "work",
+      "lt": "Dirbti",
+      "en": "Work",
+      "ru": "Работать",
+      "by": "Працаваць",
+      "tags": ["verb", "activity"]
+    },
+    {
+      "id": "play",
+      "lt": "Žaisti",
+      "en": "Play",
+      "ru": "Играть",
+      "by": "Гуляць",
+      "tags": ["verb", "activity"]
+    },
+    {
+      "id": "study",
+      "lt": "Mokytis",
+      "en": "Study",
+      "ru": "Учиться",
+      "by": "Вучыцца",
+      "tags": ["verb", "education"]
+    },
+    {
+      "id": "read",
+      "lt": "Skaityti",
+      "en": "Read",
+      "ru": "Читать",
+      "by": "Чытаць",
+      "tags": ["verb", "education"]
+    },
+    {
+      "id": "write",
+      "lt": "Rašyti",
+      "en": "Write",
+      "ru": "Писать",
+      "by": "Пісаць",
+      "tags": ["verb", "education"]
+    },
+    {
+      "id": "speak",
+      "lt": "Kalbėti",
+      "en": "Speak",
+      "ru": "Говорить",
+      "by": "Гаварыць",
+      "tags": ["verb", "communication"]
+    },
+    {
+      "id": "listen",
+      "lt": "Klausyti",
+      "en": "Listen",
+      "ru": "Слушать",
+      "by": "Слухаць",
+      "tags": ["verb", "communication"]
+    },
+    {
+      "id": "hear",
+      "lt": "Girdėti",
+      "en": "Hear",
+      "ru": "Слышать",
+      "by": "Чуць",
+      "tags": ["verb", "perception"]
+    },
+    {
+      "id": "see",
+      "lt": "Matyti",
+      "en": "See",
+      "ru": "Видеть",
+      "by": "Бачыць",
+      "tags": ["verb", "perception"]
+    },
+    {
+      "id": "look",
+      "lt": "Žiūrėti",
+      "en": "Look",
+      "ru": "Смотреть",
+      "by": "Глядзець",
+      "tags": ["verb", "perception"]
+    },
+    {
+      "id": "watch",
+      "lt": "Stebėti",
+      "en": "Watch",
+      "ru": "Наблюдать",
+      "by": "Назіраць",
+      "tags": ["verb", "perception"]
+    },
+    {
+      "id": "feel",
+      "lt": "Jausti",
+      "en": "Feel",
+      "ru": "Чувствовать",
+      "by": "Адчуваць",
+      "tags": ["verb", "perception"]
+    },
+    {
+      "id": "touch",
+      "lt": "Liesti",
+      "en": "Touch",
+      "ru": "Трогать",
+      "by": "Чапаць",
+      "tags": ["verb", "physical"]
+    },
+    {
+      "id": "hold",
+      "lt": "Laikyti",
+      "en": "Hold",
+      "ru": "Держать",
+      "by": "Трымаць",
+      "tags": ["verb", "physical"]
+    },
+    {
+      "id": "take",
+      "lt": "Imti",
+      "en": "Take",
+      "ru": "Брать",
+      "by": "Браць",
+      "tags": ["verb", "physical"]
+    },
+    {
+      "id": "give",
+      "lt": "Duoti",
+      "en": "Give",
+      "ru": "Давать",
+      "by": "Даваць",
+      "tags": ["verb", "physical"]
+    },
+    {
+      "id": "put",
+      "lt": "Dėti",
+      "en": "Put",
+      "ru": "Класть",
+      "by": "Класці",
+      "tags": ["verb", "physical"]
+    },
+    {
+      "id": "make",
+      "lt": "Daryti",
+      "en": "Make",
+      "ru": "Делать",
+      "by": "Рабіць",
+      "tags": ["verb", "creation"]
+    },
+    {
+      "id": "create",
+      "lt": "Kurti",
+      "en": "Create",
+      "ru": "Создавать",
+      "by": "Ствараць",
+      "tags": ["verb", "creation"]
+    },
+    {
+      "id": "build",
+      "lt": "Statyti",
+      "en": "Build",
+      "ru": "Строить",
+      "by": "Будаваць",
+      "tags": ["verb", "creation"]
+    },
+    {
+      "id": "break",
+      "lt": "Laužyti",
+      "en": "Break",
+      "ru": "Ломать",
+      "by": "Ламаць",
+      "tags": ["verb", "destruction"]
+    },
+    {
+      "id": "fix",
+      "lt": "Taisyti",
+      "en": "Fix",
+      "ru": "Чинить",
+      "by": "Рамантаваць",
+      "tags": ["verb", "repair"]
+    },
+    {
+      "id": "clean",
+      "lt": "Valyti",
+      "en": "Clean",
+      "ru": "Чистить",
+      "by": "Чысціць",
+      "tags": ["verb", "maintenance"]
+    },
+    {
+      "id": "wash",
+      "lt": "Plauti",
+      "en": "Wash",
+      "ru": "Мыть",
+      "by": "Мыць",
+      "tags": ["verb", "maintenance"]
+    },
+    {
+      "id": "cook",
+      "lt": "Gaminti",
+      "en": "Cook",
+      "ru": "Готовить",
+      "by": "Гатаваць",
+      "tags": ["verb", "food"]
+    },
+    {
+      "id": "buy",
+      "lt": "Pirkti",
+      "en": "Buy",
+      "ru": "Покупать",
+      "by": "Купляць",
+      "tags": ["verb", "commerce"]
+    },
+    {
+      "id": "sell",
+      "lt": "Parduoti",
+      "en": "Sell",
+      "ru": "Продавать",
+      "by": "Прадаваць",
+      "tags": ["verb", "commerce"]
+    },
+    {
+      "id": "pay",
+      "lt": "Mokėti",
+      "en": "Pay",
+      "ru": "Платить",
+      "by": "Плаціць",
+      "tags": ["verb", "commerce"]
+    },
+    {
+      "id": "spend",
+      "lt": "Išleisti",
+      "en": "Spend",
+      "ru": "Тратить",
+      "by": "Траціць",
+      "tags": ["verb", "commerce"]
+    },
+    {
+      "id": "save",
+      "lt": "Taupyti",
+      "en": "Save",
+      "ru": "Экономить",
+      "by": "Эканоміць",
+      "tags": ["verb", "commerce"]
+    },
+    {
+      "id": "open",
+      "lt": "Atidaryti",
+      "en": "Open",
+      "ru": "Открывать",
+      "by": "Адкрываць",
+      "tags": ["verb", "action"]
+    },
+    {
+      "id": "close",
+      "lt": "Uždaryti",
+      "en": "Close",
+      "ru": "Закрывать",
+      "by": "Закрываць",
+      "tags": ["verb", "action"]
+    },
+    {
+      "id": "start",
+      "lt": "Pradėti",
+      "en": "Start",
+      "ru": "Начинать",
+      "by": "Пачынаць",
+      "tags": ["verb", "action"]
+    },
+    {
+      "id": "finish",
+      "lt": "Baigti",
+      "en": "Finish",
+      "ru": "Заканчивать",
+      "by": "Заканчваць",
+      "tags": ["verb", "action"]
+    },
+    {
+      "id": "stop",
+      "lt": "Sustoti",
+      "en": "Stop",
+      "ru": "Останавливаться",
+      "by": "Спыняцца",
+      "tags": ["verb", "action"]
+    },
+    {
+      "id": "wait",
+      "lt": "Laukti",
+      "en": "Wait",
+      "ru": "Ждать",
+      "by": "Чакаць",
+      "tags": ["verb", "action"]
+    },
+    {
+      "id": "continue",
+      "lt": "Tęsti",
+      "en": "Continue",
+      "ru": "Продолжать",
+      "by": "Працягваць",
+      "tags": ["verb", "action"]
+    },
+    {
+      "id": "change",
+      "lt": "Keisti",
+      "en": "Change",
+      "ru": "Менять",
+      "by": "Мяняць",
+      "tags": ["verb", "action"]
+    },
+    {
+      "id": "turn",
+      "lt": "Sukti",
+      "en": "Turn",
+      "ru": "Поворачивать",
+      "by": "Паварочваць",
+      "tags": ["verb", "movement"]
+    },
+    {
+      "id": "move",
+      "lt": "Judėti",
+      "en": "Move",
+      "ru": "Двигаться",
+      "by": "Рухацца",
+      "tags": ["verb", "movement"]
+    },
+    {
+      "id": "stay",
+      "lt": "Pasilikti",
+      "en": "Stay",
+      "ru": "Оставаться",
+      "by": "Заставацца",
+      "tags": ["verb", "position"]
+    },
+    {
+      "id": "leave",
+      "lt": "Išvykti",
+      "en": "Leave",
+      "ru": "Уходить",
+      "by": "Сыходзіць",
+      "tags": ["verb", "movement"]
+    },
+    {
+      "id": "arrive",
+      "lt": "Atvykti",
+      "en": "Arrive",
+      "ru": "Прибывать",
+      "by": "Прыбываць",
+      "tags": ["verb", "movement"]
+    },
+    {
+      "id": "return",
+      "lt": "Grįžti",
+      "en": "Return",
+      "ru": "Возвращаться",
+      "by": "Вяртацца",
+      "tags": ["verb", "movement"]
+    },
+    {
+      "id": "send",
+      "lt": "Siųsti",
+      "en": "Send",
+      "ru": "Отправлять",
+      "by": "Адпраўляць",
+      "tags": ["verb", "communication"]
+    },
+    {
+      "id": "receive",
+      "lt": "Gauti",
+      "en": "Receive",
+      "ru": "Получать",
+      "by": "Атрымліваць",
+      "tags": ["verb", "communication"]
+    },
+    {
+      "id": "ask",
+      "lt": "Klausti",
+      "en": "Ask",
+      "ru": "Спрашивать",
+      "by": "Пытацца",
+      "tags": ["verb", "communication"]
+    },
+    {
+      "id": "answer",
+      "lt": "Atsakyti",
+      "en": "Answer",
+      "ru": "Отвечать",
+      "by": "Адказваць",
+      "tags": ["verb", "communication"]
+    },
+    {
+      "id": "tell",
+      "lt": "Pasakyti",
+      "en": "Tell",
+      "ru": "Рассказывать",
+      "by": "Расказваць",
+      "tags": ["verb", "communication"]
+    },
+    {
+      "id": "think",
+      "lt": "Mąstyti",
+      "en": "Think",
+      "ru": "Думать",
+      "by": "Думаць",
+      "tags": ["verb", "mental"]
+    },
+    {
+      "id": "know",
+      "lt": "Žinoti",
+      "en": "Know",
+      "ru": "Знать",
+      "by": "Ведаць",
+      "tags": ["verb", "mental"]
+    },
+    {
+      "id": "understand",
+      "lt": "Suprasti",
+      "en": "Understand",
+      "ru": "Понимать",
+      "by": "Разумець",
+      "tags": ["verb", "mental"]
+    },
+    {
+      "id": "remember",
+      "lt": "Prisiminti",
+      "en": "Remember",
+      "ru": "Помнить",
+      "by": "Памятаць",
+      "tags": ["verb", "mental"]
+    },
+    {
+      "id": "forget",
+      "lt": "Pamiršti",
+      "en": "Forget",
+      "ru": "Забывать",
+      "by": "Забываць",
+      "tags": ["verb", "mental"]
+    },
+    {
+      "id": "learn",
+      "lt": "Išmokti",
+      "en": "Learn",
+      "ru": "Учить",
+      "by": "Вучыць",
+      "tags": ["verb", "education"]
+    },
+    {
+      "id": "teach",
+      "lt": "Mokyti",
+      "en": "Teach",
+      "ru": "Учить",
+      "by": "Вучыць",
+      "tags": ["verb", "education"]
+    },
+    {
+      "id": "help",
+      "lt": "Padėti",
+      "en": "Help",
+      "ru": "Помогать",
+      "by": "Дапамагаць",
+      "tags": ["verb", "assistance"]
+    },
+    {
+      "id": "need",
+      "lt": "Reikėti",
+      "en": "Need",
+      "ru": "Нуждаться",
+      "by": "Патрабаваць",
+      "tags": ["verb", "necessity"]
+    },
+    {
+      "id": "want",
+      "lt": "Norėti",
+      "en": "Want",
+      "ru": "Хотеть",
+      "by": "Хацець",
+      "tags": ["verb", "desire"]
+    },
+    {
+      "id": "like",
+      "lt": "Patikti",
+      "en": "Like",
+      "ru": "Нравиться",
+      "by": "Падабацца",
+      "tags": ["verb", "emotion"]
+    },
+    {
+      "id": "love",
+      "lt": "Mylėti",
+      "en": "Love",
+      "ru": "Любить",
+      "by": "Кахаць",
+      "tags": ["verb", "emotion"]
+    },
+    {
+      "id": "hate",
+      "lt": "Nekęsti",
+      "en": "Hate",
+      "ru": "Ненавидеть",
+      "by": "Ненавідзець",
+      "tags": ["verb", "emotion"]
+    },
+    {
+      "id": "smile",
+      "lt": "Šypsotis",
+      "en": "Smile",
+      "ru": "Улыбаться",
+      "by": "Усміхацца",
+      "tags": ["verb", "expression"]
+    },
+    {
+      "id": "laugh",
+      "lt": "Juoktis",
+      "en": "Laugh",
+      "ru": "Смеяться",
+      "by": "Смяяцца",
+      "tags": ["verb", "expression"]
+    },
+    {
+      "id": "cry",
+      "lt": "Verkti",
+      "en": "Cry",
+      "ru": "Плакать",
+      "by": "Плакаць",
+      "tags": ["verb", "expression"]
+    },
+    {
+      "id": "sing",
+      "lt": "Dainuoti",
+      "en": "Sing",
+      "ru": "Петь",
+      "by": "Спяваць",
+      "tags": ["verb", "art"]
+    },
+    {
+      "id": "dance",
+      "lt": "Šokti",
+      "en": "Dance",
+      "ru": "Танцевать",
+      "by": "Танцаваць",
+      "tags": ["verb", "art"]
+    },
+    {
+      "id": "draw",
+      "lt": "Piešti",
+      "en": "Draw",
+      "ru": "Рисовать",
+      "by": "Маляваць",
+      "tags": ["verb", "art"]
+    },
+    {
+      "id": "paint",
+      "lt": "Tapyti",
+      "en": "Paint",
+      "ru": "Красить",
+      "by": "Фарбаваць",
+      "tags": ["verb", "art"]
+    },
+    {
+      "id": "win",
+      "lt": "Laimėti",
+      "en": "Win",
+      "ru": "Выигрывать",
+      "by": "Выйграваць",
+      "tags": ["verb", "achievement"]
+    },
+    {
+      "id": "lose",
+      "lt": "Pralaimėti",
+      "en": "Lose",
+      "ru": "Проигрывать",
+      "by": "Прайграваць",
+      "tags": ["verb", "failure"]
+    },
+    {
+      "id": "try",
+      "lt": "Bandyti",
+      "en": "Try",
+      "ru": "Пытаться",
+      "by": "Спрабаваць",
+      "tags": ["verb", "attempt"]
+    },
+    {
+      "id": "succeed",
+      "lt": "Pavykti",
+      "en": "Succeed",
+      "ru": "Удаваться",
+      "by": "Удавацца",
+      "tags": ["verb", "achievement"]
+    },
+    {
+      "id": "fail",
+      "lt": "Nepavykti",
+      "en": "Fail",
+      "ru": "Не удаваться",
+      "by": "Не ўдавацца",
+      "tags": ["verb", "failure"]
+    },
+    {
+      "id": "begin",
+      "lt": "Pradėti",
+      "en": "Begin",
+      "ru": "Начинать",
+      "by": "Пачынаць",
+      "tags": ["verb", "time"]
+    },
+    {
+      "id": "end",
+      "lt": "Baigti",
+      "en": "End",
+      "ru": "Заканчивать",
+      "by": "Заканчваць",
+      "tags": ["verb", "time"]
+    },
+    {
+      "id": "live",
+      "lt": "Gyventi",
+      "en": "Live",
+      "ru": "Жить",
+      "by": "Жыць",
+      "tags": ["verb", "life"]
+    },
+    {
+      "id": "die",
+      "lt": "Mirti",
+      "en": "Die",
+      "ru": "Умирать",
+      "by": "Паміраць",
+      "tags": ["verb", "life"]
+    },
+    {
+      "id": "grow",
+      "lt": "Augti",
+      "en": "Grow",
+      "ru": "Расти",
+      "by": "Расці",
+      "tags": ["verb", "development"]
+    },
+    {
+      "id": "change",
+      "lt": "Keistis",
+      "en": "Change",
+      "ru": "Меняться",
+      "by": "Мяняцца",
+      "tags": ["verb", "development"]
+    },
+    {
+      "id": "improve",
+      "lt": "Tobulėti",
+      "en": "Improve",
+      "ru": "Улучшаться",
+      "by": "Паляпшацца",
+      "tags": ["verb", "development"]
+    },
+    {
+      "id": "travel",
+      "lt": "Keliauti",
+      "en": "Travel",
+      "ru": "Путешествовать",
+      "by": "Падарожнічаць",
+      "tags": ["verb", "movement"]
+    },
+    {
+      "id": "visit",
+      "lt": "Aplankyti",
+      "en": "Visit",
+      "ru": "Посещать",
+      "by": "Наведваць",
+      "tags": ["verb", "movement"]
+    },
+    {
+      "id": "meet",
+      "lt": "Susitikti",
+      "en": "Meet",
+      "ru": "Встречаться",
+      "by": "Сустракацца",
+      "tags": ["verb", "social"]
+    },
+    {
+      "id": "greet",
+      "lt": "Sveikinti",
+      "en": "Greet",
+      "ru": "Приветствовать",
+      "by": "Вітаць",
+      "tags": ["verb", "social"]
+    },
+    {
+      "id": "say-goodbye",
+      "lt": "Atsisveikinti",
+      "en": "Say goodbye",
+      "ru": "Прощаться",
+      "by": "Развітвацца",
+      "tags": ["verb", "social"]
+    },
+    {
+      "id": "thank",
+      "lt": "Dėkoti",
+      "en": "Thank",
+      "ru": "Благодарить",
+      "by": "Дзякаваць",
+      "tags": ["verb", "social"]
+    },
+    {
+      "id": "apologize",
+      "lt": "Atsiprašyti",
+      "en": "Apologize",
+      "ru": "Извиняться",
+      "by": "Прабачацца",
+      "tags": ["verb", "social"]
+    },
+    {
+      "id": "promise",
+      "lt": "Pažadėti",
+      "en": "Promise",
+      "ru": "Обещать",
+      "by": "Абяцаць",
+      "tags": ["verb", "social"]
+    },
+    {
+      "id": "agree",
+      "lt": "Sutikti",
+      "en": "Agree",
+      "ru": "Соглашаться",
+      "by": "Згаджацца",
+      "tags": ["verb", "social"]
+    },
+    {
+      "id": "disagree",
+      "lt": "Nesutikti",
+      "en": "Disagree",
+      "ru": "Не соглашаться",
+      "by": "Не згаджацца",
+      "tags": ["verb", "social"]
+    },
+    {
+      "id": "accept",
+      "lt": "Priimti",
+      "en": "Accept",
+      "ru": "Принимать",
+      "by": "Прымаць",
+      "tags": ["verb", "decision"]
+    },
+    {
+      "id": "reject",
+      "lt": "Atmesti",
+      "en": "Reject",
+      "ru": "Отвергать",
+      "by": "Адхіляць",
+      "tags": ["verb", "decision"]
+    },
+    {
+      "id": "decide",
+      "lt": "Nuspręsti",
+      "en": "Decide",
+      "ru": "Решать",
+      "by": "Вырашаць",
+      "tags": ["verb", "decision"]
+    },
+    {
+      "id": "choose",
+      "lt": "Pasirinkti",
+      "en": "Choose",
+      "ru": "Выбирать",
+      "by": "Выбіраць",
+      "tags": ["verb", "decision"]
+    }
+  ]
+} 

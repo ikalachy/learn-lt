@@ -1,0 +1,341 @@
+{
+  "id": "travel",
+  "name": {
+    "en": "Travel",
+    "lt": "Kelionės"
+  },
+  "description": {
+    "en": "Common travel terms, accommodation, directions, and travel-related phrases",
+    "lt": "Dažniausiai vartojami kelionių terminai, apgyvendinimas, kryptys ir su kelionėmis susijusios frazės"
+  },
+  "phrases": [
+    {
+      "id": "hotel",
+      "lt": "Viešbutis",
+      "en": "Hotel",
+      "ru": "Гостиница",
+      "by": "Гасцініца",
+      "tags": ["travel", "accommodation"]
+    },
+    {
+      "id": "hostel",
+      "lt": "Hostelis",
+      "en": "Hostel",
+      "ru": "Хостел",
+      "by": "Хостэл",
+      "tags": ["travel", "accommodation"]
+    },
+    {
+      "id": "apartment",
+      "lt": "Butas",
+      "en": "Apartment",
+      "ru": "Квартира",
+      "by": "Кватэра",
+      "tags": ["travel", "accommodation"]
+    },
+    {
+      "id": "room",
+      "lt": "Kambarys",
+      "en": "Room",
+      "ru": "Комната",
+      "by": "Пакой",
+      "tags": ["travel", "accommodation"]
+    },
+    {
+      "id": "passport",
+      "lt": "Pasas",
+      "en": "Passport",
+      "ru": "Паспорт",
+      "by": "Пашпарт",
+      "tags": ["travel", "document"]
+    },
+    {
+      "id": "visa",
+      "lt": "Viza",
+      "en": "Visa",
+      "ru": "Виза",
+      "by": "Віза",
+      "tags": ["travel", "document"]
+    },
+    {
+      "id": "luggage",
+      "lt": "Bagažas",
+      "en": "Luggage",
+      "ru": "Багаж",
+      "by": "Багаж",
+      "tags": ["travel", "item"]
+    },
+    {
+      "id": "suitcase",
+      "lt": "Lagaminas",
+      "en": "Suitcase",
+      "ru": "Чемодан",
+      "by": "Чамадан",
+      "tags": ["travel", "item"]
+    },
+    {
+      "id": "backpack",
+      "lt": "Kuprinė",
+      "en": "Backpack",
+      "ru": "Рюкзак",
+      "by": "Заплечнік",
+      "tags": ["travel", "item"]
+    },
+    {
+      "id": "map",
+      "lt": "Žemėlapis",
+      "en": "Map",
+      "ru": "Карта",
+      "by": "Карта",
+      "tags": ["travel", "item"]
+    },
+    {
+      "id": "guide",
+      "lt": "Gidas",
+      "en": "Guide",
+      "ru": "Гид",
+      "by": "Гід",
+      "tags": ["travel", "person"]
+    },
+    {
+      "id": "tourist",
+      "lt": "Turistas",
+      "en": "Tourist",
+      "ru": "Турист",
+      "by": "Турыст",
+      "tags": ["travel", "person"]
+    },
+    {
+      "id": "reservation",
+      "lt": "Rezervacija",
+      "en": "Reservation",
+      "ru": "Бронирование",
+      "by": "Браніраванне",
+      "tags": ["travel", "service"]
+    },
+    {
+      "id": "booking",
+      "lt": "Užsakymas",
+      "en": "Booking",
+      "ru": "Заказ",
+      "by": "Заказ",
+      "tags": ["travel", "service"]
+    },
+    {
+      "id": "check-in",
+      "lt": "Registracija",
+      "en": "Check-in",
+      "ru": "Регистрация",
+      "by": "Рэгістрацыя",
+      "tags": ["travel", "service"]
+    },
+    {
+      "id": "check-out",
+      "lt": "Išsiregistravimas",
+      "en": "Check-out",
+      "ru": "Выписка",
+      "by": "Выпіска",
+      "tags": ["travel", "service"]
+    },
+    {
+      "id": "breakfast",
+      "lt": "Pusryčiai",
+      "en": "Breakfast",
+      "ru": "Завтрак",
+      "by": "Сняданак",
+      "tags": ["travel", "meal"]
+    },
+    {
+      "id": "restaurant",
+      "lt": "Restoranas",
+      "en": "Restaurant",
+      "ru": "Ресторан",
+      "by": "Рэстаран",
+      "tags": ["travel", "place"]
+    },
+    {
+      "id": "beach",
+      "lt": "Paplūdimys",
+      "en": "Beach",
+      "ru": "Пляж",
+      "by": "Пляж",
+      "tags": ["travel", "place"]
+    },
+    {
+      "id": "museum",
+      "lt": "Muziejus",
+      "en": "Museum",
+      "ru": "Музей",
+      "by": "Музей",
+      "tags": ["travel", "place"]
+    },
+    {
+      "id": "city-center",
+      "lt": "Miesto centras",
+      "en": "City center",
+      "ru": "Центр города",
+      "by": "Цэнтр горада",
+      "tags": ["travel", "place"]
+    },
+    {
+      "id": "tour",
+      "lt": "Ekskursija",
+      "en": "Tour",
+      "ru": "Экскурсия",
+      "by": "Экскурсія",
+      "tags": ["travel", "activity"]
+    },
+    {
+      "id": "sightseeing",
+      "lt": "Apžiūrėjimas",
+      "en": "Sightseeing",
+      "ru": "Осмотр достопримечательностей",
+      "by": "Агляд славутасцяў",
+      "tags": ["travel", "activity"]
+    },
+    {
+      "id": "souvenir",
+      "lt": "Suvenyras",
+      "en": "Souvenir",
+      "ru": "Сувенир",
+      "by": "Сувенір",
+      "tags": ["travel", "item"]
+    },
+    {
+      "id": "currency",
+      "lt": "Valiuta",
+      "en": "Currency",
+      "ru": "Валюта",
+      "by": "Валюта",
+      "tags": ["travel", "money"]
+    },
+    {
+      "id": "exchange",
+      "lt": "Keitykla",
+      "en": "Exchange",
+      "ru": "Обмен",
+      "by": "Абмен",
+      "tags": ["travel", "money"]
+    },
+    {
+      "id": "north",
+      "lt": "Šiaurė",
+      "en": "North",
+      "ru": "Север",
+      "by": "Поўнач",
+      "tags": ["travel", "direction"]
+    },
+    {
+      "id": "south",
+      "lt": "Pietūs",
+      "en": "South",
+      "ru": "Юг",
+      "by": "Поўдзень",
+      "tags": ["travel", "direction"]
+    },
+    {
+      "id": "east",
+      "lt": "Rytai",
+      "en": "East",
+      "ru": "Восток",
+      "by": "Усход",
+      "tags": ["travel", "direction"]
+    },
+    {
+      "id": "west",
+      "lt": "Vakarai",
+      "en": "West",
+      "ru": "Запад",
+      "by": "Захад",
+      "tags": ["travel", "direction"]
+    },
+    {
+      "id": "left",
+      "lt": "Kairė",
+      "en": "Left",
+      "ru": "Налево",
+      "by": "Налева",
+      "tags": ["travel", "direction"]
+    },
+    {
+      "id": "right",
+      "lt": "Dešinė",
+      "en": "Right",
+      "ru": "Направо",
+      "by": "Направа",
+      "tags": ["travel", "direction"]
+    },
+    {
+      "id": "straight",
+      "lt": "Tiesiai",
+      "en": "Straight",
+      "ru": "Прямо",
+      "by": "Прама",
+      "tags": ["travel", "direction"]
+    },
+    {
+      "id": "far",
+      "lt": "Toli",
+      "en": "Far",
+      "ru": "Далеко",
+      "by": "Далёка",
+      "tags": ["travel", "distance"]
+    },
+    {
+      "id": "near",
+      "lt": "Arti",
+      "en": "Near",
+      "ru": "Близко",
+      "by": "Блізка",
+      "tags": ["travel", "distance"]
+    },
+    {
+      "id": "where-hotel",
+      "lt": "Kur yra viešbutis?",
+      "en": "Where is the hotel?",
+      "ru": "Где находится гостиница?",
+      "by": "Дзе знаходзіцца гасцініца?",
+      "tags": ["travel", "question"]
+    },
+    {
+      "id": "have-room",
+      "lt": "Ar turite laisvą kambarį?",
+      "en": "Do you have a room available?",
+      "ru": "У вас есть свободный номер?",
+      "by": "У вас ёсць вольны нумар?",
+      "tags": ["travel", "question"]
+    },
+    {
+      "id": "how-much-night",
+      "lt": "Kiek kainuoja nakvynė?",
+      "en": "How much is it per night?",
+      "ru": "Сколько стоит за ночь?",
+      "by": "Колькі каштуе за ноч?",
+      "tags": ["travel", "question"]
+    },
+    {
+      "id": "where-exchange",
+      "lt": "Kur galiu išsikeisti pinigus?",
+      "en": "Where can I exchange money?",
+      "ru": "Где можно обменять деньги?",
+      "by": "Дзе можна абмяняць грошы?",
+      "tags": ["travel", "question"]
+    },
+    {
+      "id": "recommend-restaurant",
+      "lt": "Ar galite rekomenduoti restoraną?",
+      "en": "Can you recommend a restaurant?",
+      "ru": "Можете порекомендовать ресторан?",
+      "by": "Можаце парэкамендаваць рэстаран?",
+      "tags": ["travel", "question"]
+    },
+    {
+      "id": "lost",
+      "lt": "Aš pasiklydau",
+      "en": "I am lost",
+      "ru": "Я заблудился",
+      "by": "Я заблудзіўся",
+      "tags": ["travel", "problem"]
+    }
+  ]
+} 

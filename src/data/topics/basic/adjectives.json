@@ -1,0 +1,861 @@
+{
+  "id": "adjectives",
+  "name": {
+    "en": "Adjectives",
+    "lt": "Būdvardžiai"
+  },
+  "description": {
+    "en": "Common adjectives for describing people, things, places, and situations",
+    "lt": "Dažniausiai vartojami būdvardžiai žmonėms, daiktams, vietoms ir situacijoms apibūdinti"
+  },
+  "phrases": [
+    {
+      "id": "good",
+      "lt": "Geras",
+      "en": "Good",
+      "ru": "Хороший",
+      "by": "Добры",
+      "tags": ["adjective", "quality"]
+    },
+    {
+      "id": "bad",
+      "lt": "Blogas",
+      "en": "Bad",
+      "ru": "Плохой",
+      "by": "Дрэнны",
+      "tags": ["adjective", "quality"]
+    },
+    {
+      "id": "big",
+      "lt": "Didelis",
+      "en": "Big",
+      "ru": "Большой",
+      "by": "Вялікі",
+      "tags": ["adjective", "size"]
+    },
+    {
+      "id": "small",
+      "lt": "Mažas",
+      "en": "Small",
+      "ru": "Маленький",
+      "by": "Малы",
+      "tags": ["adjective", "size"]
+    },
+    {
+      "id": "new",
+      "lt": "Naujas",
+      "en": "New",
+      "ru": "Новый",
+      "by": "Новы",
+      "tags": ["adjective", "age"]
+    },
+    {
+      "id": "old",
+      "lt": "Senas",
+      "en": "Old",
+      "ru": "Старый",
+      "by": "Стары",
+      "tags": ["adjective", "age"]
+    },
+    {
+      "id": "young",
+      "lt": "Jaunas",
+      "en": "Young",
+      "ru": "Молодой",
+      "by": "Малады",
+      "tags": ["adjective", "age"]
+    },
+    {
+      "id": "beautiful",
+      "lt": "Gražus",
+      "en": "Beautiful",
+      "ru": "Красивый",
+      "by": "Прыгожы",
+      "tags": ["adjective", "appearance"]
+    },
+    {
+      "id": "ugly",
+      "lt": "Bjaurus",
+      "en": "Ugly",
+      "ru": "Уродливый",
+      "by": "Брыдкі",
+      "tags": ["adjective", "appearance"]
+    },
+    {
+      "id": "clean",
+      "lt": "Švarus",
+      "en": "Clean",
+      "ru": "Чистый",
+      "by": "Чысты",
+      "tags": ["adjective", "condition"]
+    },
+    {
+      "id": "dirty",
+      "lt": "Nešvarus",
+      "en": "Dirty",
+      "ru": "Грязный",
+      "by": "Брудны",
+      "tags": ["adjective", "condition"]
+    },
+    {
+      "id": "hot",
+      "lt": "Karštas",
+      "en": "Hot",
+      "ru": "Горячий",
+      "by": "Гарачы",
+      "tags": ["adjective", "temperature"]
+    },
+    {
+      "id": "cold",
+      "lt": "Šaltas",
+      "en": "Cold",
+      "ru": "Холодный",
+      "by": "Халодны",
+      "tags": ["adjective", "temperature"]
+    },
+    {
+      "id": "warm",
+      "lt": "Šiltas",
+      "en": "Warm",
+      "ru": "Тёплый",
+      "by": "Цёплы",
+      "tags": ["adjective", "temperature"]
+    },
+    {
+      "id": "cool",
+      "lt": "Vėsus",
+      "en": "Cool",
+      "ru": "Прохладный",
+      "by": "Прахалодны",
+      "tags": ["adjective", "temperature"]
+    },
+    {
+      "id": "happy",
+      "lt": "Laimingas",
+      "en": "Happy",
+      "ru": "Счастливый",
+      "by": "Шчаслівы",
+      "tags": ["adjective", "emotion"]
+    },
+    {
+      "id": "sad",
+      "lt": "Liūdnas",
+      "en": "Sad",
+      "ru": "Грустный",
+      "by": "Сумны",
+      "tags": ["adjective", "emotion"]
+    },
+    {
+      "id": "angry",
+      "lt": "Piktas",
+      "en": "Angry",
+      "ru": "Злой",
+      "by": "Злы",
+      "tags": ["adjective", "emotion"]
+    },
+    {
+      "id": "tired",
+      "lt": "Pavargęs",
+      "en": "Tired",
+      "ru": "Уставший",
+      "by": "Стомлены",
+      "tags": ["adjective", "condition"]
+    },
+    {
+      "id": "hungry",
+      "lt": "Alkanas",
+      "en": "Hungry",
+      "ru": "Голодный",
+      "by": "Галодны",
+      "tags": ["adjective", "condition"]
+    },
+    {
+      "id": "thirsty",
+      "lt": "Ištroškęs",
+      "en": "Thirsty",
+      "ru": "Жаждущий",
+      "by": "Сасмяглы",
+      "tags": ["adjective", "condition"]
+    },
+    {
+      "id": "full",
+      "lt": "Pilnas",
+      "en": "Full",
+      "ru": "Полный",
+      "by": "Поўны",
+      "tags": ["adjective", "quantity"]
+    },
+    {
+      "id": "empty",
+      "lt": "Tuščias",
+      "en": "Empty",
+      "ru": "Пустой",
+      "by": "Пусты",
+      "tags": ["adjective", "quantity"]
+    },
+    {
+      "id": "rich",
+      "lt": "Turtingas",
+      "en": "Rich",
+      "ru": "Богатый",
+      "by": "Багаты",
+      "tags": ["adjective", "wealth"]
+    },
+    {
+      "id": "poor",
+      "lt": "Neturtingas",
+      "en": "Poor",
+      "ru": "Бедный",
+      "by": "Бедны",
+      "tags": ["adjective", "wealth"]
+    },
+    {
+      "id": "expensive",
+      "lt": "Brangus",
+      "en": "Expensive",
+      "ru": "Дорогой",
+      "by": "Дарагі",
+      "tags": ["adjective", "price"]
+    },
+    {
+      "id": "cheap",
+      "lt": "Pigus",
+      "en": "Cheap",
+      "ru": "Дешёвый",
+      "by": "Танны",
+      "tags": ["adjective", "price"]
+    },
+    {
+      "id": "fast",
+      "lt": "Greitas",
+      "en": "Fast",
+      "ru": "Быстрый",
+      "by": "Хуткі",
+      "tags": ["adjective", "speed"]
+    },
+    {
+      "id": "slow",
+      "lt": "Lėtas",
+      "en": "Slow",
+      "ru": "Медленный",
+      "by": "Павольны",
+      "tags": ["adjective", "speed"]
+    },
+    {
+      "id": "easy",
+      "lt": "Lengvas",
+      "en": "Easy",
+      "ru": "Лёгкий",
+      "by": "Лёгкі",
+      "tags": ["adjective", "difficulty"]
+    },
+    {
+      "id": "difficult",
+      "lt": "Sunkus",
+      "en": "Difficult",
+      "ru": "Трудный",
+      "by": "Цяжкі",
+      "tags": ["adjective", "difficulty"]
+    },
+    {
+      "id": "hard",
+      "lt": "Kietas",
+      "en": "Hard",
+      "ru": "Твёрдый",
+      "by": "Цвёрды",
+      "tags": ["adjective", "texture"]
+    },
+    {
+      "id": "soft",
+      "lt": "Minkštas",
+      "en": "Soft",
+      "ru": "Мягкий",
+      "by": "Мяккі",
+      "tags": ["adjective", "texture"]
+    },
+    {
+      "id": "strong",
+      "lt": "Stiprus",
+      "en": "Strong",
+      "ru": "Сильный",
+      "by": "Моцны",
+      "tags": ["adjective", "strength"]
+    },
+    {
+      "id": "weak",
+      "lt": "Silpnas",
+      "en": "Weak",
+      "ru": "Слабый",
+      "by": "Слабы",
+      "tags": ["adjective", "strength"]
+    },
+    {
+      "id": "high",
+      "lt": "Aukštas",
+      "en": "High",
+      "ru": "Высокий",
+      "by": "Высокі",
+      "tags": ["adjective", "height"]
+    },
+    {
+      "id": "low",
+      "lt": "Žemas",
+      "en": "Low",
+      "ru": "Низкий",
+      "by": "Нізкі",
+      "tags": ["adjective", "height"]
+    },
+    {
+      "id": "long",
+      "lt": "Ilgas",
+      "en": "Long",
+      "ru": "Длинный",
+      "by": "Доўгі",
+      "tags": ["adjective", "length"]
+    },
+    {
+      "id": "short",
+      "lt": "Trumpas",
+      "en": "Short",
+      "ru": "Короткий",
+      "by": "Кароткі",
+      "tags": ["adjective", "length"]
+    },
+    {
+      "id": "wide",
+      "lt": "Platus",
+      "en": "Wide",
+      "ru": "Широкий",
+      "by": "Шырокі",
+      "tags": ["adjective", "width"]
+    },
+    {
+      "id": "narrow",
+      "lt": "Siauras",
+      "en": "Narrow",
+      "ru": "Узкий",
+      "by": "Вузкі",
+      "tags": ["adjective", "width"]
+    },
+    {
+      "id": "thick",
+      "lt": "Storas",
+      "en": "Thick",
+      "ru": "Толстый",
+      "by": "Тоўсты",
+      "tags": ["adjective", "thickness"]
+    },
+    {
+      "id": "thin",
+      "lt": "Plonas",
+      "en": "Thin",
+      "ru": "Тонкий",
+      "by": "Тонкі",
+      "tags": ["adjective", "thickness"]
+    },
+    {
+      "id": "heavy",
+      "lt": "Sunkus",
+      "en": "Heavy",
+      "ru": "Тяжёлый",
+      "by": "Цяжкі",
+      "tags": ["adjective", "weight"]
+    },
+    {
+      "id": "light",
+      "lt": "Lengvas",
+      "en": "Light",
+      "ru": "Лёгкий",
+      "by": "Лёгкі",
+      "tags": ["adjective", "weight"]
+    },
+    {
+      "id": "bright",
+      "lt": "Šviesus",
+      "en": "Bright",
+      "ru": "Яркий",
+      "by": "Яркі",
+      "tags": ["adjective", "light"]
+    },
+    {
+      "id": "dark",
+      "lt": "Tamsus",
+      "en": "Dark",
+      "ru": "Тёмный",
+      "by": "Цёмны",
+      "tags": ["adjective", "light"]
+    },
+    {
+      "id": "loud",
+      "lt": "Garsus",
+      "en": "Loud",
+      "ru": "Громкий",
+      "by": "Гучны",
+      "tags": ["adjective", "sound"]
+    },
+    {
+      "id": "quiet",
+      "lt": "Tylus",
+      "en": "Quiet",
+      "ru": "Тихий",
+      "by": "Ціхі",
+      "tags": ["adjective", "sound"]
+    },
+    {
+      "id": "sweet",
+      "lt": "Saldus",
+      "en": "Sweet",
+      "ru": "Сладкий",
+      "by": "Салодкі",
+      "tags": ["adjective", "taste"]
+    },
+    {
+      "id": "sour",
+      "lt": "Rūgštus",
+      "en": "Sour",
+      "ru": "Кислый",
+      "by": "Кіслы",
+      "tags": ["adjective", "taste"]
+    },
+    {
+      "id": "bitter",
+      "lt": "Kartus",
+      "en": "Bitter",
+      "ru": "Горький",
+      "by": "Горкі",
+      "tags": ["adjective", "taste"]
+    },
+    {
+      "id": "salty",
+      "lt": "Sūrus",
+      "en": "Salty",
+      "ru": "Солёный",
+      "by": "Салёны",
+      "tags": ["adjective", "taste"]
+    },
+    {
+      "id": "spicy",
+      "lt": "Aštrus",
+      "en": "Spicy",
+      "ru": "Острый",
+      "by": "Востры",
+      "tags": ["adjective", "taste"]
+    },
+    {
+      "id": "fresh",
+      "lt": "Šviežias",
+      "en": "Fresh",
+      "ru": "Свежий",
+      "by": "Свежы",
+      "tags": ["adjective", "condition"]
+    },
+    {
+      "id": "stale",
+      "lt": "Senas",
+      "en": "Stale",
+      "ru": "Несвежий",
+      "by": "Нясвежы",
+      "tags": ["adjective", "condition"]
+    },
+    {
+      "id": "wet",
+      "lt": "Šlapias",
+      "en": "Wet",
+      "ru": "Мокрый",
+      "by": "Мокры",
+      "tags": ["adjective", "moisture"]
+    },
+    {
+      "id": "dry",
+      "lt": "Sausas",
+      "en": "Dry",
+      "ru": "Сухой",
+      "by": "Сухі",
+      "tags": ["adjective", "moisture"]
+    },
+    {
+      "id": "smooth",
+      "lt": "Lygus",
+      "en": "Smooth",
+      "ru": "Гладкий",
+      "by": "Гладкі",
+      "tags": ["adjective", "texture"]
+    },
+    {
+      "id": "rough",
+      "lt": "Šiurkštus",
+      "en": "Rough",
+      "ru": "Грубый",
+      "by": "Грубы",
+      "tags": ["adjective", "texture"]
+    },
+    {
+      "id": "sharp",
+      "lt": "Aštrus",
+      "en": "Sharp",
+      "ru": "Острый",
+      "by": "Востры",
+      "tags": ["adjective", "edge"]
+    },
+    {
+      "id": "dull",
+      "lt": "Bukas",
+      "en": "Dull",
+      "ru": "Тупой",
+      "by": "Тупы",
+      "tags": ["adjective", "edge"]
+    },
+    {
+      "id": "straight",
+      "lt": "Tiesus",
+      "en": "Straight",
+      "ru": "Прямой",
+      "by": "Прамы",
+      "tags": ["adjective", "shape"]
+    },
+    {
+      "id": "curved",
+      "lt": "Lenktas",
+      "en": "Curved",
+      "ru": "Изогнутый",
+      "by": "Выгнуты",
+      "tags": ["adjective", "shape"]
+    },
+    {
+      "id": "round",
+      "lt": "Apvalus",
+      "en": "Round",
+      "ru": "Круглый",
+      "by": "Круглы",
+      "tags": ["adjective", "shape"]
+    },
+    {
+      "id": "square",
+      "lt": "Kvadratinis",
+      "en": "Square",
+      "ru": "Квадратный",
+      "by": "Квадратны",
+      "tags": ["adjective", "shape"]
+    },
+    {
+      "id": "flat",
+      "lt": "Plokščias",
+      "en": "Flat",
+      "ru": "Плоский",
+      "by": "Плоскі",
+      "tags": ["adjective", "shape"]
+    },
+    {
+      "id": "deep",
+      "lt": "Gilus",
+      "en": "Deep",
+      "ru": "Глубокий",
+      "by": "Глыбокі",
+      "tags": ["adjective", "depth"]
+    },
+    {
+      "id": "shallow",
+      "lt": "Seklus",
+      "en": "Shallow",
+      "ru": "Мелкий",
+      "by": "Мелкі",
+      "tags": ["adjective", "depth"]
+    },
+    {
+      "id": "open",
+      "lt": "Atviras",
+      "en": "Open",
+      "ru": "Открытый",
+      "by": "Адкрыты",
+      "tags": ["adjective", "state"]
+    },
+    {
+      "id": "closed",
+      "lt": "Uždarytas",
+      "en": "Closed",
+      "ru": "Закрытый",
+      "by": "Закрыты",
+      "tags": ["adjective", "state"]
+    },
+    {
+      "id": "busy",
+      "lt": "Užimtas",
+      "en": "Busy",
+      "ru": "Занятый",
+      "by": "Заняты",
+      "tags": ["adjective", "state"]
+    },
+    {
+      "id": "free",
+      "lt": "Laisvas",
+      "en": "Free",
+      "ru": "Свободный",
+      "by": "Свабодны",
+      "tags": ["adjective", "state"]
+    },
+    {
+      "id": "early",
+      "lt": "Ankstyvas",
+      "en": "Early",
+      "ru": "Ранний",
+      "by": "Ранні",
+      "tags": ["adjective", "time"]
+    },
+    {
+      "id": "late",
+      "lt": "Vėlyvas",
+      "en": "Late",
+      "ru": "Поздний",
+      "by": "Позні",
+      "tags": ["adjective", "time"]
+    },
+    {
+      "id": "quick",
+      "lt": "Greitas",
+      "en": "Quick",
+      "ru": "Быстрый",
+      "by": "Хуткі",
+      "tags": ["adjective", "speed"]
+    },
+    {
+      "id": "slow",
+      "lt": "Lėtas",
+      "en": "Slow",
+      "ru": "Медленный",
+      "by": "Павольны",
+      "tags": ["adjective", "speed"]
+    },
+    {
+      "id": "right",
+      "lt": "Teisingas",
+      "en": "Right",
+      "ru": "Правильный",
+      "by": "Правільны",
+      "tags": ["adjective", "correctness"]
+    },
+    {
+      "id": "wrong",
+      "lt": "Neteisingas",
+      "en": "Wrong",
+      "ru": "Неправильный",
+      "by": "Няправільны",
+      "tags": ["adjective", "correctness"]
+    },
+    {
+      "id": "true",
+      "lt": "Tikras",
+      "en": "True",
+      "ru": "Истинный",
+      "by": "Сапраўдны",
+      "tags": ["adjective", "truth"]
+    },
+    {
+      "id": "false",
+      "lt": "Netikras",
+      "en": "False",
+      "ru": "Ложный",
+      "by": "Фальшывы",
+      "tags": ["adjective", "truth"]
+    },
+    {
+      "id": "safe",
+      "lt": "Saugus",
+      "en": "Safe",
+      "ru": "Безопасный",
+      "by": "Бяспечны",
+      "tags": ["adjective", "safety"]
+    },
+    {
+      "id": "dangerous",
+      "lt": "Pavojingas",
+      "en": "Dangerous",
+      "ru": "Опасный",
+      "by": "Небяспечны",
+      "tags": ["adjective", "safety"]
+    },
+    {
+      "id": "healthy",
+      "lt": "Sveikas",
+      "en": "Healthy",
+      "ru": "Здоровый",
+      "by": "Здаровы",
+      "tags": ["adjective", "health"]
+    },
+    {
+      "id": "sick",
+      "lt": "Sergantis",
+      "en": "Sick",
+      "ru": "Больной",
+      "by": "Хворы",
+      "tags": ["adjective", "health"]
+    },
+    {
+      "id": "alive",
+      "lt": "Gyvas",
+      "en": "Alive",
+      "ru": "Живой",
+      "by": "Жывы",
+      "tags": ["adjective", "life"]
+    },
+    {
+      "id": "dead",
+      "lt": "Miręs",
+      "en": "Dead",
+      "ru": "Мёртвый",
+      "by": "Мёртвы",
+      "tags": ["adjective", "life"]
+    },
+    {
+      "id": "real",
+      "lt": "Tikras",
+      "en": "Real",
+      "ru": "Настоящий",
+      "by": "Сапраўдны",
+      "tags": ["adjective", "authenticity"]
+    },
+    {
+      "id": "fake",
+      "lt": "Netikras",
+      "en": "Fake",
+      "ru": "Поддельный",
+      "by": "Падробны",
+      "tags": ["adjective", "authenticity"]
+    },
+    {
+      "id": "important",
+      "lt": "Svarbus",
+      "en": "Important",
+      "ru": "Важный",
+      "by": "Важны",
+      "tags": ["adjective", "importance"]
+    },
+    {
+      "id": "unimportant",
+      "lt": "Nesvarbus",
+      "en": "Unimportant",
+      "ru": "Неважный",
+      "by": "Няважны",
+      "tags": ["adjective", "importance"]
+    },
+    {
+      "id": "possible",
+      "lt": "Galimas",
+      "en": "Possible",
+      "ru": "Возможный",
+      "by": "Магчымы",
+      "tags": ["adjective", "possibility"]
+    },
+    {
+      "id": "impossible",
+      "lt": "Negalimas",
+      "en": "Impossible",
+      "ru": "Невозможный",
+      "by": "Немагчымы",
+      "tags": ["adjective", "possibility"]
+    },
+    {
+      "id": "necessary",
+      "lt": "Būtinas",
+      "en": "Necessary",
+      "ru": "Необходимый",
+      "by": "Неабходны",
+      "tags": ["adjective", "necessity"]
+    },
+    {
+      "id": "unnecessary",
+      "lt": "Nebūtinas",
+      "en": "Unnecessary",
+      "ru": "Ненужный",
+      "by": "Непатрэбны",
+      "tags": ["adjective", "necessity"]
+    },
+    {
+      "id": "different",
+      "lt": "Skirtingas",
+      "en": "Different",
+      "ru": "Разный",
+      "by": "Розны",
+      "tags": ["adjective", "comparison"]
+    },
+    {
+      "id": "same",
+      "lt": "Toks pat",
+      "en": "Same",
+      "ru": "Одинаковый",
+      "by": "Аднолькавы",
+      "tags": ["adjective", "comparison"]
+    },
+    {
+      "id": "similar",
+      "lt": "Panašus",
+      "en": "Similar",
+      "ru": "Похожий",
+      "by": "Падобны",
+      "tags": ["adjective", "comparison"]
+    },
+    {
+      "id": "opposite",
+      "lt": "Priešingas",
+      "en": "Opposite",
+      "ru": "Противоположный",
+      "by": "Супрацьлеглы",
+      "tags": ["adjective", "comparison"]
+    },
+    {
+      "id": "first",
+      "lt": "Pirmas",
+      "en": "First",
+      "ru": "Первый",
+      "by": "Першы",
+      "tags": ["adjective", "order"]
+    },
+    {
+      "id": "last",
+      "lt": "Paskutinis",
+      "en": "Last",
+      "ru": "Последний",
+      "by": "Апошні",
+      "tags": ["adjective", "order"]
+    },
+    {
+      "id": "next",
+      "lt": "Kitas",
+      "en": "Next",
+      "ru": "Следующий",
+      "by": "Наступны",
+      "tags": ["adjective", "order"]
+    },
+    {
+      "id": "previous",
+      "lt": "Ankstesnis",
+      "en": "Previous",
+      "ru": "Предыдущий",
+      "by": "Папярэдні",
+      "tags": ["adjective", "order"]
+    },
+    {
+      "id": "ready",
+      "lt": "Pasiruošęs",
+      "en": "Ready",
+      "ru": "Готовый",
+      "by": "Гатовы",
+      "tags": ["adjective", "preparedness"]
+    },
+    {
+      "id": "complete",
+      "lt": "Pilnas",
+      "en": "Complete",
+      "ru": "Полный",
+      "by": "Поўны",
+      "tags": ["adjective", "completeness"]
+    },
+    {
+      "id": "incomplete",
+      "lt": "Nepilnas",
+      "en": "Incomplete",
+      "ru": "Неполный",
+      "by": "Няпоўны",
+      "tags": ["adjective", "completeness"]
+    }
+  ]
+} 

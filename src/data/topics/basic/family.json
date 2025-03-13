@@ -1,0 +1,85 @@
+{
+  "id": "family",
+  "name": {
+    "en": "Family",
+    "lt": "Šeima"
+  },
+  "description": {
+    "en": "Family members and relationships",
+    "lt": "Šeimos nariai ir santykiai"
+  },
+  "phrases": [
+    {
+      "id": "mother",
+      "lt": "Mama",
+      "en": "Mother",
+      "ru": "Мама",
+      "by": "Маці",
+      "tags": ["family", "parent"]
+    },
+    {
+      "id": "father",
+      "lt": "Tėtis",
+      "en": "Father",
+      "ru": "Папа",
+      "by": "Тата",
+      "tags": ["family", "parent"]
+    },
+    {
+      "id": "sister",
+      "lt": "Sesuo",
+      "en": "Sister",
+      "ru": "Сестра",
+      "by": "Сястра",
+      "tags": ["family", "sibling"]
+    },
+    {
+      "id": "brother",
+      "lt": "Brolis",
+      "en": "Brother",
+      "ru": "Брат",
+      "by": "Брат",
+      "tags": ["family", "sibling"]
+    },
+    {
+      "id": "grandmother",
+      "lt": "Močiutė",
+      "en": "Grandmother",
+      "ru": "Бабушка",
+      "by": "Бабуля",
+      "tags": ["family", "grandparent"]
+    },
+    {
+      "id": "grandfather",
+      "lt": "Senelis",
+      "en": "Grandfather",
+      "ru": "Дедушка",
+      "by": "Дзядуля",
+      "tags": ["family", "grandparent"]
+    },
+    {
+      "id": "aunt",
+      "lt": "Teta",
+      "en": "Aunt",
+      "ru": "Тётя",
+      "by": "Цётка",
+      "tags": ["family", "extended"]
+    },
+    {
+      "id": "uncle",
+      "lt": "Dėdė",
+      "en": "Uncle",
+      "ru": "Дядя",
+      "by": "Дзядзька",
+      "tags": ["family", "extended"]
+    },
+    {
+      "id": "cousin",
+      "lt": "Pusbrolis/Pusseserė",
+      "en": "Cousin",
+      "ru": "Двоюродный брат/сестра",
+      "by": "Стрыечны брат/сястра",
+      "tags": ["family", "extended"]
+    }
+  ]
+} 

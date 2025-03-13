@@ -1,0 +1,429 @@
+{
+  "id": "health",
+  "name": {
+    "en": "Health",
+    "lt": "Sveikata"
+  },
+  "description": {
+    "en": "Common health-related terms, medical vocabulary, body parts, and health conditions",
+    "lt": "Dažniausiai vartojami su sveikata susiję terminai, medicinos žodynas, kūno dalys ir sveikatos būklės"
+  },
+  "phrases": [
+    {
+      "id": "health",
+      "lt": "Sveikata",
+      "en": "Health",
+      "ru": "Здоровье",
+      "by": "Здароўе",
+      "tags": ["health", "basic"]
+    },
+    {
+      "id": "doctor",
+      "lt": "Gydytojas",
+      "en": "Doctor",
+      "ru": "Врач",
+      "by": "Урач",
+      "tags": ["health", "profession"]
+    },
+    {
+      "id": "nurse",
+      "lt": "Slaugytoja",
+      "en": "Nurse",
+      "ru": "Медсестра",
+      "by": "Медсястра",
+      "tags": ["health", "profession"]
+    },
+    {
+      "id": "hospital",
+      "lt": "Ligoninė",
+      "en": "Hospital",
+      "ru": "Больница",
+      "by": "Бальніца",
+      "tags": ["health", "place"]
+    },
+    {
+      "id": "pharmacy",
+      "lt": "Vaistinė",
+      "en": "Pharmacy",
+      "ru": "Аптека",
+      "by": "Аптэка",
+      "tags": ["health", "place"]
+    },
+    {
+      "id": "medicine",
+      "lt": "Vaistai",
+      "en": "Medicine",
+      "ru": "Лекарство",
+      "by": "Лекі",
+      "tags": ["health", "treatment"]
+    },
+    {
+      "id": "prescription",
+      "lt": "Receptas",
+      "en": "Prescription",
+      "ru": "Рецепт",
+      "by": "Рэцэпт",
+      "tags": ["health", "document"]
+    },
+    {
+      "id": "pain",
+      "lt": "Skausmas",
+      "en": "Pain",
+      "ru": "Боль",
+      "by": "Боль",
+      "tags": ["health", "symptom"]
+    },
+    {
+      "id": "fever",
+      "lt": "Karščiavimas",
+      "en": "Fever",
+      "ru": "Температура",
+      "by": "Тэмпература",
+      "tags": ["health", "symptom"]
+    },
+    {
+      "id": "headache",
+      "lt": "Galvos skausmas",
+      "en": "Headache",
+      "ru": "Головная боль",
+      "by": "Галаўны боль",
+      "tags": ["health", "symptom"]
+    },
+    {
+      "id": "cold",
+      "lt": "Peršalimas",
+      "en": "Cold",
+      "ru": "Простуда",
+      "by": "Прастуда",
+      "tags": ["health", "condition"]
+    },
+    {
+      "id": "flu",
+      "lt": "Gripas",
+      "en": "Flu",
+      "ru": "Грипп",
+      "by": "Грып",
+      "tags": ["health", "condition"]
+    },
+    {
+      "id": "allergy",
+      "lt": "Alergija",
+      "en": "Allergy",
+      "ru": "Аллергия",
+      "by": "Алергія",
+      "tags": ["health", "condition"]
+    },
+    {
+      "id": "head",
+      "lt": "Galva",
+      "en": "Head",
+      "ru": "Голова",
+      "by": "Галава",
+      "tags": ["health", "body"]
+    },
+    {
+      "id": "heart",
+      "lt": "Širdis",
+      "en": "Heart",
+      "ru": "Сердце",
+      "by": "Сэрца",
+      "tags": ["health", "body"]
+    },
+    {
+      "id": "stomach",
+      "lt": "Skrandis",
+      "en": "Stomach",
+      "ru": "Желудок",
+      "by": "Страўнік",
+      "tags": ["health", "body"]
+    },
+    {
+      "id": "back",
+      "lt": "Nugara",
+      "en": "Back",
+      "ru": "Спина",
+      "by": "Спіна",
+      "tags": ["health", "body"]
+    },
+    {
+      "id": "leg",
+      "lt": "Koja",
+      "en": "Leg",
+      "ru": "Нога",
+      "by": "Нага",
+      "tags": ["health", "body"]
+    },
+    {
+      "id": "arm",
+      "lt": "Ranka",
+      "en": "Arm",
+      "ru": "Рука",
+      "by": "Рука",
+      "tags": ["health", "body"]
+    },
+    {
+      "id": "eye",
+      "lt": "Akis",
+      "en": "Eye",
+      "ru": "Глаз",
+      "by": "Вока",
+      "tags": ["health", "body"]
+    },
+    {
+      "id": "ear",
+      "lt": "Ausis",
+      "en": "Ear",
+      "ru": "Ухо",
+      "by": "Вуха",
+      "tags": ["health", "body"]
+    },
+    {
+      "id": "nose",
+      "lt": "Nosis",
+      "en": "Nose",
+      "ru": "Нос",
+      "by": "Нос",
+      "tags": ["health", "body"]
+    },
+    {
+      "id": "mouth",
+      "lt": "Burna",
+      "en": "Mouth",
+      "ru": "Рот",
+      "by": "Рот",
+      "tags": ["health", "body"]
+    },
+    {
+      "id": "tooth",
+      "lt": "Dantis",
+      "en": "Tooth",
+      "ru": "Зуб",
+      "by": "Зуб",
+      "tags": ["health", "body"]
+    },
+    {
+      "id": "blood",
+      "lt": "Kraujas",
+      "en": "Blood",
+      "ru": "Кровь",
+      "by": "Кроў",
+      "tags": ["health", "body"]
+    },
+    {
+      "id": "injury",
+      "lt": "Trauma",
+      "en": "Injury",
+      "ru": "Травма",
+      "by": "Траўма",
+      "tags": ["health", "condition"]
+    },
+    {
+      "id": "wound",
+      "lt": "Žaizda",
+      "en": "Wound",
+      "ru": "Рана",
+      "by": "Рана",
+      "tags": ["health", "condition"]
+    },
+    {
+      "id": "bandage",
+      "lt": "Tvarstis",
+      "en": "Bandage",
+      "ru": "Бинт",
+      "by": "Бінт",
+      "tags": ["health", "item"]
+    },
+    {
+      "id": "appointment",
+      "lt": "Vizitas",
+      "en": "Appointment",
+      "ru": "Приём",
+      "by": "Прыём",
+      "tags": ["health", "event"]
+    },
+    {
+      "id": "emergency",
+      "lt": "Skubi pagalba",
+      "en": "Emergency",
+      "ru": "Скорая помощь",
+      "by": "Хуткая дапамога",
+      "tags": ["health", "urgent"]
+    },
+    {
+      "id": "ambulance",
+      "lt": "Greitoji pagalba",
+      "en": "Ambulance",
+      "ru": "Скорая помощь",
+      "by": "Хуткая дапамога",
+      "tags": ["health", "vehicle"]
+    },
+    {
+      "id": "sick",
+      "lt": "Sergantis",
+      "en": "Sick",
+      "ru": "Больной",
+      "by": "Хворы",
+      "tags": ["health", "condition"]
+    },
+    {
+      "id": "healthy",
+      "lt": "Sveikas",
+      "en": "Healthy",
+      "ru": "Здоровый",
+      "by": "Здаровы",
+      "tags": ["health", "condition"]
+    },
+    {
+      "id": "tired",
+      "lt": "Pavargęs",
+      "en": "Tired",
+      "ru": "Уставший",
+      "by": "Стомлены",
+      "tags": ["health", "condition"]
+    },
+    {
+      "id": "rest",
+      "lt": "Poilsis",
+      "en": "Rest",
+      "ru": "Отдых",
+      "by": "Адпачынак",
+      "tags": ["health", "action"]
+    },
+    {
+      "id": "sleep",
+      "lt": "Miegas",
+      "en": "Sleep",
+      "ru": "Сон",
+      "by": "Сон",
+      "tags": ["health", "action"]
+    },
+    {
+      "id": "exercise",
+      "lt": "Mankšta",
+      "en": "Exercise",
+      "ru": "Упражнение",
+      "by": "Практыкаванне",
+      "tags": ["health", "activity"]
+    },
+    {
+      "id": "diet",
+      "lt": "Dieta",
+      "en": "Diet",
+      "ru": "Диета",
+      "by": "Дыета",
+      "tags": ["health", "lifestyle"]
+    },
+    {
+      "id": "vitamin",
+      "lt": "Vitaminas",
+      "en": "Vitamin",
+      "ru": "Витамин",
+      "by": "Вітамін",
+      "tags": ["health", "supplement"]
+    },
+    {
+      "id": "insurance",
+      "lt": "Draudimas",
+      "en": "Insurance",
+      "ru": "Страховка",
+      "by": "Страхоўка",
+      "tags": ["health", "service"]
+    },
+    {
+      "id": "treatment",
+      "lt": "Gydymas",
+      "en": "Treatment",
+      "ru": "Лечение",
+      "by": "Лячэнне",
+      "tags": ["health", "care"]
+    },
+    {
+      "id": "recovery",
+      "lt": "Pasveikimas",
+      "en": "Recovery",
+      "ru": "Выздоровление",
+      "by": "Выздараўленне",
+      "tags": ["health", "process"]
+    },
+    {
+      "id": "feel-better",
+      "lt": "Sveik greičiau",
+      "en": "Feel better",
+      "ru": "Выздоравливай",
+      "by": "Папраўляйся",
+      "tags": ["health", "wish"]
+    },
+    {
+      "id": "how-do-you-feel",
+      "lt": "Kaip jautiesi?",
+      "en": "How do you feel?",
+      "ru": "Как ты себя чувствуешь?",
+      "by": "Як ты сябе адчуваеш?",
+      "tags": ["health", "question"]
+    },
+    {
+      "id": "im-sick",
+      "lt": "Aš sergu",
+      "en": "I'm sick",
+      "ru": "Я болею",
+      "by": "Я хварэю",
+      "tags": ["health", "statement"]
+    },
+    {
+      "id": "im-fine",
+      "lt": "Aš sveikas",
+      "en": "I'm fine",
+      "ru": "Я здоров",
+      "by": "Я здаровы",
+      "tags": ["health", "statement"]
+    },
+    {
+      "id": "take-care",
+      "lt": "Saugok save",
+      "en": "Take care",
+      "ru": "Береги себя",
+      "by": "Беражы сябе",
+      "tags": ["health", "wish"]
+    },
+    {
+      "id": "get-well-soon",
+      "lt": "Pasveik greitai",
+      "en": "Get well soon",
+      "ru": "Поправляйся скорее",
+      "by": "Папраўляйся хутчэй",
+      "tags": ["health", "wish"]
+    },
+    {
+      "id": "need-doctor",
+      "lt": "Reikia gydytojo",
+      "en": "Need a doctor",
+      "ru": "Нужен врач",
+      "by": "Патрэбен урач",
+      "tags": ["health", "emergency"]
+    },
+    {
+      "id": "call-ambulance",
+      "lt": "Iškviesk greitąją",
+      "en": "Call an ambulance",
+      "ru": "Вызови скорую",
+      "by": "Выклікай хуткую",
+      "tags": ["health", "emergency"]
+    },
+    {
+      "id": "first-aid",
+      "lt": "Pirmoji pagalba",
+      "en": "First aid",
+      "ru": "Первая помощь",
+      "by": "Першая дапамога",
+      "tags": ["health", "emergency"]
+    },
+    {
+      "id": "medical-help",
+      "lt": "Medicininė pagalba",
+      "en": "Medical help",
+      "ru": "Медицинская помощь",
+      "by": "Медыцынская дапамога",
+      "tags": ["health", "assistance"]
+    }
+  ]
+} 

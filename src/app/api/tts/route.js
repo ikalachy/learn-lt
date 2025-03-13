@@ -13,17 +13,26 @@ if (isDevelopment && !fs.existsSync(CACHE_DIR)) {
   fs.mkdirSync(CACHE_DIR, { recursive: true });
 }
 
-// Helper function to get text by ID
-function getTextById(id) {
-  const phrase = phrases.phrases.find(p => p.id === id);
-  return phrase?.lt;
+// Helper function to get text by ID and topic
+async function getTextById(id, topic) {
+  try {
+    // Import the topic-specific file
+    const topicData = await import(`@/data/topics/basic/${topic}.json`);
+    const phrase = topicData.phrases.find(p => p.id === id);
+    return phrase?.lt;
+  } catch (error) {
+    console.error(`Error loading topic file for ${topic}:`, error);
+    return null;
+  }
 }
 
 // Helper function to check if file exists in cache
-async function getCachedAudio(id) {
+async function getCachedAudio(id, topic) {
+  const cacheKey = `${topic}_${id}`;
+  
   if (isDevelopment) {
     // Local storage in development
-    const filepath = path.join(CACHE_DIR, `${id}.mp3`);
+    const filepath = path.join(CACHE_DIR, `${cacheKey}.mp3`);
     if (fs.existsSync(filepath)) {
       const audioContent = fs.readFileSync(filepath);
       return audioContent.toString('base64');
@@ -32,7 +41,7 @@ async function getCachedAudio(id) {
   } else {
     // Vercel Blob in production
     try {
-      const { blobs } = await list({ prefix: `audio/${id}` });
+      const { blobs } = await list({ prefix: `audio/${cacheKey}` });
       if (blobs.length > 0) {
         const response = await fetch(blobs[0].url);
         const arrayBuffer = await response.arrayBuffer();
@@ -47,16 +56,18 @@ async function getCachedAudio(id) {
 }
 
 // Helper function to save audio to cache
-async function saveToCache(id, audioContent) {
+async function saveToCache(id, topic, audioContent) {
+  const cacheKey = `${topic}_${id}`;
+  
   if (isDevelopment) {
     // Local storage in development
-    const filepath = path.join(CACHE_DIR, `${id}.mp3`);
+    const filepath = path.join(CACHE_DIR, `${cacheKey}.mp3`);
     fs.writeFileSync(filepath, Buffer.from(audioContent, 'base64'));
     return filepath;
   } else {
     // Vercel Blob in production
     try {
-      const { url } = await put(`audio/${id}.mp3`, Buffer.from(audioContent, 'base64'), {
+      const { url } = await put(`audio/${cacheKey}.mp3`, Buffer.from(audioContent, 'base64'), {
         access: 'public',
         contentType: 'audio/mp3'
       });
@@ -70,18 +81,22 @@ async function saveToCache(id, audioContent) {
 
 export async function POST(request) {
   try {
-    const { id } = await request.json();
-    console.log("phrase ID:", id);
+    const { id, topic } = await request.json();
+    console.log("phrase ID:", id, "topic:", topic);
 
-    const text = getTextById(id);
+    if (!topic) {
+      throw new Error("Topic is required");
+    }
+
+    const text = await getTextById(id, topic);
     if (!text) {
-      throw new Error("Invalid phrase ID");
+      throw new Error("Invalid phrase ID or topic");
     }
 
     // Check cache first
-    const cachedAudio = await getCachedAudio(id);
+    const cachedAudio = await getCachedAudio(id, topic);
     if (cachedAudio) {
-      console.log(`Using cached audio for ID: ${id} (${isDevelopment ? 'local' : 'blob'} storage)`);
+      console.log(`Using cached audio for ID: ${id} in topic: ${topic} (${isDevelopment ? 'local' : 'blob'} storage)`);
       return NextResponse.json({ audio: cachedAudio });
     }
 
@@ -117,8 +132,8 @@ export async function POST(request) {
     const data = await response.json();
     
     // Save to cache
-    const cachePath = await saveToCache(id, data.audioContent);
-    console.log(`Saved audio to cache for ID: ${id} (${isDevelopment ? 'local' : 'blob'} storage) at ${cachePath}`);
+    const cachePath = await saveToCache(id, topic, data.audioContent);
+    console.log(`Saved audio to cache for ID: ${id} in topic: ${topic} (${isDevelopment ? 'local' : 'blob'} storage) at ${cachePath}`);
 
     return NextResponse.json({ audio: data.audioContent });
   } catch (error) {

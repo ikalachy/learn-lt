@@ -1,0 +1,437 @@
+{
+  "id": "nature",
+  "name": {
+    "en": "Nature",
+    "lt": "Gamta"
+  },
+  "description": {
+    "en": "Common nature terms, animals, plants, landscapes, and nature-related phrases",
+    "lt": "Dažniausiai vartojami gamtos terminai, gyvūnai, augalai, kraštovaizdžiai ir su gamta susijusios frazės"
+  },
+  "phrases": [
+    {
+      "id": "tree",
+      "lt": "Medis",
+      "en": "Tree",
+      "ru": "Дерево",
+      "by": "Дрэва",
+      "tags": ["nature", "plant"]
+    },
+    {
+      "id": "flower",
+      "lt": "Gėlė",
+      "en": "Flower",
+      "ru": "Цветок",
+      "by": "Кветка",
+      "tags": ["nature", "plant"]
+    },
+    {
+      "id": "grass",
+      "lt": "Žolė",
+      "en": "Grass",
+      "ru": "Трава",
+      "by": "Трава",
+      "tags": ["nature", "plant"]
+    },
+    {
+      "id": "leaf",
+      "lt": "Lapas",
+      "en": "Leaf",
+      "ru": "Лист",
+      "by": "Ліст",
+      "tags": ["nature", "plant"]
+    },
+    {
+      "id": "forest",
+      "lt": "Miškas",
+      "en": "Forest",
+      "ru": "Лес",
+      "by": "Лес",
+      "tags": ["nature", "landscape"]
+    },
+    {
+      "id": "mountain",
+      "lt": "Kalnas",
+      "en": "Mountain",
+      "ru": "Гора",
+      "by": "Гара",
+      "tags": ["nature", "landscape"]
+    },
+    {
+      "id": "river",
+      "lt": "Upė",
+      "en": "River",
+      "ru": "Река",
+      "by": "Рака",
+      "tags": ["nature", "water"]
+    },
+    {
+      "id": "lake",
+      "lt": "Ežeras",
+      "en": "Lake",
+      "ru": "Озеро",
+      "by": "Возера",
+      "tags": ["nature", "water"]
+    },
+    {
+      "id": "sea",
+      "lt": "Jūra",
+      "en": "Sea",
+      "ru": "Море",
+      "by": "Мора",
+      "tags": ["nature", "water"]
+    },
+    {
+      "id": "ocean",
+      "lt": "Vandenynas",
+      "en": "Ocean",
+      "ru": "Океан",
+      "by": "Акіян",
+      "tags": ["nature", "water"]
+    },
+    {
+      "id": "beach",
+      "lt": "Paplūdimys",
+      "en": "Beach",
+      "ru": "Пляж",
+      "by": "Пляж",
+      "tags": ["nature", "landscape"]
+    },
+    {
+      "id": "island",
+      "lt": "Sala",
+      "en": "Island",
+      "ru": "Остров",
+      "by": "Востраў",
+      "tags": ["nature", "landscape"]
+    },
+    {
+      "id": "hill",
+      "lt": "Kalva",
+      "en": "Hill",
+      "ru": "Холм",
+      "by": "Узгорак",
+      "tags": ["nature", "landscape"]
+    },
+    {
+      "id": "valley",
+      "lt": "Slėnis",
+      "en": "Valley",
+      "ru": "Долина",
+      "by": "Даліна",
+      "tags": ["nature", "landscape"]
+    },
+    {
+      "id": "desert",
+      "lt": "Dykuma",
+      "en": "Desert",
+      "ru": "Пустыня",
+      "by": "Пустыня",
+      "tags": ["nature", "landscape"]
+    },
+    {
+      "id": "bird",
+      "lt": "Paukštis",
+      "en": "Bird",
+      "ru": "Птица",
+      "by": "Птушка",
+      "tags": ["nature", "animal"]
+    },
+    {
+      "id": "fish",
+      "lt": "Žuvis",
+      "en": "Fish",
+      "ru": "Рыба",
+      "by": "Рыба",
+      "tags": ["nature", "animal"]
+    },
+    {
+      "id": "dog",
+      "lt": "Šuo",
+      "en": "Dog",
+      "ru": "Собака",
+      "by": "Сабака",
+      "tags": ["nature", "animal"]
+    },
+    {
+      "id": "cat",
+      "lt": "Katė",
+      "en": "Cat",
+      "ru": "Кошка",
+      "by": "Кот",
+      "tags": ["nature", "animal"]
+    },
+    {
+      "id": "bear",
+      "lt": "Lokys",
+      "en": "Bear",
+      "ru": "Медведь",
+      "by": "Мядзведзь",
+      "tags": ["nature", "animal"]
+    },
+    {
+      "id": "wolf",
+      "lt": "Vilkas",
+      "en": "Wolf",
+      "ru": "Волк",
+      "by": "Воўк",
+      "tags": ["nature", "animal"]
+    },
+    {
+      "id": "fox",
+      "lt": "Lapė",
+      "en": "Fox",
+      "ru": "Лиса",
+      "by": "Ліса",
+      "tags": ["nature", "animal"]
+    },
+    {
+      "id": "deer",
+      "lt": "Elnias",
+      "en": "Deer",
+      "ru": "Олень",
+      "by": "Алень",
+      "tags": ["nature", "animal"]
+    },
+    {
+      "id": "butterfly",
+      "lt": "Drugelis",
+      "en": "Butterfly",
+      "ru": "Бабочка",
+      "by": "Матылёк",
+      "tags": ["nature", "insect"]
+    },
+    {
+      "id": "bee",
+      "lt": "Bitė",
+      "en": "Bee",
+      "ru": "Пчела",
+      "by": "Пчала",
+      "tags": ["nature", "insect"]
+    },
+    {
+      "id": "ant",
+      "lt": "Skruzdėlė",
+      "en": "Ant",
+      "ru": "Муравей",
+      "by": "Мурашка",
+      "tags": ["nature", "insect"]
+    },
+    {
+      "id": "spider",
+      "lt": "Voras",
+      "en": "Spider",
+      "ru": "Паук",
+      "by": "Павук",
+      "tags": ["nature", "insect"]
+    },
+    {
+      "id": "sky",
+      "lt": "Dangus",
+      "en": "Sky",
+      "ru": "Небо",
+      "by": "Неба",
+      "tags": ["nature", "environment"]
+    },
+    {
+      "id": "cloud",
+      "lt": "Debesis",
+      "en": "Cloud",
+      "ru": "Облако",
+      "by": "Воблака",
+      "tags": ["nature", "weather"]
+    },
+    {
+      "id": "rainbow",
+      "lt": "Vaivorykštė",
+      "en": "Rainbow",
+      "ru": "Радуга",
+      "by": "Вясёлка",
+      "tags": ["nature", "phenomenon"]
+    },
+    {
+      "id": "sunrise",
+      "lt": "Saulėtekis",
+      "en": "Sunrise",
+      "ru": "Восход",
+      "by": "Узыход",
+      "tags": ["nature", "time"]
+    },
+    {
+      "id": "sunset",
+      "lt": "Saulėlydis",
+      "en": "Sunset",
+      "ru": "Закат",
+      "by": "Захад",
+      "tags": ["nature", "time"]
+    },
+    {
+      "id": "moon",
+      "lt": "Mėnulis",
+      "en": "Moon",
+      "ru": "Луна",
+      "by": "Месяц",
+      "tags": ["nature", "space"]
+    },
+    {
+      "id": "star",
+      "lt": "Žvaigždė",
+      "en": "Star",
+      "ru": "Звезда",
+      "by": "Зорка",
+      "tags": ["nature", "space"]
+    },
+    {
+      "id": "air",
+      "lt": "Oras",
+      "en": "Air",
+      "ru": "Воздух",
+      "by": "Паветра",
+      "tags": ["nature", "element"]
+    },
+    {
+      "id": "water",
+      "lt": "Vanduo",
+      "en": "Water",
+      "ru": "Вода",
+      "by": "Вада",
+      "tags": ["nature", "element"]
+    },
+    {
+      "id": "earth",
+      "lt": "Žemė",
+      "en": "Earth",
+      "ru": "Земля",
+      "by": "Зямля",
+      "tags": ["nature", "element"]
+    },
+    {
+      "id": "fire",
+      "lt": "Ugnis",
+      "en": "Fire",
+      "ru": "Огонь",
+      "by": "Агонь",
+      "tags": ["nature", "element"]
+    },
+    {
+      "id": "stone",
+      "lt": "Akmuo",
+      "en": "Stone",
+      "ru": "Камень",
+      "by": "Камень",
+      "tags": ["nature", "material"]
+    },
+    {
+      "id": "sand",
+      "lt": "Smėlis",
+      "en": "Sand",
+      "ru": "Песок",
+      "by": "Пясок",
+      "tags": ["nature", "material"]
+    },
+    {
+      "id": "mud",
+      "lt": "Purvas",
+      "en": "Mud",
+      "ru": "Грязь",
+      "by": "Бруд",
+      "tags": ["nature", "material"]
+    },
+    {
+      "id": "rock",
+      "lt": "Uola",
+      "en": "Rock",
+      "ru": "Скала",
+      "by": "Скала",
+      "tags": ["nature", "material"]
+    },
+    {
+      "id": "nest",
+      "lt": "Lizdas",
+      "en": "Nest",
+      "ru": "Гнездо",
+      "by": "Гняздо",
+      "tags": ["nature", "animal-home"]
+    },
+    {
+      "id": "cave",
+      "lt": "Ola",
+      "en": "Cave",
+      "ru": "Пещера",
+      "by": "Пячора",
+      "tags": ["nature", "landscape"]
+    },
+    {
+      "id": "waterfall",
+      "lt": "Krioklys",
+      "en": "Waterfall",
+      "ru": "Водопад",
+      "by": "Вадаспад",
+      "tags": ["nature", "water"]
+    },
+    {
+      "id": "spring",
+      "lt": "Šaltinis",
+      "en": "Spring",
+      "ru": "Родник",
+      "by": "Крыніца",
+      "tags": ["nature", "water"]
+    },
+    {
+      "id": "swamp",
+      "lt": "Pelkė",
+      "en": "Swamp",
+      "ru": "Болото",
+      "by": "Балота",
+      "tags": ["nature", "landscape"]
+    },
+    {
+      "id": "meadow",
+      "lt": "Pieva",
+      "en": "Meadow",
+      "ru": "Луг",
+      "by": "Луг",
+      "tags": ["nature", "landscape"]
+    },
+    {
+      "id": "path",
+      "lt": "Takas",
+      "en": "Path",
+      "ru": "Тропа",
+      "by": "Сцежка",
+      "tags": ["nature", "landscape"]
+    },
+    {
+      "id": "beautiful-nature",
+      "lt": "Graži gamta",
+      "en": "Beautiful nature",
+      "ru": "Красивая природа",
+      "by": "Прыгожая прырода",
+      "tags": ["nature", "description"]
+    },
+    {
+      "id": "fresh-air",
+      "lt": "Grynas oras",
+      "en": "Fresh air",
+      "ru": "Свежий воздух",
+      "by": "Свежае паветра",
+      "tags": ["nature", "description"]
+    },
+    {
+      "id": "wild",
+      "lt": "Laukinis",
+      "en": "Wild",
+      "ru": "Дикий",
+      "by": "Дзікі",
+      "tags": ["nature", "description"]
+    },
+    {
+      "id": "natural",
+      "lt": "Natūralus",
+      "en": "Natural",
+      "ru": "Природный",
+      "by": "Прыродны",
+      "tags": ["nature", "description"]
+    }
+  ]
+} 

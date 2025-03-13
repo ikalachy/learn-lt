@@ -1,0 +1,269 @@
+{
+  "id": "calendar",
+  "name": {
+    "en": "Calendar",
+    "lt": "Kalendorius"
+  },
+  "description": {
+    "en": "Days of the week, months, seasons, and calendar-related phrases",
+    "lt": "Savaitės dienos, mėnesiai, metų laikai ir su kalendoriumi susijusios frazės"
+  },
+  "phrases": [
+    {
+      "id": "monday",
+      "lt": "Pirmadienis",
+      "en": "Monday",
+      "ru": "Понедельник",
+      "by": "Панядзелак",
+      "tags": ["calendar", "weekday"]
+    },
+    {
+      "id": "tuesday",
+      "lt": "Antradienis",
+      "en": "Tuesday",
+      "ru": "Вторник",
+      "by": "Аўторак",
+      "tags": ["calendar", "weekday"]
+    },
+    {
+      "id": "wednesday",
+      "lt": "Trečiadienis",
+      "en": "Wednesday",
+      "ru": "Среда",
+      "by": "Серада",
+      "tags": ["calendar", "weekday"]
+    },
+    {
+      "id": "thursday",
+      "lt": "Ketvirtadienis",
+      "en": "Thursday",
+      "ru": "Четверг",
+      "by": "Чацвер",
+      "tags": ["calendar", "weekday"]
+    },
+    {
+      "id": "friday",
+      "lt": "Penktadienis",
+      "en": "Friday",
+      "ru": "Пятница",
+      "by": "Пятніца",
+      "tags": ["calendar", "weekday"]
+    },
+    {
+      "id": "saturday",
+      "lt": "Šeštadienis",
+      "en": "Saturday",
+      "ru": "Суббота",
+      "by": "Субота",
+      "tags": ["calendar", "weekend"]
+    },
+    {
+      "id": "sunday",
+      "lt": "Sekmadienis",
+      "en": "Sunday",
+      "ru": "Воскресенье",
+      "by": "Нядзеля",
+      "tags": ["calendar", "weekend"]
+    },
+    {
+      "id": "january",
+      "lt": "Sausis",
+      "en": "January",
+      "ru": "Январь",
+      "by": "Студзень",
+      "tags": ["calendar", "month", "winter"]
+    },
+    {
+      "id": "february",
+      "lt": "Vasaris",
+      "en": "February",
+      "ru": "Февраль",
+      "by": "Люты",
+      "tags": ["calendar", "month", "winter"]
+    },
+    {
+      "id": "march",
+      "lt": "Kovas",
+      "en": "March",
+      "ru": "Март",
+      "by": "Сакавік",
+      "tags": ["calendar", "month", "spring"]
+    },
+    {
+      "id": "april",
+      "lt": "Balandis",
+      "en": "April",
+      "ru": "Апрель",
+      "by": "Красавік",
+      "tags": ["calendar", "month", "spring"]
+    },
+    {
+      "id": "may",
+      "lt": "Gegužė",
+      "en": "May",
+      "ru": "Май",
+      "by": "Май",
+      "tags": ["calendar", "month", "spring"]
+    },
+    {
+      "id": "june",
+      "lt": "Birželis",
+      "en": "June",
+      "ru": "Июнь",
+      "by": "Чэрвень",
+      "tags": ["calendar", "month", "summer"]
+    },
+    {
+      "id": "july",
+      "lt": "Liepa",
+      "en": "July",
+      "ru": "Июль",
+      "by": "Ліпень",
+      "tags": ["calendar", "month", "summer"]
+    },
+    {
+      "id": "august",
+      "lt": "Rugpjūtis",
+      "en": "August",
+      "ru": "Август",
+      "by": "Жнівень",
+      "tags": ["calendar", "month", "summer"]
+    },
+    {
+      "id": "september",
+      "lt": "Rugsėjis",
+      "en": "September",
+      "ru": "Сентябрь",
+      "by": "Верасень",
+      "tags": ["calendar", "month", "autumn"]
+    },
+    {
+      "id": "october",
+      "lt": "Spalis",
+      "en": "October",
+      "ru": "Октябрь",
+      "by": "Кастрычнік",
+      "tags": ["calendar", "month", "autumn"]
+    },
+    {
+      "id": "november",
+      "lt": "Lapkritis",
+      "en": "November",
+      "ru": "Ноябрь",
+      "by": "Лістапад",
+      "tags": ["calendar", "month", "autumn"]
+    },
+    {
+      "id": "december",
+      "lt": "Gruodis",
+      "en": "December",
+      "ru": "Декабрь",
+      "by": "Снежань",
+      "tags": ["calendar", "month", "winter"]
+    },
+    {
+      "id": "spring",
+      "lt": "Pavasaris",
+      "en": "Spring",
+      "ru": "Весна",
+      "by": "Вясна",
+      "tags": ["calendar", "season"]
+    },
+    {
+      "id": "summer",
+      "lt": "Vasara",
+      "en": "Summer",
+      "ru": "Лето",
+      "by": "Лета",
+      "tags": ["calendar", "season"]
+    },
+    {
+      "id": "autumn",
+      "lt": "Ruduo",
+      "en": "Autumn",
+      "ru": "Осень",
+      "by": "Восень",
+      "tags": ["calendar", "season"]
+    },
+    {
+      "id": "winter",
+      "lt": "Žiema",
+      "en": "Winter",
+      "ru": "Зима",
+      "by": "Зіма",
+      "tags": ["calendar", "season"]
+    },
+    {
+      "id": "week",
+      "lt": "Savaitė",
+      "en": "Week",
+      "ru": "Неделя",
+      "by": "Тыдзень",
+      "tags": ["calendar", "time-period"]
+    },
+    {
+      "id": "month",
+      "lt": "Mėnuo",
+      "en": "Month",
+      "ru": "Месяц",
+      "by": "Месяц",
+      "tags": ["calendar", "time-period"]
+    },
+    {
+      "id": "year",
+      "lt": "Metai",
+      "en": "Year",
+      "ru": "Год",
+      "by": "Год",
+      "tags": ["calendar", "time-period"]
+    },
+    {
+      "id": "weekend",
+      "lt": "Savaitgalis",
+      "en": "Weekend",
+      "ru": "Выходные",
+      "by": "Выхадныя",
+      "tags": ["calendar", "time-period"]
+    },
+    {
+      "id": "workday",
+      "lt": "Darbo diena",
+      "en": "Workday",
+      "ru": "Рабочий день",
+      "by": "Працоўны дзень",
+      "tags": ["calendar", "time-period"]
+    },
+    {
+      "id": "holiday",
+      "lt": "Šventė",
+      "en": "Holiday",
+      "ru": "Праздник",
+      "by": "Свята",
+      "tags": ["calendar", "event"]
+    },
+    {
+      "id": "birthday",
+      "lt": "Gimtadienis",
+      "en": "Birthday",
+      "ru": "День рождения",
+      "by": "Дзень нараджэння",
+      "tags": ["calendar", "event"]
+    },
+    {
+      "id": "what-date",
+      "lt": "Kokia šiandien data?",
+      "en": "What's the date today?",
+      "ru": "Какое сегодня число?",
+      "by": "Якое сёння чысло?",
+      "tags": ["calendar", "question"]
+    },
+    {
+      "id": "which-day",
+      "lt": "Kokia šiandien savaitės diena?",
+      "en": "What day of the week is it?",
+      "ru": "Какой сегодня день недели?",
+      "by": "Які сёння дзень тыдня?",
+      "tags": ["calendar", "question"]
+    }
+  ]
+} 

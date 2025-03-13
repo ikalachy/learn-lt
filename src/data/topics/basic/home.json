@@ -1,0 +1,365 @@
+{
+  "id": "home",
+  "name": {
+    "en": "Home",
+    "lt": "Namai"
+  },
+  "description": {
+    "en": "Common home-related terms, furniture, rooms, and household items",
+    "lt": "Dažniausiai vartojami su namais susiję terminai, baldai, kambariai ir buities reikmenys"
+  },
+  "phrases": [
+    {
+      "id": "house",
+      "lt": "Namas",
+      "en": "House",
+      "ru": "Дом",
+      "by": "Дом",
+      "tags": ["home", "building"]
+    },
+    {
+      "id": "apartment",
+      "lt": "Butas",
+      "en": "Apartment",
+      "ru": "Квартира",
+      "by": "Кватэра",
+      "tags": ["home", "building"]
+    },
+    {
+      "id": "room",
+      "lt": "Kambarys",
+      "en": "Room",
+      "ru": "Комната",
+      "by": "Пакой",
+      "tags": ["home", "space"]
+    },
+    {
+      "id": "bedroom",
+      "lt": "Miegamasis",
+      "en": "Bedroom",
+      "ru": "Спальня",
+      "by": "Спальня",
+      "tags": ["home", "room"]
+    },
+    {
+      "id": "living-room",
+      "lt": "Svetainė",
+      "en": "Living room",
+      "ru": "Гостиная",
+      "by": "Гасцёўня",
+      "tags": ["home", "room"]
+    },
+    {
+      "id": "kitchen",
+      "lt": "Virtuvė",
+      "en": "Kitchen",
+      "ru": "Кухня",
+      "by": "Кухня",
+      "tags": ["home", "room"]
+    },
+    {
+      "id": "bathroom",
+      "lt": "Vonios kambarys",
+      "en": "Bathroom",
+      "ru": "Ванная",
+      "by": "Ванны пакой",
+      "tags": ["home", "room"]
+    },
+    {
+      "id": "toilet",
+      "lt": "Tualetas",
+      "en": "Toilet",
+      "ru": "Туалет",
+      "by": "Туалет",
+      "tags": ["home", "room"]
+    },
+    {
+      "id": "balcony",
+      "lt": "Balkonas",
+      "en": "Balcony",
+      "ru": "Балкон",
+      "by": "Балкон",
+      "tags": ["home", "space"]
+    },
+    {
+      "id": "garden",
+      "lt": "Sodas",
+      "en": "Garden",
+      "ru": "Сад",
+      "by": "Сад",
+      "tags": ["home", "space"]
+    },
+    {
+      "id": "bed",
+      "lt": "Lova",
+      "en": "Bed",
+      "ru": "Кровать",
+      "by": "Ложак",
+      "tags": ["home", "furniture"]
+    },
+    {
+      "id": "table",
+      "lt": "Stalas",
+      "en": "Table",
+      "ru": "Стол",
+      "by": "Стол",
+      "tags": ["home", "furniture"]
+    },
+    {
+      "id": "chair",
+      "lt": "Kėdė",
+      "en": "Chair",
+      "ru": "Стул",
+      "by": "Крэсла",
+      "tags": ["home", "furniture"]
+    },
+    {
+      "id": "sofa",
+      "lt": "Sofa",
+      "en": "Sofa",
+      "ru": "Диван",
+      "by": "Дыван",
+      "tags": ["home", "furniture"]
+    },
+    {
+      "id": "wardrobe",
+      "lt": "Spinta",
+      "en": "Wardrobe",
+      "ru": "Шкаф",
+      "by": "Шафа",
+      "tags": ["home", "furniture"]
+    },
+    {
+      "id": "shelf",
+      "lt": "Lentyna",
+      "en": "Shelf",
+      "ru": "Полка",
+      "by": "Палка",
+      "tags": ["home", "furniture"]
+    },
+    {
+      "id": "mirror",
+      "lt": "Veidrodis",
+      "en": "Mirror",
+      "ru": "Зеркало",
+      "by": "Люстра",
+      "tags": ["home", "item"]
+    },
+    {
+      "id": "lamp",
+      "lt": "Lempa",
+      "en": "Lamp",
+      "ru": "Лампа",
+      "by": "Лямпа",
+      "tags": ["home", "item"]
+    },
+    {
+      "id": "window",
+      "lt": "Langas",
+      "en": "Window",
+      "ru": "Окно",
+      "by": "Акно",
+      "tags": ["home", "item"]
+    },
+    {
+      "id": "door",
+      "lt": "Durys",
+      "en": "Door",
+      "ru": "Дверь",
+      "by": "Дзверы",
+      "tags": ["home", "item"]
+    },
+    {
+      "id": "floor",
+      "lt": "Grindys",
+      "en": "Floor",
+      "ru": "Пол",
+      "by": "Падлога",
+      "tags": ["home", "item"]
+    },
+    {
+      "id": "wall",
+      "lt": "Siena",
+      "en": "Wall",
+      "ru": "Стена",
+      "by": "Сцяна",
+      "tags": ["home", "item"]
+    },
+    {
+      "id": "ceiling",
+      "lt": "Lubos",
+      "en": "Ceiling",
+      "ru": "Потолок",
+      "by": "Столь",
+      "tags": ["home", "item"]
+    },
+    {
+      "id": "carpet",
+      "lt": "Kilimas",
+      "en": "Carpet",
+      "ru": "Ковёр",
+      "by": "Дыван",
+      "tags": ["home", "item"]
+    },
+    {
+      "id": "curtain",
+      "lt": "Užuolaida",
+      "en": "Curtain",
+      "ru": "Штора",
+      "by": "Штора",
+      "tags": ["home", "item"]
+    },
+    {
+      "id": "pillow",
+      "lt": "Pagalvė",
+      "en": "Pillow",
+      "ru": "Подушка",
+      "by": "Падушка",
+      "tags": ["home", "item"]
+    },
+    {
+      "id": "blanket",
+      "lt": "Antklodė",
+      "en": "Blanket",
+      "ru": "Одеяло",
+      "by": "Коўдра",
+      "tags": ["home", "item"]
+    },
+    {
+      "id": "sheet",
+      "lt": "Patalynė",
+      "en": "Sheet",
+      "ru": "Простыня",
+      "by": "Пасцель",
+      "tags": ["home", "item"]
+    },
+    {
+      "id": "towel",
+      "lt": "Rankšluostis",
+      "en": "Towel",
+      "ru": "Полотенце",
+      "by": "Рушнік",
+      "tags": ["home", "item"]
+    },
+    {
+      "id": "bath",
+      "lt": "Vonia",
+      "en": "Bath",
+      "ru": "Ванна",
+      "by": "Ванна",
+      "tags": ["home", "item"]
+    },
+    {
+      "id": "sink",
+      "lt": "Kriauklė",
+      "en": "Sink",
+      "ru": "Раковина",
+      "by": "Умывальнік",
+      "tags": ["home", "item"]
+    },
+    {
+      "id": "refrigerator",
+      "lt": "Šaldytuvas",
+      "en": "Refrigerator",
+      "ru": "Холодильник",
+      "by": "Халадзільнік",
+      "tags": ["home", "appliance"]
+    },
+    {
+      "id": "stove",
+      "lt": "Viryklė",
+      "en": "Stove",
+      "ru": "Плита",
+      "by": "Пліта",
+      "tags": ["home", "appliance"]
+    },
+    {
+      "id": "microwave",
+      "lt": "Mikrobanginė krosnelė",
+      "en": "Microwave",
+      "ru": "Микроволновка",
+      "by": "Мікрахвалевая печ",
+      "tags": ["home", "appliance"]
+    },
+    {
+      "id": "washing-machine",
+      "lt": "Skalbimo mašina",
+      "en": "Washing machine",
+      "ru": "Стиральная машина",
+      "by": "Пральная машына",
+      "tags": ["home", "appliance"]
+    },
+    {
+      "id": "vacuum-cleaner",
+      "lt": "Siurblys",
+      "en": "Vacuum cleaner",
+      "ru": "Пылесос",
+      "by": "Пыласос",
+      "tags": ["home", "appliance"]
+    },
+    {
+      "id": "key",
+      "lt": "Raktas",
+      "en": "Key",
+      "ru": "Ключ",
+      "by": "Ключ",
+      "tags": ["home", "item"]
+    },
+    {
+      "id": "lock",
+      "lt": "Spyna",
+      "en": "Lock",
+      "ru": "Замок",
+      "by": "Замок",
+      "tags": ["home", "item"]
+    },
+    {
+      "id": "home-address",
+      "lt": "Namų adresas",
+      "en": "Home address",
+      "ru": "Домашний адрес",
+      "by": "Хатні адрас",
+      "tags": ["home", "information"]
+    },
+    {
+      "id": "neighbor",
+      "lt": "Kaimynas",
+      "en": "Neighbor",
+      "ru": "Сосед",
+      "by": "Сусед",
+      "tags": ["home", "person"]
+    },
+    {
+      "id": "guest",
+      "lt": "Svečias",
+      "en": "Guest",
+      "ru": "Гость",
+      "by": "Госць",
+      "tags": ["home", "person"]
+    },
+    {
+      "id": "welcome",
+      "lt": "Sveiki atvykę",
+      "en": "Welcome",
+      "ru": "Добро пожаловать",
+      "by": "Сардэчна запрашаем",
+      "tags": ["home", "greeting"]
+    },
+    {
+      "id": "make-yourself-at-home",
+      "lt": "Jauskitės kaip namie",
+      "en": "Make yourself at home",
+      "ru": "Чувствуйте себя как дома",
+      "by": "Адчувайце сябе як дома",
+      "tags": ["home", "phrase"]
+    },
+    {
+      "id": "home-sweet-home",
+      "lt": "Namai, brangūs namai",
+      "en": "Home sweet home",
+      "ru": "Дом, милый дом",
+      "by": "Дом, дарагі дом",
+      "tags": ["home", "phrase"]
+    }
+  ]
+} 

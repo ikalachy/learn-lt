@@ -1,0 +1,437 @@
+{
+  "id": "adverbs",
+  "name": {
+    "en": "Adverbs",
+    "lt": "Prieveiksmiai"
+  },
+  "description": {
+    "en": "Common adverbs used to modify verbs, adjectives, and other adverbs",
+    "lt": "Dažniausiai vartojami prieveiksmiai, kurie modifikuoja veiksmažodžius, būdvardžius ir kitus prieveiksmius"
+  },
+  "phrases": [
+    {
+      "id": "quickly",
+      "lt": "Greitai",
+      "en": "Quickly",
+      "ru": "Быстро",
+      "by": "Хутка",
+      "tags": ["adverb", "manner", "speed"]
+    },
+    {
+      "id": "slowly",
+      "lt": "Lėtai",
+      "en": "Slowly",
+      "ru": "Медленно",
+      "by": "Павольна",
+      "tags": ["adverb", "manner", "speed"]
+    },
+    {
+      "id": "well",
+      "lt": "Gerai",
+      "en": "Well",
+      "ru": "Хорошо",
+      "by": "Добра",
+      "tags": ["adverb", "manner", "quality"]
+    },
+    {
+      "id": "badly",
+      "lt": "Blogai",
+      "en": "Badly",
+      "ru": "Плохо",
+      "by": "Дрэнна",
+      "tags": ["adverb", "manner", "quality"]
+    },
+    {
+      "id": "very",
+      "lt": "Labai",
+      "en": "Very",
+      "ru": "Очень",
+      "by": "Вельмі",
+      "tags": ["adverb", "degree", "intensity"]
+    },
+    {
+      "id": "too",
+      "lt": "Per",
+      "en": "Too",
+      "ru": "Слишком",
+      "by": "Занадта",
+      "tags": ["adverb", "degree", "intensity"]
+    },
+    {
+      "id": "enough",
+      "lt": "Pakankamai",
+      "en": "Enough",
+      "ru": "Достаточно",
+      "by": "Дастаткова",
+      "tags": ["adverb", "degree", "quantity"]
+    },
+    {
+      "id": "here",
+      "lt": "Čia",
+      "en": "Here",
+      "ru": "Здесь",
+      "by": "Тут",
+      "tags": ["adverb", "place", "location"]
+    },
+    {
+      "id": "there",
+      "lt": "Ten",
+      "en": "There",
+      "ru": "Там",
+      "by": "Там",
+      "tags": ["adverb", "place", "location"]
+    },
+    {
+      "id": "now",
+      "lt": "Dabar",
+      "en": "Now",
+      "ru": "Сейчас",
+      "by": "Цяпер",
+      "tags": ["adverb", "time", "present"]
+    },
+    {
+      "id": "then",
+      "lt": "Tada",
+      "en": "Then",
+      "ru": "Тогда",
+      "by": "Тады",
+      "tags": ["adverb", "time", "sequence"]
+    },
+    {
+      "id": "today",
+      "lt": "Šiandien",
+      "en": "Today",
+      "ru": "Сегодня",
+      "by": "Сёння",
+      "tags": ["adverb", "time", "present"]
+    },
+    {
+      "id": "tomorrow",
+      "lt": "Rytoj",
+      "en": "Tomorrow",
+      "ru": "Завтра",
+      "by": "Заўтра",
+      "tags": ["adverb", "time", "future"]
+    },
+    {
+      "id": "yesterday",
+      "lt": "Vakar",
+      "en": "Yesterday",
+      "ru": "Вчера",
+      "by": "Учора",
+      "tags": ["adverb", "time", "past"]
+    },
+    {
+      "id": "always",
+      "lt": "Visada",
+      "en": "Always",
+      "ru": "Всегда",
+      "by": "Заўсёды",
+      "tags": ["adverb", "frequency", "time"]
+    },
+    {
+      "id": "never",
+      "lt": "Niekada",
+      "en": "Never",
+      "ru": "Никогда",
+      "by": "Ніколі",
+      "tags": ["adverb", "frequency", "time"]
+    },
+    {
+      "id": "sometimes",
+      "lt": "Kartais",
+      "en": "Sometimes",
+      "ru": "Иногда",
+      "by": "Часам",
+      "tags": ["adverb", "frequency", "time"]
+    },
+    {
+      "id": "often",
+      "lt": "Dažnai",
+      "en": "Often",
+      "ru": "Часто",
+      "by": "Часта",
+      "tags": ["adverb", "frequency", "time"]
+    },
+    {
+      "id": "rarely",
+      "lt": "Retai",
+      "en": "Rarely",
+      "ru": "Редко",
+      "by": "Рэдка",
+      "tags": ["adverb", "frequency", "time"]
+    },
+    {
+      "id": "usually",
+      "lt": "Paprastai",
+      "en": "Usually",
+      "ru": "Обычно",
+      "by": "Звычайна",
+      "tags": ["adverb", "frequency", "time"]
+    },
+    {
+      "id": "early",
+      "lt": "Anksti",
+      "en": "Early",
+      "ru": "Рано",
+      "by": "Рана",
+      "tags": ["adverb", "time", "sequence"]
+    },
+    {
+      "id": "late",
+      "lt": "Vėlai",
+      "en": "Late",
+      "ru": "Поздно",
+      "by": "Позна",
+      "tags": ["adverb", "time", "sequence"]
+    },
+    {
+      "id": "inside",
+      "lt": "Viduje",
+      "en": "Inside",
+      "ru": "Внутри",
+      "by": "Унутры",
+      "tags": ["adverb", "place", "location"]
+    },
+    {
+      "id": "outside",
+      "lt": "Lauke",
+      "en": "Outside",
+      "ru": "Снаружи",
+      "by": "Звонку",
+      "tags": ["adverb", "place", "location"]
+    },
+    {
+      "id": "everywhere",
+      "lt": "Visur",
+      "en": "Everywhere",
+      "ru": "Везде",
+      "by": "Усюды",
+      "tags": ["adverb", "place", "location"]
+    },
+    {
+      "id": "nowhere",
+      "lt": "Niekur",
+      "en": "Nowhere",
+      "ru": "Нигде",
+      "by": "Нідзе",
+      "tags": ["adverb", "place", "location"]
+    },
+    {
+      "id": "somewhere",
+      "lt": "Kažkur",
+      "en": "Somewhere",
+      "ru": "Где-то",
+      "by": "Недзе",
+      "tags": ["adverb", "place", "location"]
+    },
+    {
+      "id": "anywhere",
+      "lt": "Bet kur",
+      "en": "Anywhere",
+      "ru": "Где угодно",
+      "by": "Дзе-небудзь",
+      "tags": ["adverb", "place", "location"]
+    },
+    {
+      "id": "upstairs",
+      "lt": "Viršuje",
+      "en": "Upstairs",
+      "ru": "Наверху",
+      "by": "Наверсе",
+      "tags": ["adverb", "place", "direction"]
+    },
+    {
+      "id": "downstairs",
+      "lt": "Apačioje",
+      "en": "Downstairs",
+      "ru": "Внизу",
+      "by": "Унізе",
+      "tags": ["adverb", "place", "direction"]
+    },
+    {
+      "id": "forward",
+      "lt": "Pirmyn",
+      "en": "Forward",
+      "ru": "Вперёд",
+      "by": "Наперад",
+      "tags": ["adverb", "direction", "movement"]
+    },
+    {
+      "id": "backward",
+      "lt": "Atgal",
+      "en": "Backward",
+      "ru": "Назад",
+      "by": "Назад",
+      "tags": ["adverb", "direction", "movement"]
+    },
+    {
+      "id": "together",
+      "lt": "Kartu",
+      "en": "Together",
+      "ru": "Вместе",
+      "by": "Разам",
+      "tags": ["adverb", "manner", "accompaniment"]
+    },
+    {
+      "id": "alone",
+      "lt": "Vienas",
+      "en": "Alone",
+      "ru": "Один",
+      "by": "Адзін",
+      "tags": ["adverb", "manner", "accompaniment"]
+    },
+    {
+      "id": "almost",
+      "lt": "Beveik",
+      "en": "Almost",
+      "ru": "Почти",
+      "by": "Амаль",
+      "tags": ["adverb", "degree", "approximation"]
+    },
+    {
+      "id": "completely",
+      "lt": "Visiškai",
+      "en": "Completely",
+      "ru": "Полностью",
+      "by": "Цалкам",
+      "tags": ["adverb", "degree", "completeness"]
+    },
+    {
+      "id": "partly",
+      "lt": "Dalinai",
+      "en": "Partly",
+      "ru": "Частично",
+      "by": "Часткова",
+      "tags": ["adverb", "degree", "completeness"]
+    },
+    {
+      "id": "especially",
+      "lt": "Ypač",
+      "en": "Especially",
+      "ru": "Особенно",
+      "by": "Асабліва",
+      "tags": ["adverb", "emphasis", "degree"]
+    },
+    {
+      "id": "only",
+      "lt": "Tik",
+      "en": "Only",
+      "ru": "Только",
+      "by": "Толькі",
+      "tags": ["adverb", "restriction", "limitation"]
+    },
+    {
+      "id": "also",
+      "lt": "Taip pat",
+      "en": "Also",
+      "ru": "Также",
+      "by": "Таксама",
+      "tags": ["adverb", "addition", "connection"]
+    },
+    {
+      "id": "maybe",
+      "lt": "Galbūt",
+      "en": "Maybe",
+      "ru": "Может быть",
+      "by": "Магчыма",
+      "tags": ["adverb", "possibility", "uncertainty"]
+    },
+    {
+      "id": "probably",
+      "lt": "Tikriausiai",
+      "en": "Probably",
+      "ru": "Вероятно",
+      "by": "Верагодна",
+      "tags": ["adverb", "possibility", "probability"]
+    },
+    {
+      "id": "certainly",
+      "lt": "Tikrai",
+      "en": "Certainly",
+      "ru": "Конечно",
+      "by": "Канечне",
+      "tags": ["adverb", "certainty", "assurance"]
+    },
+    {
+      "id": "easily",
+      "lt": "Lengvai",
+      "en": "Easily",
+      "ru": "Легко",
+      "by": "Лёгка",
+      "tags": ["adverb", "manner", "difficulty"]
+    },
+    {
+      "id": "carefully",
+      "lt": "Atsargiai",
+      "en": "Carefully",
+      "ru": "Осторожно",
+      "by": "Асцярожна",
+      "tags": ["adverb", "manner", "care"]
+    },
+    {
+      "id": "loudly",
+      "lt": "Garsiai",
+      "en": "Loudly",
+      "ru": "Громко",
+      "by": "Гучна",
+      "tags": ["adverb", "manner", "sound"]
+    },
+    {
+      "id": "quietly",
+      "lt": "Tyliai",
+      "en": "Quietly",
+      "ru": "Тихо",
+      "by": "Ціха",
+      "tags": ["adverb", "manner", "sound"]
+    },
+    {
+      "id": "suddenly",
+      "lt": "Staiga",
+      "en": "Suddenly",
+      "ru": "Внезапно",
+      "by": "Раптам",
+      "tags": ["adverb", "manner", "time"]
+    },
+    {
+      "id": "finally",
+      "lt": "Pagaliau",
+      "en": "Finally",
+      "ru": "Наконец",
+      "by": "Нарэшце",
+      "tags": ["adverb", "time", "sequence"]
+    },
+    {
+      "id": "already",
+      "lt": "Jau",
+      "en": "Already",
+      "ru": "Уже",
+      "by": "Ужо",
+      "tags": ["adverb", "time", "completion"]
+    },
+    {
+      "id": "still",
+      "lt": "Dar",
+      "en": "Still",
+      "ru": "Всё ещё",
+      "by": "Яшчэ",
+      "tags": ["adverb", "time", "continuation"]
+    },
+    {
+      "id": "again",
+      "lt": "Vėl",
+      "en": "Again",
+      "ru": "Снова",
+      "by": "Зноў",
+      "tags": ["adverb", "frequency", "repetition"]
+    },
+    {
+      "id": "once",
+      "lt": "Kartą",
+      "en": "Once",
+      "ru": "Однажды",
+      "by": "Аднойчы",
+      "tags": ["adverb", "frequency", "time"]
+    }
+  ]
+} 

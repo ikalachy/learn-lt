@@ -1,0 +1,429 @@
+{
+  "id": "work",
+  "name": {
+    "en": "Work",
+    "lt": "Darbas"
+  },
+  "description": {
+    "en": "Common work-related terms, professions, workplace vocabulary, and business phrases",
+    "lt": "Dažniausiai vartojami su darbu susiję terminai, profesijos, darbo vietos žodynas ir verslo frazės"
+  },
+  "phrases": [
+    {
+      "id": "work",
+      "lt": "Darbas",
+      "en": "Work",
+      "ru": "Работа",
+      "by": "Праца",
+      "tags": ["work", "basic"]
+    },
+    {
+      "id": "job",
+      "lt": "Darbas",
+      "en": "Job",
+      "ru": "Работа",
+      "by": "Праца",
+      "tags": ["work", "basic"]
+    },
+    {
+      "id": "office",
+      "lt": "Biuras",
+      "en": "Office",
+      "ru": "Офис",
+      "by": "Офіс",
+      "tags": ["work", "place"]
+    },
+    {
+      "id": "company",
+      "lt": "Įmonė",
+      "en": "Company",
+      "ru": "Компания",
+      "by": "Кампанія",
+      "tags": ["work", "organization"]
+    },
+    {
+      "id": "business",
+      "lt": "Verslas",
+      "en": "Business",
+      "ru": "Бизнес",
+      "by": "Бізнес",
+      "tags": ["work", "organization"]
+    },
+    {
+      "id": "employee",
+      "lt": "Darbuotojas",
+      "en": "Employee",
+      "ru": "Сотрудник",
+      "by": "Супрацоўнік",
+      "tags": ["work", "person"]
+    },
+    {
+      "id": "employer",
+      "lt": "Darbdavys",
+      "en": "Employer",
+      "ru": "Работодатель",
+      "by": "Працадаўца",
+      "tags": ["work", "person"]
+    },
+    {
+      "id": "manager",
+      "lt": "Vadovas",
+      "en": "Manager",
+      "ru": "Менеджер",
+      "by": "Менеджар",
+      "tags": ["work", "position"]
+    },
+    {
+      "id": "boss",
+      "lt": "Viršininkas",
+      "en": "Boss",
+      "ru": "Начальник",
+      "by": "Начальнік",
+      "tags": ["work", "position"]
+    },
+    {
+      "id": "colleague",
+      "lt": "Kolega",
+      "en": "Colleague",
+      "ru": "Коллега",
+      "by": "Калега",
+      "tags": ["work", "person"]
+    },
+    {
+      "id": "client",
+      "lt": "Klientas",
+      "en": "Client",
+      "ru": "Клиент",
+      "by": "Кліент",
+      "tags": ["work", "person"]
+    },
+    {
+      "id": "customer",
+      "lt": "Pirkėjas",
+      "en": "Customer",
+      "ru": "Покупатель",
+      "by": "Пакупнік",
+      "tags": ["work", "person"]
+    },
+    {
+      "id": "salary",
+      "lt": "Atlyginimas",
+      "en": "Salary",
+      "ru": "Зарплата",
+      "by": "Зарплата",
+      "tags": ["work", "money"]
+    },
+    {
+      "id": "wage",
+      "lt": "Alga",
+      "en": "Wage",
+      "ru": "Заработная плата",
+      "by": "Заработная плата",
+      "tags": ["work", "money"]
+    },
+    {
+      "id": "meeting",
+      "lt": "Susirinkimas",
+      "en": "Meeting",
+      "ru": "Собрание",
+      "by": "Сход",
+      "tags": ["work", "event"]
+    },
+    {
+      "id": "project",
+      "lt": "Projektas",
+      "en": "Project",
+      "ru": "Проект",
+      "by": "Праект",
+      "tags": ["work", "task"]
+    },
+    {
+      "id": "task",
+      "lt": "Užduotis",
+      "en": "Task",
+      "ru": "Задача",
+      "by": "Задача",
+      "tags": ["work", "task"]
+    },
+    {
+      "id": "deadline",
+      "lt": "Terminas",
+      "en": "Deadline",
+      "ru": "Срок",
+      "by": "Тэрмін",
+      "tags": ["work", "time"]
+    },
+    {
+      "id": "schedule",
+      "lt": "Grafikas",
+      "en": "Schedule",
+      "ru": "График",
+      "by": "Графік",
+      "tags": ["work", "time"]
+    },
+    {
+      "id": "break",
+      "lt": "Pertrauka",
+      "en": "Break",
+      "ru": "Перерыв",
+      "by": "Перапынак",
+      "tags": ["work", "time"]
+    },
+    {
+      "id": "vacation",
+      "lt": "Atostogos",
+      "en": "Vacation",
+      "ru": "Отпуск",
+      "by": "Адпачынак",
+      "tags": ["work", "time"]
+    },
+    {
+      "id": "experience",
+      "lt": "Patirtis",
+      "en": "Experience",
+      "ru": "Опыт",
+      "by": "Вопыт",
+      "tags": ["work", "qualification"]
+    },
+    {
+      "id": "skills",
+      "lt": "Įgūdžiai",
+      "en": "Skills",
+      "ru": "Навыки",
+      "by": "Навыкі",
+      "tags": ["work", "qualification"]
+    },
+    {
+      "id": "resume",
+      "lt": "Gyvenimo aprašymas",
+      "en": "Resume",
+      "ru": "Резюме",
+      "by": "Рэзюмэ",
+      "tags": ["work", "document"]
+    },
+    {
+      "id": "interview",
+      "lt": "Darbo pokalbis",
+      "en": "Interview",
+      "ru": "Собеседование",
+      "by": "Сумоўе",
+      "tags": ["work", "event"]
+    },
+    {
+      "id": "contract",
+      "lt": "Sutartis",
+      "en": "Contract",
+      "ru": "Контракт",
+      "by": "Кантракт",
+      "tags": ["work", "document"]
+    },
+    {
+      "id": "computer",
+      "lt": "Kompiuteris",
+      "en": "Computer",
+      "ru": "Компьютер",
+      "by": "Кампутар",
+      "tags": ["work", "equipment"]
+    },
+    {
+      "id": "desk",
+      "lt": "Darbo stalas",
+      "en": "Desk",
+      "ru": "Рабочий стол",
+      "by": "Працоўны стол",
+      "tags": ["work", "furniture"]
+    },
+    {
+      "id": "email",
+      "lt": "Elektroninis paštas",
+      "en": "Email",
+      "ru": "Электронная почта",
+      "by": "Электронная пошта",
+      "tags": ["work", "communication"]
+    },
+    {
+      "id": "phone",
+      "lt": "Telefonas",
+      "en": "Phone",
+      "ru": "Телефон",
+      "by": "Тэлефон",
+      "tags": ["work", "equipment"]
+    },
+    {
+      "id": "report",
+      "lt": "Ataskaita",
+      "en": "Report",
+      "ru": "Отчёт",
+      "by": "Справаздача",
+      "tags": ["work", "document"]
+    },
+    {
+      "id": "presentation",
+      "lt": "Prezentacija",
+      "en": "Presentation",
+      "ru": "Презентация",
+      "by": "Прэзентацыя",
+      "tags": ["work", "task"]
+    },
+    {
+      "id": "overtime",
+      "lt": "Viršvalandžiai",
+      "en": "Overtime",
+      "ru": "Сверхурочные",
+      "by": "Звышурочныя",
+      "tags": ["work", "time"]
+    },
+    {
+      "id": "promotion",
+      "lt": "Paaukštinimas",
+      "en": "Promotion",
+      "ru": "Повышение",
+      "by": "Павышэнне",
+      "tags": ["work", "career"]
+    },
+    {
+      "id": "training",
+      "lt": "Mokymai",
+      "en": "Training",
+      "ru": "Обучение",
+      "by": "Навучанне",
+      "tags": ["work", "education"]
+    },
+    {
+      "id": "department",
+      "lt": "Skyrius",
+      "en": "Department",
+      "ru": "Отдел",
+      "by": "Аддзел",
+      "tags": ["work", "organization"]
+    },
+    {
+      "id": "team",
+      "lt": "Komanda",
+      "en": "Team",
+      "ru": "Команда",
+      "by": "Каманда",
+      "tags": ["work", "group"]
+    },
+    {
+      "id": "busy",
+      "lt": "Užsiėmęs",
+      "en": "Busy",
+      "ru": "Занят",
+      "by": "Заняты",
+      "tags": ["work", "status"]
+    },
+    {
+      "id": "available",
+      "lt": "Laisvas",
+      "en": "Available",
+      "ru": "Доступен",
+      "by": "Даступны",
+      "tags": ["work", "status"]
+    },
+    {
+      "id": "urgent",
+      "lt": "Skubus",
+      "en": "Urgent",
+      "ru": "Срочный",
+      "by": "Тэрміновы",
+      "tags": ["work", "priority"]
+    },
+    {
+      "id": "important",
+      "lt": "Svarbus",
+      "en": "Important",
+      "ru": "Важный",
+      "by": "Важны",
+      "tags": ["work", "priority"]
+    },
+    {
+      "id": "success",
+      "lt": "Sėkmė",
+      "en": "Success",
+      "ru": "Успех",
+      "by": "Поспех",
+      "tags": ["work", "achievement"]
+    },
+    {
+      "id": "problem",
+      "lt": "Problema",
+      "en": "Problem",
+      "ru": "Проблема",
+      "by": "Праблема",
+      "tags": ["work", "issue"]
+    },
+    {
+      "id": "solution",
+      "lt": "Sprendimas",
+      "en": "Solution",
+      "ru": "Решение",
+      "by": "Рашэнне",
+      "tags": ["work", "result"]
+    },
+    {
+      "id": "good-job",
+      "lt": "Puikus darbas",
+      "en": "Good job",
+      "ru": "Хорошая работа",
+      "by": "Добрая праца",
+      "tags": ["work", "praise"]
+    },
+    {
+      "id": "well-done",
+      "lt": "Gerai atlikta",
+      "en": "Well done",
+      "ru": "Отлично сделано",
+      "by": "Выдатна зроблена",
+      "tags": ["work", "praise"]
+    },
+    {
+      "id": "help",
+      "lt": "Pagalba",
+      "en": "Help",
+      "ru": "Помощь",
+      "by": "Дапамога",
+      "tags": ["work", "assistance"]
+    },
+    {
+      "id": "how-can-i-help",
+      "lt": "Kuo galiu padėti?",
+      "en": "How can I help?",
+      "ru": "Чем могу помочь?",
+      "by": "Чым магу дапамагчы?",
+      "tags": ["work", "question"]
+    },
+    {
+      "id": "please",
+      "lt": "Prašau",
+      "en": "Please",
+      "ru": "Пожалуйста",
+      "by": "Калі ласка",
+      "tags": ["work", "politeness"]
+    },
+    {
+      "id": "thank-you",
+      "lt": "Ačiū",
+      "en": "Thank you",
+      "ru": "Спасибо",
+      "by": "Дзякуй",
+      "tags": ["work", "politeness"]
+    },
+    {
+      "id": "youre-welcome",
+      "lt": "Prašau",
+      "en": "You're welcome",
+      "ru": "Пожалуйста",
+      "by": "Калі ласка",
+      "tags": ["work", "politeness"]
+    },
+    {
+      "id": "excuse-me",
+      "lt": "Atsiprašau",
+      "en": "Excuse me",
+      "ru": "Извините",
+      "by": "Прабачце",
+      "tags": ["work", "politeness"]
+    }
+  ]
+} 

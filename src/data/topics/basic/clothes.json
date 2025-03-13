@@ -1,0 +1,93 @@
+{
+  "id": "clothes",
+  "name": {
+    "en": "Clothes",
+    "lt": "Drabužiai"
+  },
+  "description": {
+    "en": "Common clothing items and related phrases",
+    "lt": "Dažnai naudojami drabužiai ir susijusios frazės"
+  },
+  "phrases": [
+    {
+      "id": "shirt",
+      "lt": "Marškiniai",
+      "en": "Shirt",
+      "ru": "Рубашка",
+      "by": "Кашуля",
+      "tags": ["clothes", "top"]
+    },
+    {
+      "id": "pants",
+      "lt": "Kelnės",
+      "en": "Pants",
+      "ru": "Брюки",
+      "by": "Штаны",
+      "tags": ["clothes", "bottom"]
+    },
+    {
+      "id": "dress",
+      "lt": "Suknelė",
+      "en": "Dress",
+      "ru": "Платье",
+      "by": "Сукенка",
+      "tags": ["clothes", "formal"]
+    },
+    {
+      "id": "shoes",
+      "lt": "Batai",
+      "en": "Shoes",
+      "ru": "Туфли",
+      "by": "Туфлі",
+      "tags": ["clothes", "footwear"]
+    },
+    {
+      "id": "jacket",
+      "lt": "Striukė",
+      "en": "Jacket",
+      "ru": "Куртка",
+      "by": "Куртка",
+      "tags": ["clothes", "outerwear"]
+    },
+    {
+      "id": "coat",
+      "lt": "Paltas",
+      "en": "Coat",
+      "ru": "Пальто",
+      "by": "Паліто",
+      "tags": ["clothes", "outerwear"]
+    },
+    {
+      "id": "hat",
+      "lt": "Kepurė",
+      "en": "Hat",
+      "ru": "Шапка",
+      "by": "Шапка",
+      "tags": ["clothes", "accessory"]
+    },
+    {
+      "id": "scarf",
+      "lt": "Šalikas",
+      "en": "Scarf",
+      "ru": "Шарф",
+      "by": "Шалік",
+      "tags": ["clothes", "accessory"]
+    },
+    {
+      "id": "gloves",
+      "lt": "Pirštinės",
+      "en": "Gloves",
+      "ru": "Перчатки",
+      "by": "Пальчаткі",
+      "tags": ["clothes", "accessory"]
+    },
+    {
+      "id": "socks",
+      "lt": "Kojinės",
+      "en": "Socks",
+      "ru": "Носки",
+      "by": "Шкарпэткі",
+      "tags": ["clothes", "footwear"]
+    }
+  ]
+} 

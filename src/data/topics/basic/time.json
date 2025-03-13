@@ -1,0 +1,141 @@
+{
+  "id": "time",
+  "name": {
+    "en": "Time",
+    "lt": "Laikas"
+  },
+  "description": {
+    "en": "Time-related words and phrases",
+    "lt": "Su laiku susiję žodžiai ir frazės"
+  },
+  "phrases": [
+    {
+      "id": "time",
+      "lt": "Laikas",
+      "en": "Time",
+      "ru": "Время",
+      "by": "Час",
+      "tags": ["time", "basic"]
+    },
+    {
+      "id": "hour",
+      "lt": "Valanda",
+      "en": "Hour",
+      "ru": "Час",
+      "by": "Гадзіна",
+      "tags": ["time", "unit"]
+    },
+    {
+      "id": "minute",
+      "lt": "Minutė",
+      "en": "Minute",
+      "ru": "Минута",
+      "by": "Хвіліна",
+      "tags": ["time", "unit"]
+    },
+    {
+      "id": "second",
+      "lt": "Sekundė",
+      "en": "Second",
+      "ru": "Секунда",
+      "by": "Секунда",
+      "tags": ["time", "unit"]
+    },
+    {
+      "id": "morning",
+      "lt": "Rytas",
+      "en": "Morning",
+      "ru": "Утро",
+      "by": "Раніца",
+      "tags": ["time", "day-part"]
+    },
+    {
+      "id": "afternoon",
+      "lt": "Popietė",
+      "en": "Afternoon",
+      "ru": "День",
+      "by": "Дзень",
+      "tags": ["time", "day-part"]
+    },
+    {
+      "id": "evening",
+      "lt": "Vakaras",
+      "en": "Evening",
+      "ru": "Вечер",
+      "by": "Вечар",
+      "tags": ["time", "day-part"]
+    },
+    {
+      "id": "night",
+      "lt": "Naktis",
+      "en": "Night",
+      "ru": "Ночь",
+      "by": "Ноч",
+      "tags": ["time", "day-part"]
+    },
+    {
+      "id": "today",
+      "lt": "Šiandien",
+      "en": "Today",
+      "ru": "Сегодня",
+      "by": "Сёння",
+      "tags": ["time", "relative"]
+    },
+    {
+      "id": "tomorrow",
+      "lt": "Rytoj",
+      "en": "Tomorrow",
+      "ru": "Завтра",
+      "by": "Заўтра",
+      "tags": ["time", "relative"]
+    },
+    {
+      "id": "yesterday",
+      "lt": "Vakar",
+      "en": "Yesterday",
+      "ru": "Вчера",
+      "by": "Учора",
+      "tags": ["time", "relative"]
+    },
+    {
+      "id": "now",
+      "lt": "Dabar",
+      "en": "Now",
+      "ru": "Сейчас",
+      "by": "Зараз",
+      "tags": ["time", "relative"]
+    },
+    {
+      "id": "later",
+      "lt": "Vėliau",
+      "en": "Later",
+      "ru": "Позже",
+      "by": "Пазней",
+      "tags": ["time", "relative"]
+    },
+    {
+      "id": "early",
+      "lt": "Anksti",
+      "en": "Early",
+      "ru": "Рано",
+      "by": "Рана",
+      "tags": ["time", "relative"]
+    },
+    {
+      "id": "late",
+      "lt": "Vėlu",
+      "en": "Late",
+      "ru": "Поздно",
+      "by": "Позна",
+      "tags": ["time", "relative"]
+    },
+    {
+      "id": "what-time",
+      "lt": "Kiek valandų?",
+      "en": "What time is it?",
+      "ru": "Который час?",
+      "by": "Колькі часу?",
+      "tags": ["time", "question"]
+    }
+  ]
+} 

@@ -1,0 +1,253 @@
+{
+  "id": "transportation",
+  "name": {
+    "en": "Transportation",
+    "lt": "Transportas"
+  },
+  "description": {
+    "en": "Common vehicles, transportation methods, and travel-related phrases",
+    "lt": "Dažniausios transporto priemonės, keliavimo būdai ir su keliavimu susijusios frazės"
+  },
+  "phrases": [
+    {
+      "id": "car",
+      "lt": "Automobilis",
+      "en": "Car",
+      "ru": "Машина",
+      "by": "Машына",
+      "tags": ["transportation", "vehicle", "road"]
+    },
+    {
+      "id": "bus",
+      "lt": "Autobusas",
+      "en": "Bus",
+      "ru": "Автобус",
+      "by": "Аўтобус",
+      "tags": ["transportation", "vehicle", "public"]
+    },
+    {
+      "id": "train",
+      "lt": "Traukinys",
+      "en": "Train",
+      "ru": "Поезд",
+      "by": "Цягнік",
+      "tags": ["transportation", "vehicle", "rail"]
+    },
+    {
+      "id": "airplane",
+      "lt": "Lėktuvas",
+      "en": "Airplane",
+      "ru": "Самолёт",
+      "by": "Самалёт",
+      "tags": ["transportation", "vehicle", "air"]
+    },
+    {
+      "id": "bicycle",
+      "lt": "Dviratis",
+      "en": "Bicycle",
+      "ru": "Велосипед",
+      "by": "Ровар",
+      "tags": ["transportation", "vehicle", "human-powered"]
+    },
+    {
+      "id": "taxi",
+      "lt": "Taksi",
+      "en": "Taxi",
+      "ru": "Такси",
+      "by": "Таксі",
+      "tags": ["transportation", "vehicle", "service"]
+    },
+    {
+      "id": "subway",
+      "lt": "Metro",
+      "en": "Subway",
+      "ru": "Метро",
+      "by": "Метро",
+      "tags": ["transportation", "vehicle", "public"]
+    },
+    {
+      "id": "tram",
+      "lt": "Tramvajus",
+      "en": "Tram",
+      "ru": "Трамвай",
+      "by": "Трамвай",
+      "tags": ["transportation", "vehicle", "public"]
+    },
+    {
+      "id": "boat",
+      "lt": "Valtis",
+      "en": "Boat",
+      "ru": "Лодка",
+      "by": "Лодка",
+      "tags": ["transportation", "vehicle", "water"]
+    },
+    {
+      "id": "ship",
+      "lt": "Laivas",
+      "en": "Ship",
+      "ru": "Корабль",
+      "by": "Карабель",
+      "tags": ["transportation", "vehicle", "water"]
+    },
+    {
+      "id": "motorcycle",
+      "lt": "Motociklas",
+      "en": "Motorcycle",
+      "ru": "Мотоцикл",
+      "by": "Матацыкл",
+      "tags": ["transportation", "vehicle", "road"]
+    },
+    {
+      "id": "helicopter",
+      "lt": "Sraigtasparnis",
+      "en": "Helicopter",
+      "ru": "Вертолёт",
+      "by": "Верталёт",
+      "tags": ["transportation", "vehicle", "air"]
+    },
+    {
+      "id": "ticket",
+      "lt": "Bilietas",
+      "en": "Ticket",
+      "ru": "Билет",
+      "by": "Білет",
+      "tags": ["transportation", "travel"]
+    },
+    {
+      "id": "station",
+      "lt": "Stotis",
+      "en": "Station",
+      "ru": "Станция",
+      "by": "Станцыя",
+      "tags": ["transportation", "location"]
+    },
+    {
+      "id": "airport",
+      "lt": "Oro uostas",
+      "en": "Airport",
+      "ru": "Аэропорт",
+      "by": "Аэрапорт",
+      "tags": ["transportation", "location"]
+    },
+    {
+      "id": "harbor",
+      "lt": "Uostas",
+      "en": "Harbor",
+      "ru": "Порт",
+      "by": "Порт",
+      "tags": ["transportation", "location"]
+    },
+    {
+      "id": "road",
+      "lt": "Kelias",
+      "en": "Road",
+      "ru": "Дорога",
+      "by": "Дарога",
+      "tags": ["transportation", "infrastructure"]
+    },
+    {
+      "id": "bridge",
+      "lt": "Tiltas",
+      "en": "Bridge",
+      "ru": "Мост",
+      "by": "Мост",
+      "tags": ["transportation", "infrastructure"]
+    },
+    {
+      "id": "driver",
+      "lt": "Vairuotojas",
+      "en": "Driver",
+      "ru": "Водитель",
+      "by": "Вадзіцель",
+      "tags": ["transportation", "person"]
+    },
+    {
+      "id": "passenger",
+      "lt": "Keleivis",
+      "en": "Passenger",
+      "ru": "Пассажир",
+      "by": "Пасажыр",
+      "tags": ["transportation", "person"]
+    },
+    {
+      "id": "platform",
+      "lt": "Platforma",
+      "en": "Platform",
+      "ru": "Платформа",
+      "by": "Платформа",
+      "tags": ["transportation", "location"]
+    },
+    {
+      "id": "schedule",
+      "lt": "Tvarkaraštis",
+      "en": "Schedule",
+      "ru": "Расписание",
+      "by": "Раскладу",
+      "tags": ["transportation", "information"]
+    },
+    {
+      "id": "departure",
+      "lt": "Išvykimas",
+      "en": "Departure",
+      "ru": "Отправление",
+      "by": "Адпраўленне",
+      "tags": ["transportation", "event"]
+    },
+    {
+      "id": "arrival",
+      "lt": "Atvykimas",
+      "en": "Arrival",
+      "ru": "Прибытие",
+      "by": "Прыбыццё",
+      "tags": ["transportation", "event"]
+    },
+    {
+      "id": "delay",
+      "lt": "Vėlavimas",
+      "en": "Delay",
+      "ru": "Задержка",
+      "by": "Затрымка",
+      "tags": ["transportation", "event"]
+    },
+    {
+      "id": "where-station",
+      "lt": "Kur yra stotis?",
+      "en": "Where is the station?",
+      "ru": "Где станция?",
+      "by": "Дзе станцыя?",
+      "tags": ["transportation", "question"]
+    },
+    {
+      "id": "when-next",
+      "lt": "Kada kitas?",
+      "en": "When is the next one?",
+      "ru": "Когда следующий?",
+      "by": "Калі наступны?",
+      "tags": ["transportation", "question"]
+    },
+    {
+      "id": "how-get",
+      "lt": "Kaip nuvykti į...?",
+      "en": "How do I get to...?",
+      "ru": "Как добраться до...?",
+      "by": "Як дабрацца да...?",
+      "tags": ["transportation", "question"]
+    },
+    {
+      "id": "ticket-cost",
+      "lt": "Kiek kainuoja bilietas?",
+      "en": "How much is the ticket?",
+      "ru": "Сколько стоит билет?",
+      "by": "Колькі каштуе білет?",
+      "tags": ["transportation", "question"]
+    },
+    {
+      "id": "stop-here",
+      "lt": "Sustokite čia",
+      "en": "Stop here",
+      "ru": "Остановите здесь",
+      "by": "Спыніце тут",
+      "tags": ["transportation", "command"]
+    }
+  ]
+} 
