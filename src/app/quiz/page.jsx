@@ -140,11 +140,19 @@ export default function QuizPage() {
   return (
     <div className="min-h-screen bg-gray-100 py-3 px-4">
       <div className="max-w-[480px] mx-auto">
-        {!showFullTopicSelector && <TopicSelector />}
+        {!showFullTopicSelector && selectedTopic && <TopicSelector />}
 
         {!selectedTopic ? (
-          <div className="text-center text-gray-600">
-            Please select a topic to start the quiz
+          <div className="fixed inset-0 bg-white z-50 overflow-y-auto">
+            <div className="max-w-[480px] mx-auto p-4">
+              <div className="flex justify-between items-center mb-6">
+                <h2 className="text-2xl font-bold">Choose a Topic</h2>
+              </div>
+              <TopicSelector 
+                isFullPage={true} 
+                onTopicSelect={() => setShowFullTopicSelector(false)}
+              />
+            </div>
           </div>
         ) : loading ? (
           <div className="text-center text-gray-600">Loading topics...</div>
@@ -294,26 +302,6 @@ export default function QuizPage() {
                   )}
                 </>
               )}
-            </div>
-          </div>
-        )}
-
-        {showFullTopicSelector && (
-          <div className="fixed inset-0 bg-white z-50 overflow-y-auto">
-            <div className="max-w-[480px] mx-auto p-4">
-              <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-bold">Choose a Topic</h2>
-                <button
-                  onClick={() => setShowFullTopicSelector(false)}
-                  className="text-gray-500 hover:text-gray-700"
-                >
-                  <span className="text-2xl">×</span>
-                </button>
-              </div>
-              <TopicSelector 
-                isFullPage={true} 
-                onTopicSelect={() => setShowFullTopicSelector(false)}
-              />
             </div>
           </div>
         )}
