@@ -118,7 +118,7 @@ const TopicSelector = () => {
 
   return (
     <div className="bg-white border-b border-gray-200">
-      <div className="px-4 py-2">
+      <div className="px-2 py-2">
         <div className="relative">
           <div ref={containerRef} className="flex items-center gap-2 overflow-x-auto pb-2">
             {topics.map((topic) => (
