@@ -168,124 +168,129 @@ export default function QuizPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-lg p-6">
-              <p className="text-2xl font-semibold text-center mb-8">
-                {currentPhrase.lt}
-              </p>
+              {isLastWord && isCorrect ? (
+                <div className="relative overflow-hidden min-h-[400px] flex flex-col items-center justify-center">
+                  {/* Background confetti effect */}
+                  <div className="absolute inset-0 overflow-hidden">
+                    <div className="absolute top-0 left-0 animate-float">
+                      <span className="text-4xl opacity-30">🎉</span>
+                    </div>
+                    <div className="absolute bottom-0 right-0 animate-float-delayed">
+                      <span className="text-4xl opacity-30">✨</span>
+                    </div>
+                  </div>
 
-              <div className="grid grid-cols-1 gap-4">
-                {options.map((option, index) => (
-                  <button
-                    key={index}
-                    onClick={() => handleAnswer(option)}
-                    disabled={userAnswer !== null}
-                    className={`p-4 text-lg rounded-lg transition-colors ${
-                      userAnswer === null
-                        ? "bg-blue-500 text-white hover:bg-blue-600"
-                        : userAnswer === option
-                        ? isCorrect
-                          ? "bg-green-500 text-white"
-                          : "bg-red-500 text-white"
-                        : option === currentPhrase[selectedLanguage] &&
-                          userAnswer !== null
-                        ? "bg-green-500 text-white"
-                        : "bg-gray-200"
-                    }`}
-                  >
-                    {option}
-                  </button>
-                ))}
-              </div>
-
-              {userAnswer && (
-                <div className="mt-1 text-center">
-                  <p
-                    className={`text-lg font-semibold ${
-                      isCorrect ? "text-green-600" : "text-red-600"
-                    }`}
-                  >
-                  </p>
-                  {isLastWord && isCorrect ? (
-                    <div className="mt-4">
-                      <div className="relative">
-                        <div className="w-24 h-24 mx-auto mb-4">
-                          <div className="absolute inset-0 animate-bounce">
-                            <span className="text-6xl">🎉</span>
-                          </div>
+                  {/* Main content */}
+                  <div className="relative z-10 flex flex-col items-center">
+                    <div className="relative mb-8">
+                      <div className="w-10 h-10">
+                        <div className="absolute inset-0 animate-bounce">
+                          <span className="text-5xl">🎉</span>
                         </div>
-                        <div className="absolute -top-2 -right-2 animate-spin-slow">
-                          <span className="text-4xl">⭐</span>
-                        </div>
-                      </div>
-
-                      <div className="space-y-2">
-                        <h3 className="text-2xl font-bold text-green-600">
-                          Congratulations!
-                        </h3>
-                        <p className="text-gray-600">
-                          You've completed all questions in this topic!
-                        </p>
-                      </div>
-
-                      <div className="w-full max-w-[300px] mx-auto bg-gray-100 rounded-full h-2 overflow-hidden mt-4">
-                        <div
-                          className="h-full bg-green-500 transition-all duration-1000"
-                          style={{ width: "100%" }}
-                        />
-                      </div>
-
-                      <div className="grid grid-cols-1 gap-3 max-w-[300px] mx-auto mt-6">
-                        <button
-                          onClick={() => {
-                            // Reset all state
-                            setCurrentIndex(0);
-                            setUserAnswer(null);
-                            setIsCorrect(null);
-                            setCurrentPhrase(null);
-                            setIsCompleted(false);
-                            setIsLastWord(false);
-
-                            // Reset progress by clearing the last word ID
-                            saveLastWordId(
-                              "quiz",
-                              selectedTopic,
-                              null,
-                              availablePhrases.length,
-                              0
-                            );
-
-                            // Set up new question from the beginning
-                            setupNewQuestion(availablePhrases);
-                          }}
-                          className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
-                        >
-                          Review Topic Again
-                        </button>
-                        <button
-                          onClick={() => (window.location.href = "/flashcards")}
-                          className="px-6 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors"
-                        >
-                          Try Flashcards
-                        </button>
-                        <button
-                          onClick={() => {
-                            selectTopic(null);
-                            setCurrentIndex(0);
-                          }}
-                          className="px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
-                        >
-                          Choose New Topic
-                        </button>
                       </div>
                     </div>
-                  ) : (
-                    <button
-                      onClick={() => setupNewQuestion()}
-                      className="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
-                    >
-                      Next Question
-                    </button>
-                  )}
+
+                    <div className="space-y-4 text-center">
+                      <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-blue-500">
+                        Congratulations!
+                      </h3>
+                      <p className="text-gray-600 text-lg">
+                        You've completed all questions in this topic!
+                      </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 gap-3 max-w-[300px] mt-8">
+                      <button
+                        onClick={() => {
+                          // Reset all state
+                          setCurrentIndex(0);
+                          setUserAnswer(null);
+                          setIsCorrect(null);
+                          setCurrentPhrase(null);
+                          setIsCompleted(false);
+                          setIsLastWord(false);
+
+                          // Reset progress by clearing the last word ID
+                          saveLastWordId(
+                            "quiz",
+                            selectedTopic,
+                            null,
+                            availablePhrases.length,
+                            0
+                          );
+
+                          // Set up new question from the beginning
+                          setupNewQuestion(availablePhrases);
+                        }}
+                        className="px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                      >
+                        Review Topic Again
+                      </button>
+                      <button
+                        onClick={() => (window.location.href = "/flashcards")}
+                        className="px-6 py-3 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-lg hover:from-purple-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                      >
+                        Try Flashcards
+                      </button>
+                      <button
+                        onClick={() => {
+                          selectTopic(null);
+                          setCurrentIndex(0);
+                        }}
+                        className="px-6 py-3 bg-gradient-to-r from-gray-500 to-gray-600 text-white rounded-lg hover:from-gray-600 hover:to-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                      >
+                        Choose New Topic
+                      </button>
+                    </div>
+                  </div>
                 </div>
+              ) : (
+                <>
+                  <p className="text-2xl font-semibold text-center mb-8">
+                    {currentPhrase.lt}
+                  </p>
+
+                  <div className="grid grid-cols-1 gap-4">
+                    {options.map((option, index) => (
+                      <button
+                        key={index}
+                        onClick={() => handleAnswer(option)}
+                        disabled={userAnswer !== null}
+                        className={`p-4 text-lg rounded-lg transition-colors ${
+                          userAnswer === null
+                            ? "bg-blue-500 text-white hover:bg-blue-600"
+                            : userAnswer === option
+                            ? isCorrect
+                              ? "bg-green-500 text-white"
+                              : "bg-red-500 text-white"
+                            : option === currentPhrase[selectedLanguage] &&
+                              userAnswer !== null
+                            ? "bg-green-500 text-white"
+                            : "bg-gray-200"
+                        }`}
+                      >
+                        {option}
+                      </button>
+                    ))}
+                  </div>
+
+                  {userAnswer && (
+                    <div className="mt-1 text-center">
+                      <p
+                        className={`text-lg font-semibold ${
+                          isCorrect ? "text-green-600" : "text-red-600"
+                        }`}
+                      >
+                      </p>
+                      <button
+                        onClick={() => setupNewQuestion()}
+                        className="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+                      >
+                        Next Question
+                      </button>
+                    </div>
+                  )}
+                </>
               )}
             </div>
           </div>
