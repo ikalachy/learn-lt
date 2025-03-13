@@ -1,10 +1,14 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { updateProgress, getLastWordId, saveLastWordId } from '@/utils/progressManager';
-import { useLanguage } from '@/contexts/LanguageContext';
-import { useTopic } from '@/contexts/TopicContext';
-import TopicSelector from '@/components/TopicSelector';
+import { useState, useEffect } from "react";
+import {
+  updateProgress,
+  getLastWordId,
+  saveLastWordId,
+} from "@/utils/progressManager";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { useTopic } from "@/contexts/TopicContext";
+import TopicSelector from "@/components/TopicSelector";
 
 export default function QuizPage() {
   const [currentPhrase, setCurrentPhrase] = useState(null);
@@ -32,7 +36,7 @@ export default function QuizPage() {
         setAvailablePhrases(topicData.phrases);
         setupNewQuestion(topicData.phrases);
       } catch (error) {
-        console.error('Error loading phrases:', error);
+        console.error("Error loading phrases:", error);
       }
     };
 
@@ -42,8 +46,15 @@ export default function QuizPage() {
   // Add effect to update options when language changes
   useEffect(() => {
     if (currentPhrase && availablePhrases.length > 0) {
-      const wrongOptions = getRandomPhrases(availablePhrases, 3, currentPhrase.id).map(p => p[selectedLanguage]);
-      const allOptions = [...wrongOptions, currentPhrase[selectedLanguage]].sort(() => 0.5 - Math.random());
+      const wrongOptions = getRandomPhrases(
+        availablePhrases,
+        3,
+        currentPhrase.id
+      ).map((p) => p[selectedLanguage]);
+      const allOptions = [
+        ...wrongOptions,
+        currentPhrase[selectedLanguage],
+      ].sort(() => 0.5 - Math.random());
       setOptions(allOptions);
       setUserAnswer(null);
       setIsCorrect(null);
@@ -52,7 +63,7 @@ export default function QuizPage() {
 
   const getRandomPhrases = (phrases, count, excludeId) => {
     return phrases
-      .filter(phrase => phrase.id !== excludeId)
+      .filter((phrase) => phrase.id !== excludeId)
       .sort(() => 0.5 - Math.random())
       .slice(0, count);
   };
@@ -60,11 +71,11 @@ export default function QuizPage() {
   const setupNewQuestion = (phrases = availablePhrases) => {
     if (!phrases.length) return;
 
-    const lastWordId = getLastWordId('quiz', selectedTopic);
+    const lastWordId = getLastWordId("quiz", selectedTopic);
     let nextIndex = 0;
 
     if (lastWordId) {
-      const lastIndex = phrases.findIndex(p => p.id === lastWordId);
+      const lastIndex = phrases.findIndex((p) => p.id === lastWordId);
       if (lastIndex >= 0) {
         // If we're at the last word, stay there
         nextIndex = lastIndex >= phrases.length - 1 ? lastIndex : lastIndex + 1;
@@ -72,9 +83,13 @@ export default function QuizPage() {
     }
 
     const phrase = phrases[nextIndex];
-    const wrongOptions = getRandomPhrases(phrases, 3, phrase.id).map(p => p[selectedLanguage]);
-    const allOptions = [...wrongOptions, phrase[selectedLanguage]].sort(() => 0.5 - Math.random());
-    
+    const wrongOptions = getRandomPhrases(phrases, 3, phrase.id).map(
+      (p) => p[selectedLanguage]
+    );
+    const allOptions = [...wrongOptions, phrase[selectedLanguage]].sort(
+      () => 0.5 - Math.random()
+    );
+
     setCurrentPhrase(phrase);
     setCurrentIndex(nextIndex);
     setOptions(allOptions);
@@ -83,7 +98,13 @@ export default function QuizPage() {
 
     // Save progress with total words count and current index
     if (phrase) {
-      saveLastWordId('quiz', selectedTopic, phrase.id, phrases.length, nextIndex);
+      saveLastWordId(
+        "quiz",
+        selectedTopic,
+        phrase.id,
+        phrases.length,
+        nextIndex
+      );
     }
 
     // If this is the last word, mark it as completed after answering
@@ -94,40 +115,40 @@ export default function QuizPage() {
 
   const handleAnswer = (answer) => {
     if (!currentPhrase) return;
-    
+
     setUserAnswer(answer);
     const correct = answer === currentPhrase[selectedLanguage];
     setIsCorrect(correct);
-    
+
     // Update progress
     updateProgress(currentPhrase.id, correct);
 
     // If this is the last word and the answer is correct, ensure completion is set
     if (isLastWord && correct) {
       setIsCompleted(true);
-      saveLastWordId('quiz', selectedTopic, currentPhrase.id, availablePhrases.length, currentIndex);
+      saveLastWordId(
+        "quiz",
+        selectedTopic,
+        currentPhrase.id,
+        availablePhrases.length,
+        currentIndex
+      );
     }
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 py-5 px-4">
+    <div className="min-h-screen bg-gray-100 py-3 px-4">
       <div className="max-w-[480px] mx-auto">
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-5">
-          <TopicSelector />
-        </div>
+        <TopicSelector />
 
         {!selectedTopic ? (
           <div className="text-center text-gray-600">
             Please select a topic to start the quiz
           </div>
         ) : loading ? (
-          <div className="text-center text-gray-600">
-            Loading topics...
-          </div>
+          <div className="text-center text-gray-600">Loading topics...</div>
         ) : !currentPhrase ? (
-          <div className="text-center text-gray-600">
-            Loading questions...
-          </div>
+          <div className="text-center text-gray-600">Loading questions...</div>
         ) : (
           <div className="space-y-6">
             <div className="flex justify-between items-center">
@@ -135,16 +156,22 @@ export default function QuizPage() {
                 Word {currentIndex + 1} of {availablePhrases.length}
               </p>
               <div className="h-3 flex-grow mx-4 bg-gray-200 rounded-full overflow-hidden shadow-inner">
-                <div 
+                <div
                   className="h-full bg-blue-500 transition-all duration-300 shadow-sm"
-                  style={{ width: `${((currentIndex + 1) / availablePhrases.length) * 100}%` }}
+                  style={{
+                    width: `${
+                      ((currentIndex + 1) / availablePhrases.length) * 100
+                    }%`,
+                  }}
                 />
               </div>
             </div>
-            
+
             <div className="bg-white rounded-lg shadow-lg p-6">
-              <p className="text-2xl font-semibold text-center mb-8">{currentPhrase.lt}</p>
-              
+              <p className="text-2xl font-semibold text-center mb-8">
+                {currentPhrase.lt}
+              </p>
+
               <div className="grid grid-cols-1 gap-4">
                 {options.map((option, index) => (
                   <button
@@ -153,14 +180,15 @@ export default function QuizPage() {
                     disabled={userAnswer !== null}
                     className={`p-4 text-lg rounded-lg transition-colors ${
                       userAnswer === null
-                        ? 'bg-blue-500 text-white hover:bg-blue-600'
+                        ? "bg-blue-500 text-white hover:bg-blue-600"
                         : userAnswer === option
                         ? isCorrect
-                          ? 'bg-green-500 text-white'
-                          : 'bg-red-500 text-white'
-                        : option === currentPhrase[selectedLanguage] && userAnswer !== null
-                        ? 'bg-green-500 text-white'
-                        : 'bg-gray-200'
+                          ? "bg-green-500 text-white"
+                          : "bg-red-500 text-white"
+                        : option === currentPhrase[selectedLanguage] &&
+                          userAnswer !== null
+                        ? "bg-green-500 text-white"
+                        : "bg-gray-200"
                     }`}
                   >
                     {option}
@@ -170,8 +198,12 @@ export default function QuizPage() {
 
               {userAnswer && (
                 <div className="mt-6 text-center">
-                  <p className={`text-lg font-semibold ${isCorrect ? 'text-green-600' : 'text-red-600'}`}>
-                    {isCorrect ? 'Correct!' : 'Incorrect. Try again!'}
+                  <p
+                    className={`text-lg font-semibold ${
+                      isCorrect ? "text-green-600" : "text-red-600"
+                    }`}
+                  >
+                    {isCorrect ? "Correct!" : "Incorrect. Try again!"}
                   </p>
                   {isLastWord && isCorrect ? (
                     <div className="mt-4">
@@ -185,7 +217,7 @@ export default function QuizPage() {
                           <span className="text-4xl">⭐</span>
                         </div>
                       </div>
-                      
+
                       <div className="space-y-2">
                         <h3 className="text-2xl font-bold text-green-600">
                           Congratulations!
@@ -196,9 +228,9 @@ export default function QuizPage() {
                       </div>
 
                       <div className="w-full max-w-[300px] mx-auto bg-gray-100 rounded-full h-2 overflow-hidden mt-4">
-                        <div 
+                        <div
                           className="h-full bg-green-500 transition-all duration-1000"
-                          style={{ width: '100%' }}
+                          style={{ width: "100%" }}
                         />
                       </div>
 
@@ -212,10 +244,16 @@ export default function QuizPage() {
                             setCurrentPhrase(null);
                             setIsCompleted(false);
                             setIsLastWord(false);
-                            
+
                             // Reset progress by clearing the last word ID
-                            saveLastWordId('quiz', selectedTopic, null, availablePhrases.length, 0);
-                            
+                            saveLastWordId(
+                              "quiz",
+                              selectedTopic,
+                              null,
+                              availablePhrases.length,
+                              0
+                            );
+
                             // Set up new question from the beginning
                             setupNewQuestion(availablePhrases);
                           }}
@@ -224,7 +262,7 @@ export default function QuizPage() {
                           Review Topic Again
                         </button>
                         <button
-                          onClick={() => window.location.href = '/flashcards'}
+                          onClick={() => (window.location.href = "/flashcards")}
                           className="px-6 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors"
                         >
                           Try Flashcards
@@ -256,4 +294,4 @@ export default function QuizPage() {
       </div>
     </div>
   );
-} 
+}

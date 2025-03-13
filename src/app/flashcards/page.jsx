@@ -105,11 +105,9 @@ export default function FlashcardsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 py-5 px-4">
+    <div className="min-h-screen bg-gray-100 py-3 px-4">
       <div className="max-w-[480px] mx-auto">
-        <div className="bg-white rounded-lg shadow-lg p-5 mb-5">
-          <TopicSelector />
-        </div>
+        <TopicSelector />
 
         {!selectedTopic ? (
           <div className="text-center text-gray-600">
@@ -120,7 +118,7 @@ export default function FlashcardsPage() {
         ) : availablePhrases.length === 0 ? (
           <div className="text-center text-gray-600">Loading phrases...</div>
         ) : (
-          <div className="space-y-6">
+          <div className="space-y-3">
             <div className="flex justify-between items-center">
               <p className="text-sm text-gray-500">
                 Card {currentIndex + 1} of {availablePhrases.length}
