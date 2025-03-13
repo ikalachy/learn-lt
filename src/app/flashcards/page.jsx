@@ -127,9 +127,9 @@ export default function FlashcardsPage() {
         ) : availablePhrases.length === 0 ? (
           <div className="text-center text-gray-600">Loading phrases...</div>
         ) : (
-          <div className="space-y-6">
-            <div className="flex justify-between items-center">
-              <p className="text-sm text-gray-500">
+          <div className="space-y-4">
+            <div className="flex justify-between items-center mt-2">
+              <p className="text-sm text-gray-500 w-24">
                 Card {currentIndex + 1} of {availablePhrases.length}
               </p>
               <div className="h-3 flex-grow mx-4 bg-gray-200 rounded-full overflow-hidden shadow-inner">
