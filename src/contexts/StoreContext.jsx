@@ -60,7 +60,7 @@ export function StoreProvider({ children }) {
           params = retrieveLaunchParams();
         }
         console.log(JSON.stringify(params, null, 2));
-        if (!params?.initData?.user?.id) {
+        if (!params?.tgWebAppData?.user?.id) {
           console.error("Telegram user data not found");
           setLoading(false);
           return;
