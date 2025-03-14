@@ -22,7 +22,7 @@ const mockData = {
     subtitleTextColor: "#708499",
     textColor: "#f5f5f5",
   },
-  initData: {
+  tgWebAppData: {
     user: {
       id: 99281932,
       firstName: "Andrew",
@@ -60,6 +60,7 @@ export function StoreProvider({ children }) {
           params = retrieveLaunchParams();
         }
         console.log(JSON.stringify(params, null, 2));
+        console.log(JSON.stringify(retrieveRawInitData(), null, 2));
         if (!params?.tgWebAppData?.user?.id) {
           console.error("Telegram user data not found");
           setLoading(false);
