@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
             <TopicProvider>
               <div className="min-h-screen flex flex-col">
                 <header className="bg-blue-600 text-white shadow-md">
-                  <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                  <nav className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
                     <div className="flex justify-between h-14">
                       <div className="flex items-center">
                         <Link
@@ -32,8 +32,10 @@ export default function RootLayout({ children }) {
                           <span className="hidden md:inline">
                             Learn Lithuanian
                           </span>
-                          <span className="md:hidden">LLT</span>
-                          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-200 transition-all group-hover:w-full"></span>
+                          <span className="md:hidden text-[12px] font-medium px-1.5 py-0.5 bg-white/10 rounded tracking-wider">
+                            LLT
+                          </span>
+                          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-200 transition-all group-hover:w-full md:block hidden"></span>
                         </Link>
                       </div>
                       <Navigation />
@@ -121,24 +123,23 @@ function Navigation() {
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-200"></span>
           )}
         </Link>
-        <div className="h-4 w-px bg-white/20 mx-1"></div>
         <LanguageSelector />
+        <a
+          href="https://www.buymeacoffee.com/ivan.k"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-yellow-500 hover:bg-yellow-400 text-black rounded-md flex items-center justify-center transition-all hover:scale-105 hover:shadow-md"
+          title="Buy me a coffee"
+        >
+          <span className="sm:hidden w-8 h-8 flex items-center justify-center text-lg">
+            ☕️
+          </span>
+          <span className="hidden sm:flex items-center space-x-1.5 px-2 py-1">
+            <span className="text-sm">☕️</span>
+            <span className="text-xs">Support</span>
+          </span>
+        </a>
       </div>
-      <a
-        href="https://www.buymeacoffee.com/ivan.k"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="bg-yellow-500 hover:bg-yellow-400 text-black rounded-md flex items-center justify-center transition-all hover:scale-105 hover:shadow-md"
-        title="Buy me a coffee"
-      >
-        <span className="sm:hidden w-8 h-8 flex items-center justify-center text-lg">
-          ☕️
-        </span>
-        <span className="hidden sm:flex items-center space-x-1.5 px-2 py-1">
-          <span className="text-sm">☕️</span>
-          <span className="text-xs">Support</span>
-        </span>
-      </a>
     </div>
   );
 }
