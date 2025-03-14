@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState, useEffect } from "react";
 
-import { retrieveLaunchParams } from "@telegram-apps/sdk";
+import { retrieveLaunchParams, retrieveRawInitData } from "@telegram-apps/sdk";
 
 const StoreContext = createContext();
 
@@ -73,7 +73,7 @@ export function StoreProvider({ children }) {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ 
+          body: JSON.stringify({
             initData: params.tgWebAppData,
           }),
         });
