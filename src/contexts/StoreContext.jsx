@@ -59,8 +59,8 @@ export function StoreProvider({ children }) {
         } else {
           params = retrieveLaunchParams();
         }
-        console.log(JSON.stringify(params, null, 2));
-        console.log(JSON.stringify(retrieveRawInitData(), null, 2));
+        // console.log(JSON.stringify(params, null, 2));
+        // console.log(JSON.stringify(retrieveRawInitData(), null, 2));
         if (!params?.tgWebAppData?.user?.id) {
           console.error("Telegram user data not found");
           setLoading(false);
@@ -74,7 +74,7 @@ export function StoreProvider({ children }) {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            initData: params.tgWebAppData,
+            initData: retrieveRawInitData(),
           }),
         });
 
