@@ -73,7 +73,7 @@ export function StoreProvider({ children }) {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({ 
-            initData: params.initData,
+            initData: params.tgWebAppData,
           }),
         });
 
