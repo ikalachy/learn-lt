@@ -108,7 +108,7 @@ function Navigation() {
           <span className="text-xs flex items-center gap-1">
             Chat
             <span
-              className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium ${
+              className={`text-[8px] px-1 py-0.5 rounded-full font-medium ${
                 loading
                   ? "bg-gray-400 text-white"
                   : user?.isPremium
