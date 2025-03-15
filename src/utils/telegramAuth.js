@@ -9,7 +9,7 @@ class TelegramAuth {
       return {
         isValid: true,
         user: {
-          id: user.id.toString(),
+          id: '765663824', //user.id.toString(),
           first_name: user.first_name,
           last_name: user.last_name,
           username: user.username,

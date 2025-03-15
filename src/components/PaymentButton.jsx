@@ -1,7 +1,8 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import { useStore } from '@/contexts/StoreContext';
+import { useEffect, useState } from "react";
+import { invoice } from "@telegram-apps/sdk";
+import { useStore } from "@/contexts/StoreContext";
 
 export default function PaymentButton() {
   const { user } = useStore();
@@ -10,10 +11,10 @@ export default function PaymentButton() {
   const handlePayment = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch('/api/create-payment', {
-        method: 'POST',
+      const response = await fetch("/api/create-payment", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           userId: user?.telegramId,
@@ -23,12 +24,13 @@ export default function PaymentButton() {
       const data = await response.json();
 
       if (data.url) {
-        window.Telegram.WebApp.openInvoice(data.url);
+        // Or in URL mode:
+        await invoice.invoice.open(data.url, "url");
       } else {
-        console.error('Failed to create payment URL');
+        console.error("Failed to create payment URL");
       }
     } catch (error) {
-      console.error('Payment error:', error);
+      console.error("Payment error:", error);
     } finally {
       setIsLoading(false);
     }
@@ -53,4 +55,4 @@ export default function PaymentButton() {
       )}
     </button>
   );
-} 
+}
