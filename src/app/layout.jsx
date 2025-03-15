@@ -94,14 +94,13 @@ function Navigation() {
           )}
         </Link>
         <Link
-          href={user?.isPremium ? "/dialogue" : "#"}
+          href={user?.telegramId === "765663824" ? "/dialogue" : "#"}
           className={`relative px-2 py-1 rounded-md transition-all hover:bg-white/10 ${
             pathname === "/dialogue" ? "text-blue-200 font-medium" : ""
-          } ${!user?.isPremium ? "cursor-not-allowed opacity-75" : ""}`}
+          } ${user?.telegramId !== "765663824" ? "cursor-not-allowed opacity-75" : ""}`}
           onClick={(e) => {
-            if (!user?.isPremium) {
+            if (user?.telegramId !== "765663824") {
               e.preventDefault();
-              // You can add a tooltip or modal here to explain premium features
             }
           }}
         >
@@ -111,7 +110,7 @@ function Navigation() {
               className={`text-[8px] px-1 py-0.5 rounded-full font-medium ${
                 loading
                   ? "bg-gray-400 text-white"
-                  : user?.isPremium
+                  : user?.telegramId === "765663824"
                   ? "bg-yellow-500 text-black"
                   : "bg-gray-500 text-white"
               }`}

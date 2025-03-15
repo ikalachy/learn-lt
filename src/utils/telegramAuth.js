@@ -2,6 +2,23 @@ const crypto = require("crypto");
 
 class TelegramAuth {
   static validateInitData(initData) {
+    // For development, directly parse user data from initData
+    if (process.env.NODE_ENV === "development") {
+      const urlParams = new URLSearchParams(initData);
+      const user = JSON.parse(urlParams.get("user"));
+      return {
+        isValid: true,
+        user: {
+          id: user.id.toString(),
+          first_name: user.first_name,
+          last_name: user.last_name,
+          username: user.username,
+          language_code: user.language_code,
+          is_premium: user.is_premium,
+        },
+      };
+    }
+
     try {
       // Get the bot token from environment variables
       const botToken = process.env.TELEGRAM_BOT_TOKEN;

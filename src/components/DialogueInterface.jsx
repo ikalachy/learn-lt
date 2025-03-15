@@ -5,6 +5,7 @@ import { AIProgressManager } from "@/utils/aiProgressManager";
 import ReactMarkdown from "react-markdown";
 import { Inter } from "next/font/google";
 import { useStore } from "@/contexts/StoreContext";
+import PaymentButton from "@/components/PaymentButton";
 const inter = Inter({ subsets: ["latin"] });
 
 const topics = [
@@ -32,7 +33,7 @@ export default function DialogueInterface() {
   const { user } = useStore();
 
   const userId = user?.telegramId;
-  const isPremium = user?.isPremium;
+  const isAuthorized = userId === "765663824";
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -43,11 +44,11 @@ export default function DialogueInterface() {
   }, [messages, isLoading]);
 
   useEffect(() => {
-    if (isPremium) {
+    if (isAuthorized) {
       const progress = AIProgressManager.getProgress(userId);
       setTopicProgress(progress);
     }
-  }, [isPremium, userId]);
+  }, [isAuthorized, userId]);
 
   const startNewDialogue = async (topic) => {
     setSelectedTopic(topic);
@@ -126,13 +127,15 @@ export default function DialogueInterface() {
     }
   };
 
-  if (!isPremium) {
+  if (!isAuthorized) {
     return (
-      <div className={`p-4 text-center ${inter.className}`}>
-        <h2 className="text-xl font-bold mb-2">Premium Feature</h2>
-        <p className="text-gray-600">
-          Upgrade to premium to access interactive AI dialogues!
-        </p>
+      <div className={`p-8 text-center max-w-md mx-auto ${inter.className}`}>
+        <h2 className="text-2xl font-bold mb-4">Access Denied</h2>
+        <div className="bg-red-50 rounded-lg p-6 mb-6">
+          <p className="text-gray-600 mb-4">
+            This feature is currently not available for your account.
+          </p>
+        </div>
       </div>
     );
   }
