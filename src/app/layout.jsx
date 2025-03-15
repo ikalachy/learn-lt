@@ -8,10 +8,14 @@ import { TopicProvider } from "@/contexts/TopicContext";
 import { StoreProvider, useStore } from "@/contexts/StoreContext";
 import LanguageSelector from "@/components/LanguageSelector";
 import { Analytics } from "@vercel/analytics/react";
+import { initApp } from "@/utils/init";
+import "@/utils/mockEnv";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 const isDevelopment = process.env.NODE_ENV === "development";
+
+initApp(isDevelopment);
 
 export default function RootLayout({ children }) {
   return (
@@ -97,7 +101,11 @@ function Navigation() {
           href={user?.telegramId === "765663824" ? "/dialogue" : "#"}
           className={`relative px-2 py-1 rounded-md transition-all hover:bg-white/10 ${
             pathname === "/dialogue" ? "text-blue-200 font-medium" : ""
-          } ${user?.telegramId !== "765663824" ? "cursor-not-allowed opacity-75" : ""}`}
+          } ${
+            user?.telegramId !== "765663824"
+              ? "cursor-not-allowed opacity-75"
+              : ""
+          }`}
           onClick={(e) => {
             if (user?.telegramId !== "765663824") {
               e.preventDefault();
