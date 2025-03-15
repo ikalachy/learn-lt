@@ -33,7 +33,7 @@ export default function DialogueInterface() {
   const { user } = useStore();
 
   const userId = user?.telegramId;
-  const isAuthorized = userId === "765663824";
+  const isPremium = user?.isPremium;
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -44,11 +44,11 @@ export default function DialogueInterface() {
   }, [messages, isLoading]);
 
   useEffect(() => {
-    if (isAuthorized) {
+    if (isPremium) {
       const progress = AIProgressManager.getProgress(userId);
       setTopicProgress(progress);
     }
-  }, [isAuthorized, userId]);
+  }, [isPremium, userId]);
 
   const startNewDialogue = async (topic) => {
     setSelectedTopic(topic);
@@ -127,14 +127,29 @@ export default function DialogueInterface() {
     }
   };
 
-  if (!isAuthorized) {
+  if (!isPremium) {
     return (
       <div className={`p-8 text-center max-w-md mx-auto ${inter.className}`}>
-        <h2 className="text-2xl font-bold mb-4">Access Denied</h2>
-        <div className="bg-red-50 rounded-lg p-6 mb-6">
+        <h2 className="text-2xl font-bold mb-4">Premium Feature</h2>
+        <div className="bg-blue-50 rounded-lg p-6 mb-6">
           <p className="text-gray-600 mb-4">
-            This feature is currently not available for your account.
+            Upgrade to premium to unlock interactive AI dialogues and practice Lithuanian conversation skills!
           </p>
+          <ul className="text-left text-gray-600 mb-6 space-y-2">
+            <li className="flex items-center gap-2">
+              <span className="text-green-500">✓</span> Unlimited AI conversations
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="text-green-500">✓</span> Practice real-world scenarios
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="text-green-500">✓</span> Improve speaking confidence
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="text-green-500">✓</span> Learn natural expressions
+            </li>
+          </ul>
+          <PaymentButton />
         </div>
       </div>
     );
