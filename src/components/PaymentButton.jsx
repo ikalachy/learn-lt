@@ -24,8 +24,7 @@ export default function PaymentButton() {
       const data = await response.json();
 
       if (data.url) {
-        // Or in URL mode:
-        await invoice.invoice.open(data.url);
+        await invoice.open(data.url);
       } else {
         console.error("Failed to create payment URL");
       }
