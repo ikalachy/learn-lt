@@ -21,9 +21,6 @@ initApp(isDevelopment);
 const AUTHORIZED_IDS = ["765663824", "227702136", "5291293144"];
 
 export default function RootLayout({ children }) {
-  const { user, loading } = useStore();
-
-  const isAuthorized = AUTHORIZED_IDS.includes(user?.telegramId);
 
   return (
     <html lang="en">
