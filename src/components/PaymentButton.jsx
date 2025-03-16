@@ -1,17 +1,20 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { invoice } from "@telegram-apps/sdk";
+import { invoice, openTelegramLink } from "@telegram-apps/sdk";
 import { useStore } from "@/contexts/StoreContext";
 
 export default function PaymentButton() {
   const { user } = useStore();
   const [isLoading, setIsLoading] = useState(false);
   const [status, setStatus] = useState(null);
+  const [showOptions, setShowOptions] = useState(false);
 
-  const handlePayment = async () => {
+  const handlePayment = async (method) => {
     setIsLoading(true);
     setStatus(null);
+    setShowOptions(false);
+    
     try {
       const response = await fetch("/api/create-payment", {
         method: "POST",
@@ -20,17 +23,28 @@ export default function PaymentButton() {
         },
         body: JSON.stringify({
           userId: user?.telegramId,
+          method,
         }),
       });
 
       const data = await response.json();
-      if (data.url && invoice.open.isAvailable()) {
+
+      if (!data.url) {
+        console.error("Failed to create payment URL");
+        setStatus('failed');
+        return;
+      }
+
+      if (method === 'ton' && data.url) {
+        // Open TON wallet
+        openTelegramLink(data.url);
+        setStatus('pending');
+      } else if (method === 'invoice' && invoice.open.isAvailable()) {
         const invoiceStatus = await invoice.open(data.url, "url");
         setStatus(invoiceStatus);
         
         switch (invoiceStatus) {
           case 'paid':
-            // Payment successful, you might want to refresh user data or show success message
             console.log('Payment successful!');
             break;
           case 'failed':
@@ -46,7 +60,6 @@ export default function PaymentButton() {
             console.log('Payment status:', invoiceStatus);
         }
       } else {
-        console.error("Failed to create payment URL");
         setStatus('failed');
       }
     } catch (error) {
@@ -59,23 +72,50 @@ export default function PaymentButton() {
 
   return (
     <div className="flex flex-col items-center gap-2">
-      <button
-        onClick={handlePayment}
-        disabled={isLoading}
-        className="bg-yellow-500 hover:bg-yellow-400 text-black px-6 py-2 rounded-lg font-medium transition-all transform hover:scale-105 disabled:opacity-75 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
-      >
-        {isLoading ? (
-          <>
-            <span className="w-4 h-4 border-2 border-black/20 border-t-black rounded-full animate-spin"></span>
-            Processing...
-          </>
-        ) : (
-          <>
-            <span className="text-lg">⚡️</span>
-            Upgrade to Premium
-          </>
-        )}
-      </button>
+      {!showOptions ? (
+        <button
+          onClick={() => setShowOptions(true)}
+          disabled={isLoading}
+          className="bg-yellow-500 hover:bg-yellow-400 text-black px-6 py-2 rounded-lg font-medium transition-all transform hover:scale-105 disabled:opacity-75 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
+        >
+          {isLoading ? (
+            <>
+              <span className="w-4 h-4 border-2 border-black/20 border-t-black rounded-full animate-spin"></span>
+              Processing...
+            </>
+          ) : (
+            <>
+              <span className="text-lg">⚡️</span>
+              Upgrade to Premium
+            </>
+          )}
+        </button>
+      ) : (
+        <div className="flex flex-col gap-2 w-full max-w-xs">
+          <button
+            onClick={() => handlePayment('invoice')}
+            disabled={isLoading}
+            className="bg-blue-500 hover:bg-blue-400 text-white px-6 py-2 rounded-lg font-medium transition-all transform hover:scale-105 disabled:opacity-75 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
+          >
+            <span className="text-lg">💳</span>
+            Pay with Card
+          </button>
+          <button
+            onClick={() => handlePayment('ton')}
+            disabled={isLoading}
+            className="bg-cyan-500 hover:bg-cyan-400 text-white px-6 py-2 rounded-lg font-medium transition-all transform hover:scale-105 disabled:opacity-75 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
+          >
+            <span className="text-lg">💎</span>
+            Pay with TON
+          </button>
+          <button
+            onClick={() => setShowOptions(false)}
+            className="text-sm text-gray-500 hover:text-gray-700"
+          >
+            Cancel
+          </button>
+        </div>
+      )}
       {status && (
         <div className={`text-sm ${
           status === 'paid' ? 'text-green-600' :
