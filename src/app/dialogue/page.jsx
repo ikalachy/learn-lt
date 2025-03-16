@@ -5,12 +5,15 @@ import { useRouter } from 'next/navigation';
 import DialogueInterface from '@/components/DialogueInterface';
 import { useStore } from '@/contexts/StoreContext';
 
+// List of authorized Telegram IDs
+const AUTHORIZED_IDS = ["765663824", "227702136", "5291293144"];
+
 export default function DialoguePage() {
   const router = useRouter();
   const { user, loading } = useStore();
 
   useEffect(() => {
-    if (!loading && user?.telegramId !== "765663824") {
+    if (!loading && !AUTHORIZED_IDS.includes(user?.telegramId)) {
       router.push('/');
     }
   }, [user, loading, router]);
@@ -23,7 +26,7 @@ export default function DialoguePage() {
     );
   }
 
-  if (user?.telegramId !== "765663824") {
+  if (!AUTHORIZED_IDS.includes(user?.telegramId)) {
     return null;
   }
 

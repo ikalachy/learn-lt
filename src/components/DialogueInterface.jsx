@@ -21,6 +21,9 @@ const topics = [
   "Environment and Nature",
 ];
 
+// List of authorized Telegram IDs
+const AUTHORIZED_IDS = ["765663824", "227702136", "5291293144"];
+
 export default function DialogueInterface() {
   const [selectedTopic, setSelectedTopic] = useState(null);
   const [messages, setMessages] = useState([]);
@@ -33,6 +36,7 @@ export default function DialogueInterface() {
   const { user } = useStore();
 
   const userId = user?.telegramId;
+  const isAuthorized = AUTHORIZED_IDS.includes(userId);
   const isPremium = user?.isPremium;
 
   const scrollToBottom = () => {
@@ -126,6 +130,15 @@ export default function DialogueInterface() {
       setIsLoading(false);
     }
   };
+
+  if (!isAuthorized) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-[60vh] text-center">
+        <h2 className="text-2xl font-bold text-gray-800 mb-4">Access Denied</h2>
+        <p className="text-gray-600">You are not authorized to access this feature.</p>
+      </div>
+    );
+  }
 
   if (!isPremium) {
     return (
