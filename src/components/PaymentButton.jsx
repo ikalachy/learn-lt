@@ -1,10 +1,9 @@
 "use client";
 
-import { openTelegramLink } from "@telegram-apps/sdk";
 import { useStore } from "@/contexts/StoreContext";
 import { TonConnectButton, useTonConnectUI } from "@/tonconnect";
 import { toNano } from "ton-core";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const BOT_USERNAME =
   process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME || "LearnLTBot";
@@ -24,7 +23,7 @@ export default function PaymentButton() {
         messages: [
           {
             address: process.env.NEXT_PUBLIC_OWNER_WALLET,
-            amount: toNano(TON_PRICE),
+            amount: toNano(TON_PRICE).toString(),
             comment: `premium_${user?.telegramId}`,
           },
         ],
@@ -43,27 +42,24 @@ export default function PaymentButton() {
       </div>
 
       {tonConnectUI.connected && (
-        <div>
-          <button
-            onClick={handlePayment}
-            disabled={isLoading}
-            className="bg-yellow-500 hover:bg-yellow-400 text-black px-6 py-2 rounded-lg font-medium transition-all transform hover:scale-105 disabled:opacity-75 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
-          >
-            {isLoading ? (
-              <>
-                <span className="w-4 h-4 border-2 border-black/20 border-t-black rounded-full animate-spin"></span>
-                Processing...
-              </>
-            ) : (
-              <>
-                <span className="text-lg">💎</span>
-                Pay {TON_PRICE} TON
-              </>
-            )}
-          </button>
-        </div>
+        <button
+          onClick={handlePayment}
+          disabled={isLoading}
+          className="bg-yellow-500 hover:bg-yellow-400 text-black px-6 py-2 rounded-lg font-medium transition-all transform hover:scale-105 disabled:opacity-75 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
+        >
+          {isLoading ? (
+            <>
+              <span className="w-4 h-4 border-2 border-black/20 border-t-black rounded-full animate-spin"></span>
+              Processing...
+            </>
+          ) : (
+            <>
+              <span className="text-lg">💎</span>
+              Pay {TON_PRICE} TON
+            </>
+          )}
+        </button>
       )}
-      <button onClick={() => toNano(1)}>test</button>
     </div>
   );
 }
