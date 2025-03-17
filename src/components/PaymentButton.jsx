@@ -8,7 +8,7 @@ import { useState } from "react";
 const BOT_USERNAME =
   process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME || "LearnLTBot";
 
-const TON_PRICE = 0.05; // Price in TON
+const TON_PRICE = 0.1; // Price in TON
 
 export default function PaymentButton() {
   const { user, setUser } = useStore();
