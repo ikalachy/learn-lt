@@ -1,12 +1,13 @@
 "use client";
 
 import { useStore } from "@/contexts/StoreContext";
-import { TonConnectButton, useTonConnectUI } from "@/tonconnect";
+import { CHAIN, TonConnectButton, useTonConnectUI } from "@/tonconnect";
 import { toNano } from "ton-core";
 import { useState } from "react";
 
 const BOT_USERNAME =
   process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME || "LearnLTBot";
+const TON_NETWORK = process.env.TON_NETWORK || "testnet";
 
 const TON_PRICE = 0.1; // Price in TON
 
@@ -22,6 +23,7 @@ export default function PaymentButton() {
     try {
       const transactionData = {
         validUntil: Date.now() + 5 * 60 * 1000, // 5 minutes
+        network: TON_NETWORK === "mainnet" ? CHAIN.MAINNET : CHAIN.TESTNET,
         messages: [
           {
             address: process.env.NEXT_PUBLIC_OWNER_WALLET,
@@ -75,7 +77,7 @@ export default function PaymentButton() {
       <div className="flex justify-center">
         <TonConnectButton />
       </div>
-
+      <button onClick={() => handlePayment()}>Pay</button>
       {tonConnectUI.connected && !user?.isPremium && (
         <button
           onClick={handlePayment}
