@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <TonConnectUIProvider manifestUrl="/tonconnect-manifest.json">
+        <TonConnectUIProvider manifestUrl="https://learnlt.vercel.app/tonconnect-manifest.json">
           <StoreProvider>
             <LanguageProvider>
               <TopicProvider>
