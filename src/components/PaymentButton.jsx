@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 const BOT_USERNAME =
   process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME || "LearnLTBot";
 
-const TON_PRICE = "0.1"; // Price in TON
+const TON_PRICE = 0.1; // Price in TON
 
 export default function PaymentButton() {
   const { user } = useStore();
@@ -25,12 +25,12 @@ export default function PaymentButton() {
           {
             address: process.env.NEXT_PUBLIC_OWNER_WALLET,
             amount: toNano(TON_PRICE),
-            comment: `premium_${user?.telegramId}`
-          }
-        ]
+            comment: `premium_${user?.telegramId}`,
+          },
+        ],
       });
     } catch (error) {
-      console.error('Transaction error:', error);
+      console.error("Transaction error:", error);
     } finally {
       setIsLoading(false);
     }
@@ -41,26 +41,29 @@ export default function PaymentButton() {
       <div className="flex justify-center">
         <TonConnectButton />
       </div>
-      
+
       {tonConnectUI.connected && (
-        <button
-          onClick={handlePayment}
-          disabled={isLoading}
-          className="bg-yellow-500 hover:bg-yellow-400 text-black px-6 py-2 rounded-lg font-medium transition-all transform hover:scale-105 disabled:opacity-75 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
-        >
-          {isLoading ? (
-            <>
-              <span className="w-4 h-4 border-2 border-black/20 border-t-black rounded-full animate-spin"></span>
-              Processing...
-            </>
-          ) : (
-            <>
-              <span className="text-lg">💎</span>
-              Pay {TON_PRICE} TON
-            </>
-          )}
-        </button>
+        <div>
+          <button
+            onClick={handlePayment}
+            disabled={isLoading}
+            className="bg-yellow-500 hover:bg-yellow-400 text-black px-6 py-2 rounded-lg font-medium transition-all transform hover:scale-105 disabled:opacity-75 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
+          >
+            {isLoading ? (
+              <>
+                <span className="w-4 h-4 border-2 border-black/20 border-t-black rounded-full animate-spin"></span>
+                Processing...
+              </>
+            ) : (
+              <>
+                <span className="text-lg">💎</span>
+                Pay {TON_PRICE} TON
+              </>
+            )}
+          </button>
+        </div>
       )}
+      <button onClick={() => toNano(1)}>test</button>
     </div>
   );
 }
