@@ -28,7 +28,7 @@ export default function PaymentButton() {
           {
             address: process.env.NEXT_PUBLIC_OWNER_WALLET,
             amount: toNano(TON_PRICE).toString(),
-            payload: `premium_${user?.telegramId}`,
+            payload: `premium_${user?.telegramId}`.toString("base64") // payload with comment in body ,
           },
         ],
       };
