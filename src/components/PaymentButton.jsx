@@ -2,7 +2,8 @@
 
 import { openTelegramLink } from "@telegram-apps/sdk";
 import { useStore } from "@/contexts/StoreContext";
-import { TonConnectButton, useTonConnectUI, toNano } from "@/tonconnect";
+import { TonConnectButton, useTonConnectUI } from "@/tonconnect";
+import { toNano } from "ton-core";
 import { useEffect, useState } from "react";
 
 const BOT_USERNAME =
