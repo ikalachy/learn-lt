@@ -8,26 +8,26 @@ import { TopicProvider } from "@/contexts/TopicContext";
 import { StoreProvider, useStore } from "@/contexts/StoreContext";
 import LanguageSelector from "@/components/LanguageSelector";
 import { Analytics } from "@vercel/analytics/react";
-import { initApp } from "@/utils/init";
-import "@/utils/mockEnv";
+import { useInitApp } from "@/utils/init";
+import { useMockEnv } from "@/utils/mockEnv";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 const isDevelopment = process.env.NODE_ENV === "development";
 
-initApp(isDevelopment);
-
 // List of authorized Telegram IDs
 const AUTHORIZED_IDS = ["765663824", "227702136", "5291293144"];
 
 export default function RootLayout({ children }) {
+  useMockEnv();
+  useInitApp(isDevelopment);
 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <StoreProvider>
-          <LanguageProvider>
-            <TopicProvider>
+          <StoreProvider>
+            <LanguageProvider>
+              <TopicProvider>
               <div className="min-h-screen flex flex-col">
                 <header className="bg-blue-600 text-white shadow-md">
                   <nav className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
@@ -107,9 +107,7 @@ function Navigation() {
           href={isAuthorized ? "/dialogue" : "#"}
           className={`relative px-2 py-1 rounded-md transition-all hover:bg-white/10 ${
             pathname === "/dialogue" ? "text-blue-200 font-medium" : ""
-          } ${
-            !isAuthorized ? 'cursor-not-allowed opacity-75' : ''
-          }`}
+          } ${!isAuthorized ? "cursor-not-allowed opacity-75" : ""}`}
           onClick={(e) => {
             if (!isAuthorized) {
               e.preventDefault();
