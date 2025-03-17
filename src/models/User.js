@@ -11,6 +11,10 @@ const userSchema = new mongoose.Schema({
     type: Boolean,
     default: false
   },
+  subscriptionDate: {
+    type: Date,
+    default: null
+  },
   first_name: String,
   last_name: String,
   username: String,

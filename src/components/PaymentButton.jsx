@@ -11,25 +11,60 @@ const BOT_USERNAME =
 const TON_PRICE = 0.1; // Price in TON
 
 export default function PaymentButton() {
-  const { user } = useStore();
+  const { user, setUser } = useStore();
   const [tonConnectUI] = useTonConnectUI();
   const [isLoading, setIsLoading] = useState(false);
+  const [status, setStatus] = useState(null);
 
   const handlePayment = async () => {
     setIsLoading(true);
+    setStatus(null);
     try {
-      await tonConnectUI.sendTransaction({
+      const transactionData = {
         validUntil: Date.now() + 5 * 60 * 1000, // 5 minutes
         messages: [
           {
             address: process.env.NEXT_PUBLIC_OWNER_WALLET,
             amount: toNano(TON_PRICE).toString(),
-            comment: `premium_${user?.telegramId}`,
+            payload: `premium_${user?.telegramId}`,
           },
         ],
+      };
+
+      const result = await tonConnectUI.sendTransaction(transactionData, {
+        returnStrategy: "https://t.me/LearnLTBot",
       });
+
+      console.log(result.boc);
+      // Call backend to validate transaction
+      const response = await fetch("/api/payments/ton/callback", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          signedBoc: result.boc,
+          userId: user?.telegramId,
+        }),
+      });
+
+      const responseData = await response.json();
+
+      if (responseData.success) {
+        setStatus("success");
+        // Update user in store with premium status
+        setUser({
+          ...user,
+          isPremium: true,
+          subscriptionDate: new Date().toISOString(),
+        });
+      } else {
+        setStatus("error");
+        console.error("Payment validation failed:", responseData.error);
+      }
     } catch (error) {
       console.error("Transaction error:", error);
+      setStatus("error");
     } finally {
       setIsLoading(false);
     }
@@ -41,7 +76,7 @@ export default function PaymentButton() {
         <TonConnectButton />
       </div>
 
-      {tonConnectUI.connected && (
+      {tonConnectUI.connected && !user?.isPremium && (
         <button
           onClick={handlePayment}
           disabled={isLoading}
@@ -59,6 +94,18 @@ export default function PaymentButton() {
             </>
           )}
         </button>
+      )}
+
+      {status === "success" && (
+        <div className="text-green-600 font-medium">
+          Payment successful! You now have premium access.
+        </div>
+      )}
+
+      {status === "error" && (
+        <div className="text-red-600 font-medium">
+          Payment failed. Please try again or contact support.
+        </div>
       )}
     </div>
   );
