@@ -7,6 +7,19 @@ const TELEGRAM_WEBHOOK_URL = process.env.TELEGRAM_WEBHOOK_URL;
 const TON_PRICE = process.env.TON_PRICE || 2.5; // Price in TON
 const WALLET_ADDRESS = process.env.OWNER_WALLET;
 
+// Helper function to convert TON to nano
+function toNano(amount) {
+  return Math.floor(amount * 1000000000);
+}
+
+// Helper function to generate payment links
+function generatePaymentLink(toWallet, amount, comment, app) {
+  if (app === "tonhub") {
+    return `https://tonhub.com/transfer/${toWallet}?amount=${toNano(amount)}&text=${comment}`;
+  }
+  return `https://app.tonkeeper.com/transfer/${toWallet}?amount=${toNano(amount)}&text=${comment}`;
+}
+
 // Helper function to send message to Telegram
 async function sendTelegramMessage(chatId, text, replyToMessageId = null) {
   const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
@@ -47,14 +60,21 @@ function getRandomPhrase() {
 async function handlePremiumCommand(message) {
   const chatId = message.chat.id;
   const messageId = message.message_id;
+  const comment = `premium_${chatId}`;
 
-  // Create payment buttons with both direct TON link and verification
+  // Create payment buttons with both wallet options and verification
   const keyboard = {
     inline_keyboard: [
       [
         {
-          text: `Open TON Wallet`,
-          url: `ton://transfer/${WALLET_ADDRESS}?amount=${Math.floor(TON_PRICE * 1000000000)}&text=premium_${chatId}`
+          text: "💎 Pay with TonKeeper",
+          url: generatePaymentLink(WALLET_ADDRESS, TON_PRICE, comment, "tonkeeper")
+        }
+      ],
+      [
+        {
+          text: "💎 Pay with Tonhub",
+          url: generatePaymentLink(WALLET_ADDRESS, TON_PRICE, comment, "tonhub")
         }
       ],
       [
@@ -83,8 +103,9 @@ async function handlePremiumCommand(message) {
               `💎 Price: ${TON_PRICE} TON\n` +
               `💳 Wallet: \`${WALLET_ADDRESS}\`\n\n` +
               `To complete your payment:\n` +
-              `1. Click "Open TON Wallet" to make the transfer\n` +
-              `2. After sending, click "Check Payment Status"\n\n` +
+              `1. Choose your preferred wallet (TonKeeper or Tonhub)\n` +
+              `2. Complete the payment\n` +
+              `3. Click "Check Payment Status"\n\n` +
               `Your payment will be verified automatically.`,
         reply_markup: keyboard
       }),
