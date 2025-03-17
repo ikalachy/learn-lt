@@ -2,7 +2,7 @@
 
 import { openTelegramLink } from "@telegram-apps/sdk";
 import { useStore } from "@/contexts/StoreContext";
-import { TonConnectButton, useTonConnectUI } from "@/tonconnect";
+import { TonConnectButton, useTonConnectUI, toNano } from "@/tonconnect";
 import { useEffect, useState } from "react";
 
 const BOT_USERNAME =
@@ -19,11 +19,11 @@ export default function PaymentButton() {
     setIsLoading(true);
     try {
       await tonConnectUI.sendTransaction({
-        validUntil: Math.floor(Date.now() / 1000) + 60 * 20, // 20 minutes
+        validUntil: Date.now() + 5 * 60 * 1000, // 5 minutes
         messages: [
           {
             address: process.env.NEXT_PUBLIC_OWNER_WALLET,
-            amount: TON_PRICE,
+            amount: toNano(TON_PRICE),
             comment: `premium_${user?.telegramId}`
           }
         ]
