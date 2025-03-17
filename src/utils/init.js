@@ -8,7 +8,7 @@ import { useEffect } from "react";
 export function useInitApp(debug = false) {
   useEffect(() => {
     // Only run in browser environment
-    // if (typeof window === "undefined") return;
+    if (typeof window === "undefined") return;
 
     // Initialize special event handlers for Telegram Desktop, Android, iOS, etc.
     // Also, configure the package.

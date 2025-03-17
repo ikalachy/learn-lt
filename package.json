@@ -12,6 +12,7 @@
     "@google/generative-ai": "^0.2.1",
     "@telegram-apps/sdk": "^2.0.12",
     "@tonconnect/sdk": "^3.0.7",
+    "@tonconnect/ui": "^2.0.12",
     "@vercel/analytics": "^1.5.0",
     "@vercel/blob": "^0.27.2",
     "mongodb": "^6.14.2",
