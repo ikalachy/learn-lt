@@ -1,15 +1,5 @@
 {
-    "url": "https://t.me/LearnLTBot",
+    "url": "https://learnlt.vercel.app",
     "name": "Learn Lithuanian",
-    "iconUrl": "https://t.me/LearnLTBot/photo",
-    "termsOfUseUrl": "https://t.me/LearnLTBot",
-    "privacyPolicyUrl": "https://t.me/LearnLTBot",
-    "items": [
-        {
-            "name": "Premium Subscription",
-            "imageUrl": "https://t.me/LearnLTBot/photo",
-            "amount": "2.5",
-            "description": "Unlimited access to AI dialogues and premium features"
-        }
-    ]
+    "iconUrl": "https://learnlt.vercel.app/logo.png"
 } 
