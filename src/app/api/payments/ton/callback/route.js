@@ -5,13 +5,15 @@ import { UserManager } from '@/utils/userManager';
 export async function POST(request) {
   try {
     const { signedBoc, userId } = await request.json();
-
+    
     if (!signedBoc || !userId) {
       return NextResponse.json(
         { success: false, error: 'Missing required fields' },
         { status: 400 }
       );
     }
+    console.log('signedBoc', signedBoc);
+    console.log('userId', userId);
 
     // Verify the transaction
     const isValid = await verifyTransaction(signedBoc, userId);
