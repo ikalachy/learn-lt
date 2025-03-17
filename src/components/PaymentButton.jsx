@@ -1,189 +1,41 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { invoice } from "@telegram-apps/sdk";
+import { invoice, openTelegramLink } from "@telegram-apps/sdk";
 import { useStore } from "@/contexts/StoreContext";
 
-// TON Connect manifest
-const MANIFEST_URL = "/tonconnect-manifest.json";
+const BOT_USERNAME = process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME || 'LearnLTBot';
 
 export default function PaymentButton() {
   const { user } = useStore();
   const [isLoading, setIsLoading] = useState(false);
   const [status, setStatus] = useState(null);
   const [showOptions, setShowOptions] = useState(false);
-  const [paymentData, setPaymentData] = useState(null);
-
-  // Initialize TON Connect
-  useEffect(() => {
-    const initTonConnect = async () => {
-      if (typeof window !== 'undefined') {
-        try {
-          // Load TonConnect SDK
-          const TonConnect = (await import('@tonconnect/sdk')).TonConnect;
-          
-          // Initialize connector
-          const connector = new TonConnect({
-            manifestUrl: MANIFEST_URL
-          });
-
-          // Store the connector instance
-          window.tonConnector = connector;
-
-          // Listen for wallet events
-          connector.onStatusChange(wallet => {
-            if (wallet) {
-              console.log('Wallet connected:', wallet);
-            } else {
-              console.log('Wallet disconnected');
-            }
-          });
-        } catch (error) {
-          console.error('Failed to initialize TON Connect:', error);
-        }
-      }
-    };
-
-    initTonConnect();
-  }, []);
-
-  // Check payment status
-  useEffect(() => {
-    let intervalId;
-    
-    if (paymentData?.paymentId && status === 'pending') {
-      intervalId = setInterval(async () => {
-        try {
-          const response = await fetch('/api/check-payment', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              paymentId: paymentData.paymentId,
-              userId: user?.telegramId,
-              method: 'ton'
-            })
-          });
-
-          const data = await response.json();
-          if (data.status === 'paid') {
-            setStatus('paid');
-            clearInterval(intervalId);
-          } else if (data.status === 'failed') {
-            setStatus('failed');
-            clearInterval(intervalId);
-          }
-        } catch (error) {
-          console.error('Payment check error:', error);
-        }
-      }, 5000); // Check every 5 seconds
-    }
-
-    return () => {
-      if (intervalId) {
-        clearInterval(intervalId);
-      }
-    };
-  }, [paymentData, status, user?.telegramId]);
 
   const handlePayment = async (method) => {
     setIsLoading(true);
     setStatus(null);
     setShowOptions(false);
-    setPaymentData(null);
     
     try {
-      const response = await fetch("/api/create-payment", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          userId: user?.telegramId,
-          method,
-        }),
-      });
-
-      const data = await response.json();
-
       if (method === 'ton') {
-        if (!data.payload || !data.paymentId) {
-          console.error("Failed to create TON payment");
-          setStatus('failed');
-          return;
-        }
-
-        // Store payment data for status checking
-        setPaymentData(data);
-
-        // Send transaction using TON Connect
-        if (window.tonConnector) {
-          try {
-            // First try universal link approach
-            const walletConnectionSource = {
-              universalLink: 'https://app.tonkeeper.com/ton-connect',
-              bridgeUrl: 'https://bridge.tonapi.io/bridge'
-            };
-
-            // Connect wallet if not connected
-            if (!window.tonConnector.connected) {
-              try {
-                const connectResult = await window.tonConnector.connect(walletConnectionSource);
-                if (!connectResult) {
-                  throw new Error('Wallet connection failed');
-                }
-                // Wait a moment for the connection to be fully established
-                await new Promise(resolve => setTimeout(resolve, 1000));
-              } catch (connError) {
-                console.error('Connection error:', connError);
-                // If universal link fails, try extension as fallback
-                try {
-                  const extConnectResult = await window.tonConnector.connect({
-                    jsBridgeKey: 'tonkeeper'
-                  });
-                  if (!extConnectResult) {
-                    throw new Error('Wallet connection failed');
-                  }
-                  // Wait a moment for the connection to be fully established
-                  await new Promise(resolve => setTimeout(resolve, 1000));
-                } catch (extError) {
-                  throw new Error('No wallet available. Please install Tonkeeper or use universal link.');
-                }
-              }
-            }
-
-            // Double check connection before sending transaction
-            if (!window.tonConnector.connected) {
-              throw new Error('Wallet connection not established');
-            }
-
-            // Send transaction
-            const result = await window.tonConnector.sendTransaction(data.payload);
-            if (result) {
-              console.log('Transaction sent:', result);
-              setStatus('pending');
-            } else {
-              throw new Error('Transaction failed to send');
-            }
-          } catch (error) {
-            console.error('TON Connect error:', error);
-            // Show more user-friendly error message
-            if (error.message.includes('No wallet available')) {
-              setStatus('Please install Tonkeeper wallet or open in Tonkeeper browser');
-            } else if (error.message.includes('Wallet connection')) {
-              setStatus('Could not connect to wallet. Please try again.');
-            } else if (error.message.includes('Transaction failed')) {
-              setStatus('Transaction could not be sent. Please try again.');
-            } else {
-              setStatus('failed');
-            }
-          }
-        } else {
-          console.error('TON Connect not initialized');
-          setStatus('failed');
-        }
+        // Open bot with /premium command using openTelegramLink
+        openTelegramLink(`https://t.me/${BOT_USERNAME}?start=premium_${user?.telegramId}`);
+        setStatus('Please complete the payment in Telegram bot');
       } else if (method === 'invoice' && invoice.open.isAvailable()) {
+        const response = await fetch("/api/create-payment", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            userId: user?.telegramId,
+            method: 'invoice',
+          }),
+        });
+
+        const data = await response.json();
+        
         if (!data.url) {
           console.error("Failed to create invoice URL");
           setStatus('failed');

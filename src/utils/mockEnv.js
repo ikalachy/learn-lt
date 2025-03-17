@@ -12,7 +12,7 @@ const isDevelopment = process.env.NODE_ENV === "development";
 // see it in your final bundle.
 if (isDevelopment) {
   await (async () => {
-    if (await isTMA()) {
+    if (!window && (await isTMA())) {
       return;
     }
 

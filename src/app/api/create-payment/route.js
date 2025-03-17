@@ -1,9 +1,7 @@
 import { NextResponse } from 'next/server';
 
 const PREMIUM_PRICE = process.env.PREMIUM_PRICE_USD || 5; // Price in USD
-const TON_PRICE = process.env.TON_PRICE || 2.5; // Price in TON
 const BOT_USERNAME = process.env.TELEGRAM_BOT_USERNAME;
-const OWNER_WALLET = process.env.OWNER_WALLET;
 
 export async function POST(req) {
   try {
@@ -17,38 +15,10 @@ export async function POST(req) {
     }
 
     if (method === "ton") {
-      if (!OWNER_WALLET) {
-        return NextResponse.json(
-          { error: "Wallet configuration missing" },
-          { status: 500 }
-        );
-      }
-
-      // Generate unique payment ID
-      const paymentId = `premium_${userId}_${Date.now()}_${Math.random().toString(36).substring(2, 8)}`;
-      
-      // Create TON Connect payment data
-      const tonConnectPayload = {
-        version: 2,
-        network: process.env.TON_NETWORK || 'mainnet',
-        transaction: {
-          valid_until: Math.floor(Date.now() / 1000) + 3600, // Valid for 1 hour
-          messages: [
-            {
-              address: OWNER_WALLET,
-              amount: Math.floor(TON_PRICE * 1000000000).toString(), // Convert to nanotons
-              payload: paymentId, // For payment identification
-              stateInit: null
-            }
-          ]
-        }
-      };
-
+      // For TON payments, we just return success as the bot will handle the actual payment
       return NextResponse.json({
-        method: 'ton_connect',
-        payload: tonConnectPayload,
-        paymentId,
-        amount: TON_PRICE
+        method: 'ton',
+        status: 'redirect_to_bot'
       });
     } else if (method === "invoice") {
       // Create Telegram Payment invoice
