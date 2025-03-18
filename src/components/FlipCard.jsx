@@ -37,7 +37,7 @@ export default function FlipCard({ frontText, backText, onFlip, selectedLanguage
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ id, topic }),
+        body: JSON.stringify({ id, topic, content: frontText }),
       });
 
       if (!response.ok) {
