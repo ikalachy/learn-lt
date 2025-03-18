@@ -234,14 +234,6 @@
       "tags": ["adjective", "speed"]
     },
     {
-      "id": "slow",
-      "lt": "Lėtas",
-      "en": "Slow",
-      "ru": "Медленный",
-      "by": "Павольны",
-      "tags": ["adjective", "speed"]
-    },
-    {
       "id": "easy",
       "lt": "Lengvas",
       "en": "Easy",
