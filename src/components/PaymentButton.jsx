@@ -80,10 +80,10 @@ export default function PaymentButton() {
   };
 
   return (
-    <div className="flex flex-col items-center p-4 sm:p-6 bg-gradient-to-b from-white to-gray-50 rounded-xl shadow-lg">
-      <div className="w-full flex justify-between items-start mb-6">
+    <div className="flex flex-col items-center p-3 sm:p-4 bg-gradient-to-b from-white to-gray-50 rounded-xl shadow-lg">
+      <div className="w-full flex justify-between items-start mb-4">
         <div className="text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-2">
+          <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-1">
             Unlock Premium Features
           </h2>
           <p className="text-gray-600 text-base sm:text-lg">
@@ -92,9 +92,9 @@ export default function PaymentButton() {
         </div>
       </div>
 
-      <div className="w-full max-w-md space-y-4">
-        <div className="backdrop-blur-s2m rounded-lg p-4 sm:p-6 ">
-          <ul className="space-y-3">
+      <div className="w-full max-w-md space-y-3">
+        <div className="backdrop-blur-s2m rounded-lg p-3 sm:p-4">
+          <ul className="space-y-2">
             <li className="flex items-center gap-2 text-gray-700 group">
               <span className="flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-green-100 text-green-600 group-hover:scale-110 transition-transform">
                 ✓
@@ -122,14 +122,14 @@ export default function PaymentButton() {
           </ul>
         </div>
 
-        <div className="flex flex-col items-center gap-3">
+        <div className="flex flex-col items-center gap-2">
           {!tonConnectUI.connected && <TonConnectButton />}
-
+          
           {tonConnectUI.connected && !user?.isPremium && (
             <button
               onClick={handlePayment}
               disabled={isLoading}
-              className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-medium text-base sm:text-lg shadow-md hover:shadow-lg transition-all duration-200 disabled:opacity-75 disabled:cursor-not-allowed disabled:hover:shadow-md flex items-center justify-center gap-2 group"
+              className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg font-medium text-base sm:text-lg shadow-md hover:shadow-lg transition-all duration-200 disabled:opacity-75 disabled:cursor-not-allowed disabled:hover:shadow-md flex items-center justify-center gap-2 group"
             >
               {isLoading ? (
                 <>

@@ -18,7 +18,7 @@ export default function DialoguePage() {
   }
 
   return (
-    <div className="container mx-auto px-3 py-1">
+    <div className="container mx-auto">
       <DialogueInterface />
     </div>
   );

@@ -129,7 +129,7 @@ export default function DialogueInterface() {
 
   if (!isPremium) {
     return (
-      <div className={`p-8 text-center max-w-md mx-auto ${inter.className}`}>
+      <div className={`p-5 text-center max-w-md mx-auto ${inter.className}`}>
         <PaymentButton />
       </div>
     );
