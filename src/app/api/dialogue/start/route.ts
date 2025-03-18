@@ -33,16 +33,24 @@ export async function POST(request: Request) {
 
     const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash-lite" });
 
-    const prompt = `Tu esi naudingas AI lietuvių kalbos mokytojas. Pradėk pokalbį apie ${topic}.
+    const prompt = `Tu esi naudingas AI lietuvių kalbos mokytojas. Pradėk pokalbį apie **${topic}**.
     Naudok paprastus žodžius ir trumpus sakinius.
     Užduok klausimus, į kuriuos lengva atsakyti A1-A2 lygiu.
-    Sukurk pokalbį, kuris tęsis apie 5-7 kartų.
-    Būkite draugiškas ir palaikantis.
-    Visada kalbėkite lietuviškai.
+    Sukurk pokalbį, kuris tęsis apie 5-7 kartus.
+    Būk draugiškas ir palaikantis.
+    Visada kalbėk lietuviškai.
+    
+    Prašau laikytis pasirinktos temos **"${topic}"** viso pokalbio metu. 
+    Jei vartotojas bando kalbėti kita tema, primink grįžti prie temos sakydamas: 
+    *"Atsiprašau, kalbėkime apie ${topic}."*
+    
+    Jei vartotojas pradeda kalbėti kita kalba, mandagiai paprašyk grįžti prie lietuvių kalbos, sakydamas: 
+    *"Pabandykime kalbėti lietuviškai."*
+    
     Pavyzdys:
-    AI: Labas! Ar mėgstate ${topic}?
+    AI: Labas! Ar mėgstate **${topic}**?
     Vartotojas: (atsako)
-    AI: (tęsia pokalbį, užduoda kitą paprastą klausimą).`;
+    AI: (tęsia pokalbį, užduoda kitą paprastą klausimą apie **${topic}**).`;
 
     const result = await model.generateContent(prompt);
     const response = await result.response;

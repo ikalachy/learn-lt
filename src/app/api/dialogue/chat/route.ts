@@ -49,7 +49,7 @@ export async function POST(request: Request) {
 
     ${isNearEnd 
       ? 'This is the final exchange. Provide a natural response and then I will generate a summary.'
-      : 'Continue the conversation naturally. Keep your response concise (2-3 sentences) and engaging.'}
+      : 'Continue the conversation naturally. Keep your response concise (1-2 sentences) and engaging.'}
     
     Maintain the same topic and ensure the conversation flows naturally.`;
 
@@ -66,10 +66,11 @@ export async function POST(request: Request) {
       Assistant: ${text}
 
       Please provide:
-      1. A brief summary of the key points discussed
-      2. 2-3 specific recommendations for the user to improve their language skills
+      1. A brief summary of the key points discussed (1-2 sentences). It should be short and concise.
+      2. 4-5 specific recommendations for the user to improve their language skills
       3. Areas where the user showed strength
-      4. Areas that need more practice`;
+      4. Areas that need more practice
+      5. based on dialogue content suggest 10 new words or phrases that the user can learn`;
 
       const summaryResult = await model.generateContent(summaryPrompt);
       const summaryResponse = await summaryResult.response;
