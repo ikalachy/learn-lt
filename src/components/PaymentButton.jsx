@@ -13,11 +13,69 @@ const TON_NETWORK = process.env.TON_NETWORK || "testnet";
 
 const TON_PRICE = 2; // Price in TON
 
+function PaymentInfoPopup({ isOpen, onClose }) {
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+      <div className="bg-white rounded-xl shadow-xl max-w-md w-full p-6 relative">
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+        >
+          ✕
+        </button>
+        
+        <h3 className="text-xl font-bold text-gray-900 mb-4">
+          How to Pay with TON
+        </h3>
+        
+        <div className="space-y-4 -ml-1">
+          <div className="flex items-start gap-2">
+            <div className="flex-1">
+              <p className="font-medium text-gray-900">Connect Telegram Wallet</p>
+              <p className="text-sm text-gray-600">
+                Click the "Connect Wallet" button to link your Telegram wallet
+              </p>
+            </div>
+          </div>
+          
+          <div className="flex items-start gap-2">
+            <div className="flex-1">
+              <p className="font-medium text-gray-900">Confirm Payment</p>
+              <p className="text-sm text-gray-600">
+                Review the payment details and confirm the transaction in your wallet
+              </p>
+            </div>
+          </div>
+          
+          <div className="flex items-start gap-2">
+            <div className="flex-1">
+              <p className="font-medium text-gray-900">Get Premium Access</p>
+              <p className="text-sm text-gray-600">
+                Once payment is confirmed, you'll get immediate access to premium features
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-6 p-4 bg-blue-50 rounded-lg">
+          <p className="text-sm text-blue-800">
+            💡 Payment is processed securely through Telegram's TON blockchain. 
+            Make sure you have enough TON in your wallet before proceeding.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function PaymentButton() {
   const { user, setUser } = useStore();
   const [tonConnectUI] = useTonConnectUI();
   const [isLoading, setIsLoading] = useState(false);
   const [status, setStatus] = useState(null);
+  const [showPaymentInfo, setShowPaymentInfo] = useState(false);
 
   const handlePayment = async () => {
     setIsLoading(true);
@@ -86,7 +144,7 @@ export default function PaymentButton() {
           <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-1">
             Unlock Premium Features
           </h2>
-          <p className="text-gray-600 text-base sm:text-lg">
+          <p className="text-gray-600 text-base sm:text-lg mb-2">
             Level up your Lithuanian
           </p>
         </div>
@@ -123,26 +181,43 @@ export default function PaymentButton() {
         </div>
 
         <div className="flex flex-col items-center gap-2">
-          {!tonConnectUI.connected && <TonConnectButton />}
+          {!tonConnectUI.connected && (
+            <div className="text-center mb-2 flex flex-col items-center">
+              <div className="flex justify-center">
+                <TonConnectButton />
+              </div>
+              <button
+                onClick={() => setShowPaymentInfo(true)}
+                className="mt-2 text-xs text-blue-600 hover:text-blue-700 underline"
+              >
+                How to pay with TON?
+              </button>
+            </div>
+          )}
           
           {tonConnectUI.connected && !user?.isPremium && (
-            <button
-              onClick={handlePayment}
-              disabled={isLoading}
-              className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg font-medium text-base sm:text-lg shadow-md hover:shadow-lg transition-all duration-200 disabled:opacity-75 disabled:cursor-not-allowed disabled:hover:shadow-md flex items-center justify-center gap-2 group"
-            >
-              {isLoading ? (
-                <>
-                  <span className="w-4 h-4 sm:w-5 sm:h-5 border-2 border-white/20 border-t-white rounded-full animate-spin"></span>
-                  <span>Processing...</span>
-                </>
-              ) : (
-                <>
-                  <span className="text-lg sm:text-xl">💎</span>
-                  <span>Pay {TON_PRICE} TON</span>
-                </>
-              )}
-            </button>
+            <div className="w-full">
+              <p className="text-sm text-gray-600 mb-2 text-center">
+                Click below to pay {TON_PRICE} TON using your connected wallet
+              </p>
+              <button
+                onClick={handlePayment}
+                disabled={isLoading}
+                className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg font-medium text-base sm:text-lg shadow-md hover:shadow-lg transition-all duration-200 disabled:opacity-75 disabled:cursor-not-allowed disabled:hover:shadow-md flex items-center justify-center gap-2 group"
+              >
+                {isLoading ? (
+                  <>
+                    <span className="w-4 h-4 sm:w-5 sm:h-5 border-2 border-white/20 border-t-white rounded-full animate-spin"></span>
+                    <span>Processing...</span>
+                  </>
+                ) : (
+                  <>
+                    <span className="text-lg sm:text-xl">💎</span>
+                    <span>Pay {TON_PRICE} TON</span>
+                  </>
+                )}
+              </button>
+            </div>
           )}
 
           {status === "success" && (
@@ -160,6 +235,11 @@ export default function PaymentButton() {
           )}
         </div>
       </div>
+
+      <PaymentInfoPopup 
+        isOpen={showPaymentInfo} 
+        onClose={() => setShowPaymentInfo(false)} 
+      />
     </div>
   );
 }
