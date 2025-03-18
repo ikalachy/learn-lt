@@ -11,7 +11,7 @@ const TON_NETWORK = process.env.TON_NETWORK || "testnet";
 // const boc =
 //   "te6cckEBBAEAzAAB5YgBT0te3ralFidB9QOahqlQVxLn4gi0Zmdi5DDGiE3uIhgDm0s7c///+Is+ypmYAAAANNY6pNs8lNZvYtgoFuPcSDnpIys9OsEcBanFXU8e364d94ENs2YxIoyu5pJ+HiAkozPmPc0QbH/VCehAZ6ChpBcBAgoOw8htAwIDAAAAkkIAJAISLZhw+HX7kA6xkp6uixFGNM+3lDZI2JpBPVLcJnMgL68IAAAAAAAAAAAAAAAAAAAAAAAAcHJlbWl1bV83NjU2NjM4MjSGtAfp";
 
-const TON_PRICE = process.env.TON_PRICE; // Price in TON
+const TON_PRICE = 0.1; // Price in TON
 
 export default function PaymentButton() {
   const { user, setUser } = useStore();
@@ -129,7 +129,7 @@ export default function PaymentButton() {
 
         <div className="flex flex-col items-center gap-3">
           {!tonConnectUI.connected && <TonConnectButton />}
-          
+
           {tonConnectUI.connected && !user?.isPremium && (
             <button
               onClick={handlePayment}
