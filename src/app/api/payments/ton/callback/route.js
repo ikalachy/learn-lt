@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { verifyTransaction } from '@/lib/ton';
+import { verifyTransaction } from '@/utils/ton';
 import { UserManager } from '@/utils/userManager';
 
 export async function POST(request) {

@@ -21,9 +21,6 @@ const topics = [
   "Environment and Nature",
 ];
 
-// List of authorized Telegram IDs
-const AUTHORIZED_IDS = ["765663824", "227702136", "5291293144"];
-
 export default function DialogueInterface() {
   const [selectedTopic, setSelectedTopic] = useState(null);
   const [messages, setMessages] = useState([]);
@@ -36,7 +33,6 @@ export default function DialogueInterface() {
   const { user } = useStore();
 
   const userId = user?.telegramId;
-  const isAuthorized = AUTHORIZED_IDS.includes(userId);
   const isPremium = user?.isPremium;
 
   const scrollToBottom = () => {
@@ -131,39 +127,10 @@ export default function DialogueInterface() {
     }
   };
 
-  if (!isAuthorized) {
-    return (
-      <div className="flex flex-col items-center justify-center min-h-[60vh] text-center">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">Access Denied</h2>
-        <p className="text-gray-600">You are not authorized to access this feature.</p>
-      </div>
-    );
-  }
-
   if (!isPremium) {
     return (
       <div className={`p-8 text-center max-w-md mx-auto ${inter.className}`}>
-        <h2 className="text-2xl font-bold mb-4">Premium Feature</h2>
-        <div className="bg-blue-50 rounded-lg p-6 mb-6">
-          <p className="text-gray-600 mb-4">
-            Upgrade to premium to unlock interactive AI dialogues and practice Lithuanian conversation skills!
-          </p>
-          <ul className="text-left text-gray-600 mb-6 space-y-2">
-            <li className="flex items-center gap-2">
-              <span className="text-green-500">✓</span> Unlimited AI conversations
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-green-500">✓</span> Practice real-world scenarios
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-green-500">✓</span> Improve speaking confidence
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-green-500">✓</span> Learn natural expressions
-            </li>
-          </ul>
-          <PaymentButton />
-        </div>
+        <PaymentButton />
       </div>
     );
   }

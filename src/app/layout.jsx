@@ -16,9 +16,6 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 const isDevelopment = process.env.NODE_ENV === "development";
 
-// List of authorized Telegram IDs
-const AUTHORIZED_IDS = ["765663824", "227702136", "5291293144"];
-
 export default function RootLayout({ children }) {
   useMockEnv();
   useInitApp(isDevelopment);
@@ -68,8 +65,6 @@ function Navigation() {
   const pathname = usePathname();
   const { user, loading } = useStore();
 
-  const isAuthorized = AUTHORIZED_IDS.includes(user?.telegramId);
-
   return (
     <div className="flex items-center space-x-2">
       <div className="flex items-center space-x-1">
@@ -107,15 +102,10 @@ function Navigation() {
           )}
         </Link>
         <Link
-          href={isAuthorized ? "/dialogue" : "#"}
+          href="/dialogue"
           className={`relative px-2 py-1 rounded-md transition-all hover:bg-white/10 ${
             pathname === "/dialogue" ? "text-blue-200 font-medium" : ""
-          } ${!isAuthorized ? "cursor-not-allowed opacity-75" : ""}`}
-          onClick={(e) => {
-            if (!isAuthorized) {
-              e.preventDefault();
-            }
-          }}
+          }`}
         >
           <span className="text-xs flex items-center gap-1">
             Chat
