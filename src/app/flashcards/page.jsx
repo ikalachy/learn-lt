@@ -7,8 +7,8 @@ import {
   getLastWordId,
   saveLastWordId,
 } from "@/utils/progressManager";
-import { useLanguage } from "@/contexts/LanguageContext";
-import { useTopic } from "@/contexts/TopicContext";
+import { useLanguageStore } from "@/stores/languageStore";
+import { useTopicStore } from "@/stores/topicStore";
 import TopicSelector from "@/components/TopicSelector";
 
 export default function FlashcardsPage() {
@@ -17,9 +17,8 @@ export default function FlashcardsPage() {
   const [availablePhrases, setAvailablePhrases] = useState([]);
   const [isLastWord, setIsLastWord] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
-  const [showFullTopicSelector, setShowFullTopicSelector] = useState(false);
-  const { selectedLanguage } = useLanguage();
-  const { selectedTopic, selectTopic, loading } = useTopic();
+  const { selectedLanguage } = useLanguageStore();
+  const { selectedTopic, loading, hideFullPage } = useTopicStore();
 
   useEffect(() => {
     const loadPhrases = async () => {
@@ -108,7 +107,7 @@ export default function FlashcardsPage() {
   return (
     <div className="min-h-screen bg-gray-100 py-3 px-4">
       <div className="max-w-[480px] mx-auto">
-        {!showFullTopicSelector && selectedTopic && <TopicSelector />}
+        {selectedTopic && <TopicSelector />}
 
         {!selectedTopic ? (
           <div className="fixed inset-0 bg-white z-50 overflow-y-auto">
@@ -116,10 +115,7 @@ export default function FlashcardsPage() {
               <div className="flex justify-between items-center mb-6">
                 <h2 className="text-2xl font-bold">Choose a Topic</h2>
               </div>
-              <TopicSelector 
-                isFullPage={true} 
-                onTopicSelect={() => setShowFullTopicSelector(false)}
-              />
+              <TopicSelector />
             </div>
           </div>
         ) : loading ? (
@@ -194,8 +190,7 @@ export default function FlashcardsPage() {
                       </button>
                       <button
                         onClick={() => {
-                          setShowFullTopicSelector(true);
-                          selectTopic(null);
+                          hideFullPage();
                           setIsCompleted(false);
                         }}
                         className="px-6 py-3 bg-gradient-to-r from-gray-500 to-gray-600 text-white rounded-lg hover:from-gray-600 hover:to-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
@@ -235,26 +230,6 @@ export default function FlashcardsPage() {
                   </div>
                 </>
               )}
-            </div>
-          </div>
-        )}
-
-        {showFullTopicSelector && (
-          <div className="fixed inset-0 bg-white z-50 overflow-y-auto">
-            <div className="max-w-[480px] mx-auto p-4">
-              <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-bold">Choose a Topic</h2>
-                <button
-                  onClick={() => setShowFullTopicSelector(false)}
-                  className="text-gray-500 hover:text-gray-700"
-                >
-                  <span className="text-2xl">×</span>
-                </button>
-              </div>
-              <TopicSelector 
-                isFullPage={true} 
-                onTopicSelect={() => setShowFullTopicSelector(false)}
-              />
             </div>
           </div>
         )}

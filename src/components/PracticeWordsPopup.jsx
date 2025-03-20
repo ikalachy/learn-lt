@@ -3,7 +3,6 @@ import FlipCard from './FlipCard';
 
 export default function PracticeWordsPopup({ words, onClose }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [flippedCount, setFlippedCount] = useState(0);
 
   const handleFlip = (isFlipped) => {
     if (isFlipped) {

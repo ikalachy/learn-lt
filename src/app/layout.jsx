@@ -3,8 +3,6 @@
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LanguageProvider } from "@/contexts/LanguageContext";
-import { TopicProvider } from "@/contexts/TopicContext";
 import { StoreProvider, useStore } from "@/contexts/StoreContext";
 import LanguageSelector from "@/components/LanguageSelector";
 import { Analytics } from "@vercel/analytics/react";
@@ -12,6 +10,8 @@ import { useInitApp } from "@/utils/init";
 import { useMockEnv } from "@/utils/mockEnv";
 import { TonConnectUIProvider } from "@/tonconnect";
 import "./globals.css";
+import { useEffect } from "react";
+import { useTopicStore } from "@/stores/topicStore";
 
 const inter = Inter({ subsets: ["latin"] });
 const isDevelopment = process.env.NODE_ENV === "development";
@@ -19,40 +19,41 @@ const isDevelopment = process.env.NODE_ENV === "development";
 export default function RootLayout({ children }) {
   useMockEnv();
   useInitApp(isDevelopment);
+  const { initialize } = useTopicStore();
+
+  useEffect(() => {
+    initialize();
+  }, [initialize]);
 
   return (
     <html lang="en">
       <body className={inter.className}>
         <TonConnectUIProvider manifestUrl="https://learnlt.vercel.app/tonconnect-manifest.json">
           <StoreProvider>
-            <LanguageProvider>
-              <TopicProvider>
-                <div className="min-h-screen flex flex-col">
-                  <header className="bg-blue-600 text-white shadow-md">
-                    <nav className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-                      <div className="flex justify-between h-14">
-                        <div className="flex items-center">
-                          <Link
-                            href="/"
-                            className="text-lg font-bold hover:text-blue-200 transition-colors relative group"
-                          >
-                            <span className="hidden md:inline">
-                              Learn Lithuanian
-                            </span>
-                            <span className="md:hidden text-[12px] font-medium px-1.5 py-0.5 bg-white/10 rounded tracking-wider">
-                              LLT
-                            </span>
-                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-200 transition-all group-hover:w-full md:block hidden"></span>
-                          </Link>
-                        </div>
-                        <Navigation />
-                      </div>
-                    </nav>
-                  </header>
-                  <main className="flex-grow">{children}</main>
-                </div>
-              </TopicProvider>
-            </LanguageProvider>
+            <div className="min-h-screen flex flex-col">
+              <header className="bg-blue-600 text-white shadow-md">
+                <nav className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+                  <div className="flex justify-between h-14">
+                    <div className="flex items-center">
+                      <Link
+                        href="/"
+                        className="text-lg font-bold hover:text-blue-200 transition-colors relative group"
+                      >
+                        <span className="hidden md:inline">
+                          Learn Lithuanian
+                        </span>
+                        <span className="md:hidden text-[12px] font-medium px-1.5 py-0.5 bg-white/10 rounded tracking-wider">
+                          LLT
+                        </span>
+                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-200 transition-all group-hover:w-full md:block hidden"></span>
+                      </Link>
+                    </div>
+                    <Navigation />
+                  </div>
+                </nav>
+              </header>
+              <main className="flex-grow">{children}</main>
+            </div>
           </StoreProvider>
         </TonConnectUIProvider>
         {!isDevelopment && <Analytics />}

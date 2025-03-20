@@ -1,101 +1,78 @@
 "use client";
 
+import { useProgressStore } from "@/stores/progressStore";
+import { useLanguageStore } from "@/stores/languageStore";
+import { useTopicStore } from "@/stores/topicStore";
 import Link from "next/link";
-import {
-  getProgress,
-  getCompletedTopicsCount,
-  getTotalCompletedTopics,
-} from "@/utils/progressManager";
 
 export default function HomePage() {
+  const { selectedLanguage } = useLanguageStore();
+  const { selectedTopic, selectTopic } = useTopicStore();
+  const { 
+    getProgress, 
+    getCompletedTopicsCount, 
+    getTotalCompletedTopics,
+    getTopicSeenCount
+  } = useProgressStore();
+
   const progress = getProgress();
-  const lastViewedWords = progress?.lastViewedWords || {};
-
-  // Calculate total topics started across all modes
-  const totalStarted = Object.values(lastViewedWords).reduce(
-    (total, modeProgress) => {
-      return total + Object.keys(modeProgress).length;
-    },
-    0
-  );
-
-  // Get total completed topics
+  const totalStarted = Object.keys(progress.lastViewedWords || {}).length;
   const totalCompleted = getTotalCompletedTopics();
 
+  const modes = [
+    { id: 'flashcards', name: 'Flashcards', color: 'blue' },
+    { id: 'quiz', name: 'Quiz', color: 'green' },
+    { id: 'typing', name: 'Spell', color: 'purple' }
+  ];
+
   return (
-    <div className="min-h-screen bg-gray-100 py-5 px-4">
-      <div className="max-w-4xl mx-auto">
-        <div className="mb-5 bg-white rounded-lg shadow-lg p-6">
-          <h2 className="text-2xl font-semibold mb-4">Your Progress</h2>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="text-center">
-              <p className="text-3xl font-bold text-blue-600">{totalStarted}</p>
-              <p className="text-gray-600">Topics Started</p>
+    <div className="min-h-screen bg-gray-100 py-3 px-4">
+      <div className="max-w-[480px] mx-auto">
+        <div className="bg-white rounded-lg shadow-lg p-6">
+          <h1 className="text-2xl font-bold mb-4">Learn Lithuanian</h1>
+          
+          {/* Overall Progress */}
+          <div className="grid grid-cols-2 gap-4 mb-6">
+            <div className="bg-blue-50 p-4 rounded-lg">
+              <p className="text-sm text-gray-600">Topics Started</p>
+              <p className="text-2xl font-bold text-blue-600">{totalStarted}</p>
             </div>
-            <div className="text-center">
-              <p className="text-3xl font-bold text-green-600">
-                {totalCompleted}
-              </p>
-              <p className="text-gray-600">Topics Completed</p>
+            <div className="bg-green-50 p-4 rounded-lg">
+              <p className="text-sm text-gray-600">Topics Completed</p>
+              <p className="text-2xl font-bold text-green-600">{totalCompleted}</p>
             </div>
           </div>
-        </div>
-        <div className="grid md:grid-cols-3 gap-5">
-          <Link href="/flashcards">
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-              <h2 className="text-2xl font-semibold mb-4">Flashcards</h2>
-              <p className="text-gray-600">
-                Practice Lithuanian words and phrases with interactive
-                flashcards.
-              </p>
-              <div className="mt-4 space-y-1">
-                <p className="text-sm text-gray-500">
-                  {Object.keys(lastViewedWords.flashcards || {}).length} topics
-                  started
-                </p>
-                <p className="text-sm text-green-600">
-                  {getCompletedTopicsCount("flashcards")} topics completed
-                </p>
-              </div>
-            </div>
-          </Link>
 
-          <Link href="/quiz">
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-              <h2 className="text-2xl font-semibold mb-4">Quiz Mode</h2>
-              <p className="text-gray-600">
-                Test your knowledge by choosing the correct translation.
-              </p>
-              <div className="mt-4 space-y-1">
-                <p className="text-sm text-gray-500">
-                  {Object.keys(lastViewedWords.quiz || {}).length} topics
-                  started
-                </p>
-                <p className="text-sm text-green-600">
-                  {getCompletedTopicsCount("quiz")} topics completed
-                </p>
-              </div>
-            </div>
-          </Link>
-
-          <Link href="/typing">
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-              <h2 className="text-2xl font-semibold mb-4">Spell It!</h2>
-              <p className="text-gray-600">
-                Practice spelling Lithuanian words by selecting letters in the
-                correct order.
-              </p>
-              <div className="mt-4 space-y-1">
-                <p className="text-sm text-gray-500">
-                  {Object.keys(lastViewedWords.typing || {}).length} topics
-                  started
-                </p>
-                <p className="text-sm text-green-600">
-                  {getCompletedTopicsCount("typing")} topics completed
-                </p>
-              </div>
-            </div>
-          </Link>
+          {/* Mode-specific Progress */}
+          <div className="space-y-4">
+            {modes.map((mode) => {
+              const completedCount = getCompletedTopicsCount(mode.id);
+              const startedCount = Object.keys(progress.lastViewedWords?.[mode.id] || {}).length;
+              
+              return (
+                <Link 
+                  key={mode.id} 
+                  href={`/${mode.id}`}
+                  className="block"
+                >
+                  <div className={`bg-${mode.color}-50 p-4 rounded-lg transition-all hover:bg-${mode.color}-100`}>
+                    <div className="flex justify-between items-center mb-2">
+                      <h3 className="font-semibold text-gray-700">{mode.name}</h3>
+                      <span className={`text-${mode.color}-600 font-medium`}>
+                        {completedCount}/{startedCount} completed
+                      </span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-2">
+                      <div 
+                        className={`bg-${mode.color}-500 h-2 rounded-full`}
+                        style={{ width: `${startedCount ? (completedCount / startedCount) * 100 : 0}%` }}
+                      ></div>
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>

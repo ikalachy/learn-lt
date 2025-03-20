@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import phrases from '@/data/phrases.json';
 import { updateProgress } from '@/utils/progressManager';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { useLanguageStore } from "@/stores/languageStore";
 
 export default function TypingPage() {
   const [currentPhrase, setCurrentPhrase] = useState(null);
@@ -16,7 +16,7 @@ export default function TypingPage() {
   const [hintCount, setHintCount] = useState(2);
   const [score, setScore] = useState(0);
   const [streak, setStreak] = useState(0);
-  const { selectedLanguage } = useLanguage();
+  const { selectedLanguage } = useLanguageStore();
 
   const MAX_ATTEMPTS = 3;
   const HINT_DURATION = 1500;
